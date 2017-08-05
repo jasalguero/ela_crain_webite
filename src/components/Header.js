@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/header.css';
 
-const Header = ({ section }) => {
+const Header = ({ section, onViewModeChange }) => {
   return (
     <header
       className={section === 'writing' ? 'header-writting' : 'header-coaching'}
@@ -10,8 +10,8 @@ const Header = ({ section }) => {
       {section === 'writing'
         ? <div className="header-wrapper">
             <div className="icons left reading-styles">
-              <span>Icon1</span>
-              <span>Icon2</span>
+              <span onClick={() => onViewModeChange('full')}>Full</span>
+              <span onClick={() => onViewModeChange('list')}>List</span>
             </div>
             <div className="logo">
               <Link to="/">Ela Crain</Link>
