@@ -1,0 +1,38 @@
+@import 'styles/_colors.scss';
+
+.home .panel {
+  width: 50%;
+  float: left;
+  min-height: 100vh;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.left {
+    background-color: $black;
+    color: $white;
+
+    & .label:hover {
+      background-color: $white;
+      color: $black;
+    }
+  }
+
+  &.right {
+    background-color: $white;
+    color: $black;
+
+    & .label:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  .label {
+    padding: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
