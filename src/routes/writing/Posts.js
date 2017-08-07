@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
-import '../styles/writing.css';
+import Header from '../../components/Header';
+import '../../styles/Writing.css';
 
-class Writing extends Component {
+class WritingPosts extends Component {
   state = {
     viewMode: 'full'
   };
@@ -25,4 +25,4 @@ class Writing extends Component {
   }
 }
 
-export default Writing;
+export default WritingPosts;

@@ -1,0 +1,39 @@
+@import 'styles/_colors.scss';
+
+form.contact-form {
+  label {
+    display: block;
+    font-size: 10px;
+    margin-bottom: 7px;
+  }
+
+  input,
+  textarea {
+    display: block;
+    color: $white;
+    border: 1px solid $white;
+    background-color: $black;
+    padding: 8px;
+    width: 288px;
+    font-size: 16px;
+    margin-bottom: 23px;
+  }
+
+  textarea {
+    width: 430px;
+  }
+
+  button {
+    margin-top: 18px;
+    font-size: 18px;
+    background-color: $black;
+    color: $white;
+    border: 0;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      cursor: pointer;
+      border-bottom: 2px solid $white;
+    }
+  }
+}

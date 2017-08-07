@@ -1,0 +1,35 @@
+@import 'styles/_colors.scss';
+
+.about {
+  .container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    overflow: hidden;
+
+    .left {
+      flex: 1 1 auto;
+      overflow: auto;
+    }
+
+    .right {
+      flex: 0 0 600px;
+      overflow: hidden;
+      
+      img.portrait {
+        position: fixed;
+      } 
+    }
+
+    section {
+      margin-bottom: 90px;
+    }
+
+    .review {
+      font-weight: bold;
+      font-size: 27px;
+      display: block;
+      margin-bottom: 55px;
+    }
+  }
+}
