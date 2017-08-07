@@ -17,7 +17,7 @@ const Header = ({ section, onViewModeChange }) => {
               <Link to="/">Ela Crain</Link>
             </div>
             <div className="links">
-              <Link to="/writing">Posts</Link>
+              <Link to="/writing/posts">Posts</Link>
               <Link to="/writing/about">About</Link>
             </div>
           </div>
