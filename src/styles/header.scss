@@ -21,14 +21,23 @@ header {
       text-align: left;
       justify-content: flex-start;
 
-      span {
-        margin-right: 10px;
-        text-transform: uppercase;
-        border-bottom: 2px solid transparent;
+      .icon {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        font-size: 0;
+        margin-right: 19px;
+        cursor: pointer;
 
-        &:hover {
-          cursor: pointer;
-          border-bottom: 2px solid $white;
+        &.overview {
+          background-image: url('../icons/overview.svg');
+        }
+
+        &.single {
+          background-image: url('../icons/single.svg');
         }
       }
     }

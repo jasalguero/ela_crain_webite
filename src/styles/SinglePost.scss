@@ -1,0 +1,38 @@
+@import 'styles/_colors.scss';
+
+.single-post {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    margin-top: 37px;
+    margin-bottom: 27px;
+    max-height: 512px;
+  }
+
+  .title {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 6px;
+  }
+
+  .excerpt {
+    font-family: Lora;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .read-more-link {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+}

@@ -10,8 +10,18 @@ const Header = ({ section, onViewModeChange }) => {
       {section === 'writing'
         ? <div className="header-wrapper">
             <div className="icons left reading-styles">
-              <span onClick={() => onViewModeChange('full')}>Full</span>
-              <span onClick={() => onViewModeChange('list')}>List</span>
+              <span
+                className="icon single"
+                onClick={() => onViewModeChange('single')}
+              >
+                Single
+              </span>
+              <span
+                className="icon overview"
+                onClick={() => onViewModeChange('overview')}
+              >
+                Overview
+              </span>
             </div>
             <div className="logo">
               <Link to="/">Ela Crain</Link>
