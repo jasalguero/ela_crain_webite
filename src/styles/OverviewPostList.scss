@@ -1,0 +1,44 @@
+@import 'styles/_colors.scss';
+
+.overview-post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .post {
+    border-top: solid 1px $greyish-brown;
+    padding-top: 44px;
+    padding-bottom: 44px;
+
+    transition: padding 0.4s ease;
+
+    .title {
+      font-family: Lora;
+      font-size: 40px;
+      text-align: center;
+      color: $white;
+    }
+
+    .info {
+      font-family: Roboto;
+      font-size: 18px;
+      letter-spacing: 1px;
+      text-align: center;
+      color: $black;
+      display: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+      padding: 60px;
+      background-color: $white;
+
+      .title {
+        color: $black;
+      }
+      .info {
+        display: block;
+      }
+    }
+  }
+}

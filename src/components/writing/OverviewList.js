@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../styles/OverviewPostList.css';
 
 class PostList extends Component {
   render() {
@@ -7,9 +8,12 @@ class PostList extends Component {
     return (
       <ul className="overview-post-list">
         {items.map(item =>
-          <h1 key={item.title}>
-            {item.title}
-          </h1>
+          <li key={item.title} className="post">
+            <div className="title">
+              {item.title}
+            </div>
+            <div className="info">Short Story, 2016</div>
+          </li>
         )}
       </ul>
     );
