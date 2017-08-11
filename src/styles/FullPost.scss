@@ -1,0 +1,72 @@
+@import 'styles/_colors.scss';
+
+.full-post {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 10%;
+
+  img {
+    margin-top: 37px;
+    margin-bottom: 27px;
+    max-height: 512px;
+  }
+
+  .title {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 6px;
+  }
+
+  .excerpt {
+    font-family: Lora;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .comment {
+    font-family: Roboto;
+    font-size: 27px;
+    font-weight: 900;
+    line-height: 1.33;
+    letter-spacing: -0.2px;
+    margin-top: 74px;
+    margin: 0 20%;
+  }
+
+  .audio-widget {
+    .audio-title {
+      font-family: Roboto;
+      font-size: 16px;
+      letter-spacing: 1.1px;
+      color: $greyish-brown;
+      margin-top: 75px;
+    }
+
+    .audio-spacing {
+      width: 1px;
+      margin: 0 auto;
+      font-size: 0;
+      height: 60px;
+      background-color: $greyish-brown;
+      margin-top: 34px;
+      margin-bottom: 28px;
+    }
+  }
+
+  .head {
+    font-family: Lora;
+    font-size: 91px;
+    line-height: 1.19;
+  }
+
+  .content {
+    font-family: Lora;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin: 74px 20% 0 20%;
+  }
+}

@@ -5,7 +5,7 @@ import SingleList from '../../components/writing/SingleList';
 import '../../styles/Writing.css';
 import * as WritingAPI from '../../utils/WritingAPI';
 
-class WritingPosts extends Component {
+class PostsRoute extends Component {
   state = {
     viewMode: 'single',
     posts: []
@@ -35,4 +35,4 @@ class WritingPosts extends Component {
   }
 }
 
-export default WritingPosts;
+export default PostsRoute;

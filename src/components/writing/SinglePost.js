@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/SinglePost.css';
 
 class SinglePost extends Component {
   render() {
     const post = this.props.post;
+
     return (
       <div className="single-post">
         <img
@@ -17,9 +19,9 @@ class SinglePost extends Component {
         <div className="excerpt">
           {post.excerpt}
         </div>
-        <div className="read-more-link" onClick={this.props.onReadMore}>
+        <Link className="read-more-link" to={`/writing/posts/${post.id}`}>
           Read More
-        </div>
+        </Link>
       </div>
     );
   }

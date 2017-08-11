@@ -5,7 +5,7 @@ import Portrait from '../../images/writing-about.png'; // Tell Webpack this JS f
 
 import '../../styles/About.css';
 
-class About extends Component {
+class AboutRoute extends Component {
   render() {
     return (
       <div className="about writing">
@@ -108,4 +108,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default AboutRoute;
