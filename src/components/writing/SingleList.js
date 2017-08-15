@@ -7,13 +7,22 @@ class SingleList extends Component {
   };
 
   render() {
-    console.log('number of posts ', this.props.items.length);
     let item =
       this.props.items.length > this.state.currentPostIndex
         ? this.props.items[this.state.currentPostIndex]
         : {};
 
-    return <SinglePost post={item} />;
+    return (
+      <div className="single-post-wrapper">
+        <div className="post-navigation nav-prev">
+          <div className="link">Previous</div>
+        </div>
+        <SinglePost post={item} />
+        <div className="post-navigation nav-next">
+          <div className="link">Next</div>
+        </div>
+      </div>
+    );
   }
 }
 

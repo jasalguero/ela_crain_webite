@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AudioWidget from '../AudioWidget';
 import '../../styles/FullPost.css';
 
 class FullPost extends Component {
@@ -20,12 +21,7 @@ class FullPost extends Component {
         <div className="comment">
           {post.comment}
         </div>
-        {post.audio &&
-          <div className="audio-widget">
-            <div className="audio-title">Listen to the Audio Story</div>
-            <div className="audio-spacing">''</div>
-            <div className="audio-spotify">Spotify thingy goes here</div>
-          </div>}
+        {post.audio && <AudioWidget data={post.audio} />}
         <div className="head">
           {post.head}
         </div>

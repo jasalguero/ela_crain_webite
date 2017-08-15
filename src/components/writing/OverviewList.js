@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/OverviewPostList.css';
 
 class PostList extends Component {
   render() {
-    const items = this.props.items;
+    const posts = this.props.items;
 
     return (
       <ul className="overview-post-list">
-        {items.map(item =>
-          <li key={item.title} className="post">
-            <div className="title">
-              {item.title}
-            </div>
-            <div className="info">Short Story, 2016</div>
+        {posts.map(post =>
+          <li key={post.title} className="post">
+            <Link to={`/writing/posts/${post.id}`}>
+              <div className="title">
+                {post.title}
+              </div>
+              <div className="info">Short Story, 2016</div>
+            </Link>
           </li>
         )}
       </ul>
