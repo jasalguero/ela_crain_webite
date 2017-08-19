@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import FullPost from '../../components/writing/FullPost';
 
@@ -60,7 +61,9 @@ class PostRoute extends Component {
           <div className="post-title">
             {this.state.prevPost.title}
           </div>
-          <div className="link">Previous</div>
+          <Link to={`/writing/posts/${this.state.prevPost.id}`}>
+            <div className="link">Previous</div>
+          </Link>
         </div>
       </div>
     );
@@ -71,10 +74,12 @@ class PostRoute extends Component {
       this.state.nextPost &&
       <div className="post-navigation nav-next">
         <div className="nav-content">
-          <div className="post-title">
+          <div className="post-title" onClick={this.toNextPost}>
             {this.state.nextPost.title}
           </div>
-          <div className="link">Next</div>
+          <Link to={`/writing/posts/${this.state.prevPost.id}`}>
+            <div className="link">Next</div>
+          </Link>
         </div>
       </div>
     );
