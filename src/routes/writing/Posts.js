@@ -3,19 +3,11 @@ import Header from '../../components/Header';
 import OverviewList from '../../components/writing/OverviewList';
 import SingleList from '../../components/writing/SingleList';
 import '../../styles/Writing.css';
-import * as WritingAPI from '../../utils/WritingAPI';
 
 class PostsRoute extends Component {
   state = {
-    viewMode: 'single',
-    posts: []
+    viewMode: 'single'
   };
-
-  componentDidMount() {
-    WritingAPI.getAllPosts().then(posts => {
-      this.setState({ posts });
-    });
-  }
 
   changeViewMode = mode => {
     this.setState({ viewMode: mode });
@@ -27,8 +19,8 @@ class PostsRoute extends Component {
         <Header section="writing" onViewModeChange={this.changeViewMode} />
         <div className="content-wrapper">
           {this.state.viewMode === 'single'
-            ? <SingleList items={this.state.posts} />
-            : <OverviewList items={this.state.posts} />}
+            ? <SingleList items={this.props.posts} />
+            : <OverviewList items={this.props.posts} />}
         </div>
       </div>
     );

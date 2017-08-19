@@ -14,13 +14,7 @@ class SingleList extends Component {
 
     return (
       <div className="single-post-wrapper">
-        <div className="post-navigation nav-prev">
-          <div className="link">Previous</div>
-        </div>
         <SinglePost post={item} />
-        <div className="post-navigation nav-next">
-          <div className="link">Next</div>
-        </div>
       </div>
     );
   }
