@@ -7,11 +7,17 @@ class FullPost extends Component {
     const post = this.props.post;
     return (
       <div className="full-post">
-        <img
-          className="post-image"
-          src="https://placeimg.com/640/480/people"
-          alt={post.title}
-        />
+        <div className="collage-wrapper">
+          <div className="background-title">
+            {post.title}
+          </div>
+          <img
+            className="post-image"
+            src="https://placeimg.com/640/480/people"
+            alt={post.title}
+          />
+        </div>
+
         <div className="title">
           {post.title}
         </div>
