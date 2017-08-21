@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import FullPost from '../../components/writing/FullPost';
 
+import '../../styles/FullPostNavigation.css';
+
 class PostRoute extends Component {
   state = {
     post: null,
@@ -74,10 +76,10 @@ class PostRoute extends Component {
       this.state.nextPost &&
       <div className="post-navigation nav-next">
         <div className="nav-content">
-          <div className="post-title" onClick={this.toNextPost}>
+          <div className="post-title">
             {this.state.nextPost.title}
           </div>
-          <Link to={`/writing/posts/${this.state.prevPost.id}`}>
+          <Link to={`/writing/posts/${this.state.nextPost.id}`}>
             <div className="link">Next</div>
           </Link>
         </div>
@@ -89,13 +91,13 @@ class PostRoute extends Component {
     return (
       <div className="writing">
         <Header section="writing" onViewModeChange={this.changeViewMode} />
+        {this.getNavPrev()}
         <div className="full-post-wrapper">
-          {this.getNavPrev()}
           {this.state.post
             ? <FullPost post={this.state.post} />
             : <h1>Post doesn't exist</h1>}
-          {this.getNavNext()}
         </div>
+        {this.getNavNext()}
       </div>
     );
   }

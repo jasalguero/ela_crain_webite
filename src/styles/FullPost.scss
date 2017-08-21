@@ -1,76 +1,9 @@
-@import 'styles/_colors.scss';
+@import 'styles/vars.scss';
 
 .full-post-wrapper {
   display: flex;
   min-height: 100vh;
   overflow: hidden;
-
-  .post-navigation {
-    width: 500px;
-    position: absolute;
-    display: inline-block;
-    top: 50%;
-    z-index: 10;
-
-    transition: right 0.4s ease;
-
-    .nav-content {
-      margin-top: auto;
-      color: $white;
-    }
-
-    .link {
-      cursor: pointer;
-      font-size: 18px;
-      text-align: center;
-      padding: 10px;
-    }
-
-    .post-title {
-      font-family: Lora;
-      font-size: 27px;
-      text-align: center;
-      padding: 30px 10px 10px 10px;
-    }
-
-    &.nav-prev {
-      left: -65px;
-      margin-left: -202px;
-      transition: left 0.4s ease-in;
-
-      &:hover {
-        left: 0;
-        .link {
-          text-decoration: underline;
-        }
-      }
-
-      .nav-content {
-        left: 0;
-        transform: rotate(-90deg);
-      }
-    }
-
-    &.nav-next {
-      right: -65px;
-      margin-right: -202px;
-
-      transition: right 0.4s ease;
-
-      &:hover {
-        right: 0;
-
-        .link {
-          text-decoration: underline;
-        }
-      }
-
-      .nav-content {
-        right: 0;
-        transform: rotate(-270deg);
-      }
-    }
-  }
 
   .full-post {
     width: 100%;
