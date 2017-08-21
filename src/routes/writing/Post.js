@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../../components/Header';
+import Header from '../../components/writing/Header';
 import FullPost from '../../components/writing/FullPost';
 
 import '../../styles/FullPostNavigation.css';
@@ -90,7 +90,7 @@ class PostRoute extends Component {
   render() {
     return (
       <div className="writing">
-        <Header section="writing" onViewModeChange={this.changeViewMode} />
+        <Header showLayoutIcons={false} />
         {this.getNavPrev()}
         <div className="full-post-wrapper">
           {this.state.post

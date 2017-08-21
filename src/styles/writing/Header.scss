@@ -33,11 +33,11 @@ header {
         cursor: pointer;
 
         &.overview {
-          background-image: url('../icons/overview.svg');
+          background-image: url('../../icons/overview.svg');
         }
 
         &.single {
-          background-image: url('../icons/single.svg');
+          background-image: url('../../icons/single.svg');
         }
       }
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../../components/Header';
+import Header from '../../components/writing/Header';
 import ContactForm from '../../components/ContactForm';
 import Portrait from '../../images/writing-about.png'; // Tell Webpack this JS file uses this image
 
@@ -9,7 +9,7 @@ class AboutRoute extends Component {
   render() {
     return (
       <div className="about writing">
-        <Header section="writing" />
+        <Header showLayoutIcons={false} />
         <div className="container">
           <div className="left">
             {/* ABOUT SECTION  */}

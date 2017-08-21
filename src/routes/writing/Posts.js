@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../../components/Header';
+import Header from '../../components/writing/Header';
 import OverviewList from '../../components/writing/OverviewList';
 import SingleList from '../../components/writing/SingleList';
 import '../../styles/Writing.css';
@@ -16,7 +16,7 @@ class PostsRoute extends Component {
   render() {
     return (
       <div className="writing">
-        <Header section="writing" onViewModeChange={this.changeViewMode} />
+        <Header showLayoutIcons={true} onViewModeChange={this.changeViewMode} />
         <div className="content-wrapper">
           {this.state.viewMode === 'single'
             ? <SingleList items={this.props.posts} />
