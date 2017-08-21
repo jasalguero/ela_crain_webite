@@ -2,7 +2,7 @@
 
 .full-post-wrapper {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 
   .post-navigation {
@@ -10,6 +10,7 @@
     position: absolute;
     display: inline-block;
     top: 50%;
+    z-index: 10;
 
     transition: right 0.4s ease;
 
@@ -72,6 +73,7 @@
   }
 
   .full-post {
+    width: 100%;
     overflow-y: auto;
     display: flex;
     align-items: center;
