@@ -1,19 +1,60 @@
 @import 'styles/vars.scss';
 
 header {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: space-between;
   width: 100%;
-  height: 80px;
-  align-items: center;
-  padding-left: 72px;
-  padding-right: 72px;
+  height: 260px;
+
+  .section-selector {
+    display: flex;
+    align-items: center;
+    margin-top: -180px;
+    transition: margin-top $animation-duration $animation-type;
+
+    .section {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 180px;
+      cursor: pointer;
+      transition: flex $animation-duration $animation-type;
+
+      &:hover {
+        flex: 2;
+      }
+    }
+
+    .writing-section {
+      font-family: Roboto;
+      font-size: 44px;
+      font-weight: 900;
+      color: $white;
+      background-color: $superblack;
+    }
+
+    .coaching-section {
+      font-family: Lora;
+      font-size: 44px;
+      color: $black;
+      background-color: $white;
+    }
+  }
+
+  &:hover {
+    .section-selector{
+      margin-top: 0;
+    }
+  }
 
   .header-wrapper {
+    height: 80px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    flex-shrink: 0;
+    padding-left: 72px;
+    padding-right: 72px;
+    align-items: center;
 
     .icons {
       display: flex;

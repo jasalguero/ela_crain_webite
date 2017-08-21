@@ -5,6 +5,14 @@ import '../../styles/writing/Header.css';
 const Header = ({ showLayoutIcons, onViewModeChange }) => {
   return (
     <header>
+      <div className="section-selector">
+        <div className="writing-section section">
+          <Link to="/writing/posts">Writing</Link>
+        </div>
+        <div className="coaching-section section">
+          <Link to="/coaching">Coaching</Link>
+        </div>
+      </div>
       <div className="header-wrapper">
         <div className="icons-wrapper">
           {showLayoutIcons &&
