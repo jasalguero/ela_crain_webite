@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../components/writing/Header';
 import FullPost from '../../components/writing/FullPost';
+import PostHeader from '../../components/writing/PostHeader';
 
 import '../../styles/FullPostNavigation.css';
 
@@ -88,13 +89,15 @@ class PostRoute extends Component {
   }
 
   render() {
+    const post = this.state.post;
     return (
       <div className="writing">
         <Header showLayoutIcons={false} />
+        <PostHeader post={post} />
         {this.getNavPrev()}
         <div className="full-post-wrapper">
           {this.state.post
-            ? <FullPost post={this.state.post} />
+            ? <FullPost post={post} />
             : <h1>Post doesn't exist</h1>}
         </div>
         {this.getNavNext()}

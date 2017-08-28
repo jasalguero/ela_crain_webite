@@ -1,0 +1,32 @@
+@import 'styles/vars.scss';
+
+.post-header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 74px;
+  transition: top $animation-duration $animation-type;
+
+  &.no-show {
+    top: -74px;
+  }
+
+  .left-side {
+    margin-left: 5%;
+    margin-top: 20px;
+
+    .currently-reading {
+      font-family: Roboto;
+      font-size: 10px;
+      letter-spacing: 0.8px;
+      color: $white;
+    }
+
+    .post-title {
+      font-family: Lora;
+      font-size: 18px;
+      color: $white;
+    }
+  }
+}
