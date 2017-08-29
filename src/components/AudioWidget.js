@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/ContactForm.css';
+import '../styles/AudioWidget.css';
 
 class AudioWidget extends Component {
   render() {
@@ -7,7 +7,16 @@ class AudioWidget extends Component {
       <div className="audio-widget">
         <div className="audio-title">Listen to the Audio Story</div>
         <div className="audio-spacing">''</div>
-        <div className="audio-spotify">Spotify thingy goes here</div>
+        <div className="audio-spotify">
+          <iframe
+            title="soundcloud"
+            width="100%"
+            height="300"
+            scrolling="no"
+            frameBorder="no"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/9818871&amp;color=000000&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"
+          />
+        </div>
       </div>
     );
   }

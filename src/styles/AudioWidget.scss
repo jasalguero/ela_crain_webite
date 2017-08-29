@@ -1,0 +1,13 @@
+@import 'styles/vars.scss';
+
+.audio-widget {
+  margin: 0 25%;
+  text-align: center;
+
+  .audio-title {
+    margin-top: 75px;
+  }
+  .audio-spotify {
+    width: 720px;
+  }
+}
