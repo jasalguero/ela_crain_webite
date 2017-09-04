@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import ImageCollage from '../ImageCollage';
 import '../../styles/SinglePost.css';
 
 class SinglePost extends Component {
@@ -8,11 +9,7 @@ class SinglePost extends Component {
 
     return (
       <div className="single-post">
-        <img
-          className="post-image"
-          src="https://placeimg.com/640/480/people"
-          alt={post.title}
-        />
+        <ImageCollage title={post.title} />
         <div className="title">
           {post.title}
         </div>
