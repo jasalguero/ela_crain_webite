@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ContactForm from '../../components/ContactForm';
 import NewsletterForm from '../../components/NewsletterForm';
 import AudioWidget from '../AudioWidget';
+import ImageCollage from '../ImageCollage';
 import '../../styles/FullPost.css';
 
 class FullPost extends Component {
@@ -10,17 +11,7 @@ class FullPost extends Component {
     return (
       <div>
         <div className="full-post">
-          <div className="collage-wrapper">
-            <div className="background-title">
-              {post.title}
-            </div>
-            <img
-              className="post-image"
-              src="https://placeimg.com/640/480/people"
-              alt={post.title}
-            />
-          </div>
-
+          <ImageCollage title={post.title} />
           <div className="title">
             {post.title}
           </div>
