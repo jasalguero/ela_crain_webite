@@ -1,7 +1,6 @@
 @import 'styles/vars.scss';
 
 .collage-wrapper {
-  background-color: red;
   position: relative;
   margin-top: 37px;
   min-height: 512px;
@@ -9,6 +8,8 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-left: 20%;
+  margin-right: 20%;
 
   .background-title {
     position: absolute;
@@ -25,39 +26,36 @@
   }
 
   .image-collage {
-    background-color: blue;
     position: relative;
     left: 0;
-    width: 100%;
+    width: 720px;
     height: 512px;
-    margin-left: 20%;
-    margin-right: 20%;
+    
     img {
       position: absolute;
       z-index: 10;
+      margin: 0;
+      transition: top 1s $animation-type,
+        left 1s $animation-type;
     }
     .image-top {
       //original size:  1000px x 520px
       width: 500px;
-      height: 360px;
-      top: -100px;
-      left: 180px;
+      height: 260px;
       z-index: 12;
     }
+
     .image-middle {
       // original size: 700x550
       width: 350px;
       height: 275px;
-      top: 150px;
-      left: 430px;
-      z-index: 11
+      z-index: 11;
     }
+
     .image-bottom {
       //original size: 550x450
       width: 275px;
       height: 225px;
-      left: 252px;
-      bottom: -22px;
       z-index: 10;
     }
   }
