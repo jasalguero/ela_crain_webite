@@ -110,3 +110,17 @@
     }
   }
 }
+
+.forms-wrapper {
+  display: flex;
+  border: 1px solid $grey;
+  margin-top: 115px;
+  section {   
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-bottom: 2.5%;
+  }
+  section:first-child {
+    border-right: 1px solid $grey;
+  }
+}

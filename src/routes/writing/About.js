@@ -32,15 +32,7 @@ class AboutRoute extends Component {
               </p>
             </section>
             {/* CONTACT SECTION  */}
-            <section>
-              <h1>Contact</h1>
-              <p>
-                You can hit me up with matters related to my writing, to ask for
-                advice, anything really! I will try to get back to you as fast
-                as possible.
-              </p>
-              <ContactForm />
-            </section>
+            <ContactForm />
             {/* REVIEWS */}
             <section>
               <h1>Reviews</h1>
