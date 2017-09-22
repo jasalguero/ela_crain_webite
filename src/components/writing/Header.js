@@ -46,8 +46,8 @@ class Header extends Component {
                 </span>
               </div>}
           </div>
-          <div className="logo" onClick={this.toggleSelector}>
-            <span>Ela Crain</span>
+          <div className="logo-container" onClick={this.toggleSelector}>
+            <span className="logo">Ela Crain</span>
           </div>
           <div className="links">
             <Link to="/writing/posts">Posts</Link>
