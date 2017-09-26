@@ -2,7 +2,7 @@
 
 .about {
   .container {
-    margin: 0 10%;
+    margin: 0 5% 0 10%;
     display: flex;
     overflow: hidden;
 
@@ -12,12 +12,13 @@
     }
 
     .right {
-      flex: 0 0 600px;
+      flex: 0 0 640px;
       overflow: hidden;
       
       img.portrait {
         position: fixed;
-        mix-blend-mode: lighten;
+        mix-blend-mode: lighten;  
+        right: 40px;
       } 
     }
 
@@ -26,10 +27,17 @@
     }
 
     .review {
-      font-weight: bold;
+      font-family: Lora;
       font-size: 27px;
       display: block;
       margin-bottom: 55px;
+
+      .author {
+        display: block;
+        font-family: Roboto;
+        font-size: 18px;
+        line-height: 2.0;
+      }
     }
   }
 }
