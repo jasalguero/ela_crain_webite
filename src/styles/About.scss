@@ -2,7 +2,7 @@
 
 .about {
   .container {
-    margin: 0 5% 0 10%;
+    margin: 0 5% 200px 10%;
     display: flex;
     overflow: hidden;
 
@@ -13,13 +13,17 @@
 
     .right {
       flex: 0 0 640px;
-      overflow: hidden;
-      
-      img.portrait {
-        position: fixed;
-        mix-blend-mode: lighten;  
-        right: 40px;
-      } 
+
+      .wrapper {
+        position: absolute;
+        margin-bottom: 200px;
+
+        img.portrait {
+          position: fixed;
+          mix-blend-mode: lighten;
+          right: 0;
+        }
+      }
     }
 
     section {

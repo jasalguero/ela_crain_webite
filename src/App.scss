@@ -22,3 +22,7 @@ h1 {
   font-weight: bold;
   font-size: 61px;
 }
+
+button:focus {
+  outline: none;
+}

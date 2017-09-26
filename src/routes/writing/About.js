@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../../components/writing/Header';
+import Footer from '../../components/writing/Footer';
 import ContactForm from '../../components/ContactForm';
 import Portrait from '../../images/writing-about.png'; // Tell Webpack this JS file uses this image
 
@@ -69,6 +70,7 @@ class AboutRoute extends Component {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

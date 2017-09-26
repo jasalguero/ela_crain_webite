@@ -3,4 +3,23 @@
 footer {
   width: 100%;
   height: 95px;
+  border-top: 1px solid $grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: Roboto;
+  z-index: 10;
+
+  .copyright {
+    color: $white;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .mentions {
+    display: inline-block;
+    margin-left: 20px;
+    color: $brownish-grey;
+  }
 }
