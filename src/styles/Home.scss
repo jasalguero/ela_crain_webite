@@ -1,39 +1,79 @@
 @import 'styles/vars.scss';
 
-.home .panel {
-  width: 50%;
-  float: left;
-  min-height: 100vh;
-  font-size: 60px;
+.home {
   display: flex;
-  align-items: center;
-  justify-content: center;
 
-  &.left {
-    background-color: $black;
-    color: $white;
+  .panel {
+    width: 50%;
+    float: left;
+    min-height: 100vh;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: flex $animation-duration $animation-type;
 
-    & .label:hover {
-      background-color: $white;
-      color: $black;
+    .label {
+      margin-top: 20px;
+      transition: margin-top $animation-duration $animation-type;
+
+      .sub {
+        font-family: Roboto;
+        font-size: 18px;
+        text-align: center;
+        width: 241px;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity $animation-duration $animation-type;
+      }
     }
-  }
 
-  &.right {
-    background-color: $white;
-    color: $black;
+    &:hover {
+      flex: 2;
+      .label {
+        margin-top: 0;
+      }
+      .sub {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
 
-    & .label:hover {
+    &.left {
+      flex: 1;
+      font-family: Roboto;
+      font-size: 61px;
+      font-weight: 900;
       background-color: $black;
       color: $white;
-    }
-  }
 
-  .label {
-    padding: 20px;
-    text-align: center;
-    &:hover {
-      cursor: pointer;
+      &:hover {
+        flex: 2;
+      }
+    }
+
+    &.right {
+      flex: 1;
+      background-color: $white;
+      color: $black;
+      font-family: Lora;
+      font-size: 61px;
+
+      .label .sub {
+        color: $black;
+      }
+
+      &:hover {
+        flex: 2;
+      }
+    }
+
+    .label {
+      padding: 20px;
+      text-align: center;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
