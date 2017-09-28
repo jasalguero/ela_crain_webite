@@ -1,0 +1,42 @@
+@import 'styles/vars.scss';
+
+.coaching {
+  .container {
+    margin: 0 5% 0 5%;
+
+    .coaching-hero {
+      padding: 177px 20% 135px 20%;
+      background-color: $black;
+      color: $white;
+      text-align: center;
+
+      .head {
+        font-family: Lora;
+        font-size: 61px;
+        line-height: 1.18;
+        letter-spacing: 1.2px;
+      }
+
+      .sub {
+        font-size: 18px;
+        margin-top: 28px;
+      }
+
+      button {
+        height: 45px;
+        background-color: $dark-sky-blue;
+        margin-top: 60px;
+        font-size: 18px;
+        text-align: left;
+        color: $white;
+        padding: 12px 29px;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($dark-sky-blue, 10%);
+        }
+      }
+    }
+  }
+}

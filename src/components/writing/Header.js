@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import HeaderSelector from '../HeaderSelector';
 import '../../styles/writing/Header.css';
 
 class Header extends Component {
@@ -16,18 +17,7 @@ class Header extends Component {
 
     return (
       <header>
-        <div
-          className={`section-selector ${this.state.showSelector
-            ? 'open'
-            : 'collapsed'}`}
-        >
-          <div className="writing-section section">
-            <Link to="/writing/posts">Writing</Link>
-          </div>
-          <div className="coaching-section section">
-            <Link to="/coaching">Coaching</Link>
-          </div>
-        </div>
+        <HeaderSelector showSelector={this.state.showSelector} />
         <div className="header-wrapper">
           <div className="icons-wrapper">
             {showLayoutIcons &&

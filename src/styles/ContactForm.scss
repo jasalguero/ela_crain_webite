@@ -1,6 +1,7 @@
 @import 'styles/vars.scss';
 
-form.contact-form, form.newsletter-form {
+form.contact-form,
+form.newsletter-form {
   label {
     display: block;
     font-size: 10px;
@@ -34,6 +35,42 @@ form.contact-form, form.newsletter-form {
     &:hover {
       cursor: pointer;
       border-bottom: 2px solid $white;
+    }
+  }
+
+  &.coaching {
+    input,
+    textarea {
+      color: $black;
+      border: 1px solid $black;
+      background-color: $white;
+
+      &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: $grayish;
+      }
+      &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $grayish;
+      }
+      &:-ms-input-placeholder {
+        /* IE 10+ */
+        color: $grayish;
+      }
+      &:-moz-placeholder {
+        /* Firefox 18- */
+        color: $grayish;
+      }
+    }
+  }
+
+  button {
+    background-color: $white;
+    color: $black;
+
+    &:hover {
+      cursor: pointer;
+      border-bottom: 2px solid $black;
     }
   }
 }

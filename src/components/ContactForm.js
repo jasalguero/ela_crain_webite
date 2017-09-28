@@ -19,7 +19,11 @@ class ContactForm extends Component {
           advice, anything really! I will try to get back to you as fast as
           possible.
         </p>
-        <form className="contact-form" to="/" onSubmit={this.handleSubmit}>
+        <form
+          className={'contact-form ' + this.props.type}
+          to="/"
+          onSubmit={this.handleSubmit}
+        >
           <label>YOUR EMAIL</label>
           <input type="text" placeholder="e.g. john@gmail.com" />
           <label>YOUR NAME</label>

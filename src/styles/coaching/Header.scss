@@ -1,0 +1,12 @@
+@import 'styles/vars.scss';
+@import '../writing/Header.scss';
+
+header.coaching .header-wrapper {
+  .links {
+    position: absolute;
+  }
+
+  .logo-container .logo {
+    background-image: url('../../images/ela_black.svg');
+  }
+}

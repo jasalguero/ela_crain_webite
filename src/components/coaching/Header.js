@@ -1,13 +1,34 @@
-import React from 'react';
-// import { Link } from 'react-router-dom';
-// import '../styles/Header.css';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import HeaderSelector from '../HeaderSelector';
+import '../../styles/coaching/Header.css';
 
-const Header = ({ section, onViewModeChange }) => {
-  return (
-    <header>
-      <div>Coaching</div>
-    </header>
-  );
-};
+class Header extends Component {
+  state = {
+    showSelector: false
+  };
+
+  toggleSelector = () => {
+    this.setState({ showSelector: !this.state.showSelector });
+  };
+
+  render() {
+    return (
+      <header className="coaching">
+        <HeaderSelector showSelector={this.state.showSelector} />
+        <div className="header-wrapper">
+          <div className="links">
+            <Link to="/coaching">Coaching</Link>
+            <Link to="/coaching/posts">Blog</Link>
+            <Link to="/coaching/about">About</Link>
+          </div>
+          <div className="logo-container" onClick={this.toggleSelector}>
+            <span className="logo">Ela Crain</span>
+          </div>
+        </div>
+      </header>
+    );
+  }
+}
 
 export default Header;
