@@ -14,7 +14,7 @@ class Header extends Component {
           <Link to="/writing/posts">Writing</Link>
         </div>
         <div className="coaching-section section">
-          <Link to="/coaching/coaching">Coaching</Link>
+          <Link to="/coaching">Coaching</Link>
         </div>
       </div>
     );

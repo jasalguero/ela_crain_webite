@@ -4,12 +4,31 @@
 .about.coaching {
   .container {
     margin-top: 55px;
-    background-color: $white;
 
-    h1 {
-      font-family: Lora;
-      font-size: 61px;
-      font-weight: 100;
+    .left {
+      flex: 0 0 640px;
+
+      .wrapper {
+        position: absolute;
+        mix-blend-mode: lighten;
+
+        img.portrait {
+          position: fixed;
+          mix-blend-mode: lighten;
+          
+        }
+      }
+    }
+
+    .right {
+      flex: 1 1 auto;
+      overflow: auto;
+
+      h1 {
+        font-family: Lora;
+        font-size: 61px;
+        font-weight: 100;
+      }
     }
   }
 }
