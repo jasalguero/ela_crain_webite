@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import ImageCollage from '../ImageCollage';
+import Header from '../../components/coaching/Header';
 import '../../styles/SinglePost.css';
 
 class SinglePost extends Component {
@@ -9,14 +9,14 @@ class SinglePost extends Component {
 
     return (
       <div className="single-post">
-        <ImageCollage title={post.title} />
+        <Header showLayoutIcons={true} onViewModeChange={this.changeViewMode} />
         <div className="title">
           {post.title}
         </div>
         <div className="excerpt">
           {post.excerpt}
         </div>
-        <Link className="read-more-link" to={`/writing/posts/${post.id}`}>
+        <Link className="read-more-link" to={`/coaching/posts/${post.id}`}>
           Read More
         </Link>
       </div>

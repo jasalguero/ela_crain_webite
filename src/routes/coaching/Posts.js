@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../../components/coaching/Header';
 import OverviewList from '../../components/coaching/OverviewList';
 import SingleList from '../../components/coaching/SingleList';
 import '../../styles/Coaching.css';
@@ -14,9 +13,9 @@ class PostsRoute extends Component {
   };
 
   render() {
+    debugger;
     return (
       <div className="coaching">
-        <Header showLayoutIcons={true} onViewModeChange={this.changeViewMode} />
         <div className="content-wrapper">
           {this.state.viewMode === 'single'
             ? <SingleList items={this.props.posts} />

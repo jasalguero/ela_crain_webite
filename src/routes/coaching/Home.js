@@ -4,37 +4,30 @@ import Posts from './Posts';
 import Post from './Post';
 import About from './About';
 import Coaching from './Coaching';
-import * as API from '../../utils/CoachingAPI';
 
 import '../../styles/Coaching.css';
 
 class CoachingRoute extends Component {
-  state = {
-    posts: []
-  };
-
-  componentDidMount() {
-    API.getAllPosts().then(posts => {
-      this.setState({ posts });
-    });
-  }
-
   render() {
     return (
       <div className="coaching">
         <Route
           exact
           path="/coaching/posts"
-          render={() => <Posts posts={this.state.posts} />}
+          render={() => <Posts posts={this.props.posts} />}
         />
         <Route
           exact
           path="/coaching/posts/:id"
           render={({ match }) => {
-            return <Post posts={this.state.posts} match={match} />;
+            return <Post posts={this.props.posts} match={match} />;
           }}
         />
-        <Route exact path="/coaching" component={Coaching} />
+        <Route
+          exact
+          path="/coaching"
+          render={() => <Coaching events={this.props.events} />}
+        />
         <Route path="/coaching/about" component={About} />
       </div>
     );
