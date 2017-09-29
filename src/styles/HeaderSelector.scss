@@ -3,12 +3,6 @@
 .section-selector {
   display: flex;
   align-items: center;
-  margin-top: -180px;
-  transition: margin-top $animation-duration $animation-type;
-
-  &.open {
-    margin-top: 0;
-  }
 
   .section {
     flex: 1;

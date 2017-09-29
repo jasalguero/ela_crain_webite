@@ -3,6 +3,12 @@
 header {
   width: 100%;
   height: 260px;
+  margin-top: -180px;
+  transition: margin-top $animation-duration $animation-type;
+
+  &.open {
+    margin-top: 0;
+  }
 
   .header-wrapper {
     height: 80px;

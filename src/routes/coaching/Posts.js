@@ -13,7 +13,6 @@ class PostsRoute extends Component {
   };
 
   render() {
-    debugger;
     return (
       <div className="coaching">
         <div className="content-wrapper">

@@ -5,11 +5,7 @@ import '../styles/HeaderSelector.css';
 class Header extends Component {
   render() {
     return (
-      <div
-        className={`section-selector ${this.props.showSelector
-          ? 'open'
-          : 'collapsed'}`}
-      >
+      <div className="section-selector">
         <div className="writing-section section">
           <Link to="/writing/posts">Writing</Link>
         </div>

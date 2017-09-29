@@ -14,8 +14,10 @@ class Header extends Component {
 
   render() {
     return (
-      <header className="coaching">
-        <HeaderSelector showSelector={this.state.showSelector} />
+      <header
+        className={`coaching ${this.state.showSelector ? 'open' : 'collapsed'}`}
+      >
+        <HeaderSelector />
         <div className="header-wrapper">
           <div className="links">
             <Link to="/coaching">Coaching</Link>

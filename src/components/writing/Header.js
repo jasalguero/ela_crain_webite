@@ -16,8 +16,10 @@ class Header extends Component {
     const { showLayoutIcons, onViewModeChange } = this.props;
 
     return (
-      <header>
-        <HeaderSelector showSelector={this.state.showSelector} />
+      <header
+        className={`writing ${this.state.showSelector ? 'open' : 'collapsed'}`}
+      >
+        <HeaderSelector />
         <div className="header-wrapper">
           <div className="icons-wrapper">
             {showLayoutIcons &&
