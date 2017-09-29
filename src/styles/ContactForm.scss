@@ -62,15 +62,14 @@ form.newsletter-form {
         color: $grayish;
       }
     }
-  }
+    button {
+      background-color: $white;
+      color: $black;
 
-  button {
-    background-color: $white;
-    color: $black;
-
-    &:hover {
-      cursor: pointer;
-      border-bottom: 2px solid $black;
+      &:hover {
+        cursor: pointer;
+        border-bottom: 2px solid $black;
+      }
     }
   }
 }

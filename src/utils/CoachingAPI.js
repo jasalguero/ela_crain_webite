@@ -1,10 +1,10 @@
 //const api = "https://reactnd-books-api.udacity.com"
 const EVENTBRITE_URL = `https://www.eventbriteapi.com/v3/events/search/?organizer.id=14279858158&token=4EE6S6T6BO2ZFRBNCOLU`;
 
-// const headers = {
-//   Accept: "application/json",
-//   Authorization: token
-// };
+const headers = {
+  Accept: 'application/json'
+  // Authorization: token
+};
 
 //TODO: Implement API for Wordpress Writing posts
 
@@ -167,7 +167,7 @@ As we were about to leave the consultation room, he said quietly, “I haven't w
   );
 
 export const fetchEventbriteEvents = () => {
-  return fetch(`${EVENTBRITE_URL}`)
+  return fetch(`${EVENTBRITE_URL}`, { headers })
     .then(res => res.json())
     .then(data => data.events);
 };
