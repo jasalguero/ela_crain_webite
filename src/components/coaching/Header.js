@@ -13,6 +13,8 @@ class Header extends Component {
   };
 
   render() {
+    const { showLayoutIcons, onViewModeChange } = this.props;
+
     return (
       <header
         className={`coaching ${this.state.showSelector ? 'open' : 'collapsed'}`}
@@ -26,6 +28,23 @@ class Header extends Component {
           </div>
           <div className="logo-container" onClick={this.toggleSelector}>
             <span className="logo">Ela Crain</span>
+          </div>
+          <div className="icons-wrapper">
+            {showLayoutIcons &&
+              <div className="icons left reading-styles">
+                <span
+                  className="icon single"
+                  onClick={() => onViewModeChange('single')}
+                >
+                  Single
+                </span>
+                <span
+                  className="icon overview"
+                  onClick={() => onViewModeChange('overview')}
+                >
+                  Overview
+                </span>
+              </div>}
           </div>
         </div>
       </header>

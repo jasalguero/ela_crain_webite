@@ -7,7 +7,7 @@ import WritingAbout from './About';
 class WritingRoute extends Component {
   render() {
     return (
-      <div className="writing">
+      <div className="home-writing">
         <Route
           exact
           path="/writing/posts"
