@@ -1,5 +1,4 @@
-//const api = "https://reactnd-books-api.udacity.com"
-const EVENTBRITE_URL = `https://www.eventbriteapi.com/v3/events/search/?organizer.id=14279858158&token=4EE6S6T6BO2ZFRBNCOLU`;
+const EVENTBRITE_URL = `https://www.eventbriteapi.com/v3/events/search/?organizer.id=14279858158&token=4EE6S6T6BO2ZFRBNCOLU&expand=venue`;
 
 const headers = {
   Accept: 'application/json'

@@ -20,7 +20,7 @@ class CoachingRoute extends Component {
               help you reaching the next step in your life or career.
             </div>
           </div>
-          <WorkshopList />
+          <WorkshopList events={this.props.events} />
         </div>
         <Footer />
       </div>

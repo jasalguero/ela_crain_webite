@@ -8,7 +8,6 @@
   .image {
     min-width: 288px;
     height: 384px;
-    background-color: $black;
   }
 
   .info {
@@ -39,6 +38,11 @@
       color: $white;
       border: none;
       margin-top: 29px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lighten($black, 10%); 
+      }
     }
 
     .seats {
