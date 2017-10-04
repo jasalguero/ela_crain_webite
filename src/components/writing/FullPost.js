@@ -8,6 +8,10 @@ import '../../styles/FullPost.css';
 class FullPost extends Component {
   render() {
     const post = this.props.post;
+    // get the first sentence of the content
+    const head = post.content.split('.')[0].replace(/(<([^>]+)>)/gi, '');
+    // set the content to everything except the first sentence
+    const text = post.content.split('.').slice(1);
     return (
       <div>
         <div className="full-post">
@@ -16,18 +20,14 @@ class FullPost extends Component {
             {post.title}
           </div>
           <div className="excerpt">
-            {post.excerpt}
+            {post.fields && post.fields.excerpt}
           </div>
           <div className="comment">
-            {post.comment}
+            {post.fields && post.fields.comment}
           </div>
-          {post.audio && <AudioWidget data={post.audio} />}
-          <div className="head">
-            {post.head}
-          </div>
-          <div className="content">
-            {post.content}
-          </div>
+          {post.fields.audio && <AudioWidget data={post.fields.audio} />}
+          <div className="head" dangerouslySetInnerHTML={{ __html: head }} />
+          <div className="content" dangerouslySetInnerHTML={{ __html: text }} />
         </div>
         <div className="forms-wrapper">
           <ContactForm />

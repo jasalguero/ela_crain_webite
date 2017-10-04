@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/writing/Header';
 import FullPost from '../../components/writing/FullPost';
 import PostHeader from '../../components/writing/PostHeader';
+import Footer from '../../components/writing/Footer';
 
 import '../../styles/FullPostNavigation.css';
 
@@ -101,6 +102,7 @@ class PostRoute extends Component {
             : <h1>Post doesn't exist</h1>}
         </div>
         {this.getNavNext()}
+        <Footer />
       </div>
     );
   }

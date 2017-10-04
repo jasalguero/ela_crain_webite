@@ -13,8 +13,8 @@ class SinglePost extends Component {
         <div className="title">
           {post.title}
         </div>
-        <div className="excerpt">
-          {post.excerpt}
+        <div className="headline">
+          {post.fields && post.fields.headline}
         </div>
         <Link className="read-more-link" to={`/writing/posts/${post.id}`}>
           Read More
