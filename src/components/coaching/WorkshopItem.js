@@ -4,7 +4,6 @@ import '../../styles/coaching/WorkshopItem.css';
 
 const WorkshopList = props => {
   const event = props.event;
-  console.log('description', event.description.html);
   return (
     <div className="workshop-item">
       <div

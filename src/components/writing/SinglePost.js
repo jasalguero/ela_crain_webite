@@ -9,7 +9,7 @@ class SinglePost extends Component {
 
     return (
       <div className="single-post">
-        <ImageCollage title={post.title} />
+        {post.id && <ImageCollage post={post} />}
         <div className="title">
           {post.title}
         </div>

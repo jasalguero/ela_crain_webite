@@ -1,10 +1,4 @@
 import React, { Component } from 'react';
-// import ImageTop from '../images/bom-top.png'; // Tell Webpack this JS file uses this image
-// import ImageMiddle from '../images/bom-middle.png'; // Tell Webpack this JS file uses this image
-// import ImageBottom from '../images/bom-bottom.png'; // Tell Webpack this JS file uses this image
-import ImageTop from '../images/ru-top.png'; // Tell Webpack this JS file uses this image
-import ImageMiddle from '../images/ru-middle.png'; // Tell Webpack this JS file uses this image
-import ImageBottom from '../images/ru-bottom.png'; // Tell Webpack this JS file uses this image
 import '../styles/ImageCollage.css';
 
 const CONSTS = {
@@ -78,7 +72,9 @@ class ImageCollage extends Component {
   }
 
   render() {
-    let { title } = this.props;
+    const { post } = this.props;
+    const title = post.title;
+    const { bottom_image, top_image, middle_image } = post.fields;
 
     return (
       <div className="collage-wrapper">
@@ -92,19 +88,19 @@ class ImageCollage extends Component {
               ref={image => {
                 this.topImage = image;
               }}
-              src={ImageTop}
+              src={top_image}
               alt={`${title}-top`}
               className="image-top"
               style={this.state.imageTopStyles}
             />
             <img
-              src={ImageMiddle}
+              src={middle_image}
               alt={`${title}-middle`}
               className="image-middle"
               style={this.state.imageMiddleStyles}
             />
             <img
-              src={ImageBottom}
+              src={bottom_image}
               alt={`${title}-bottom`}
               className="image-bottom"
               style={this.state.imageBottomStyles}

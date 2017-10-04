@@ -11,7 +11,7 @@ class FullPost extends Component {
     return (
       <div>
         <div className="full-post">
-          <ImageCollage title={post.title} />
+          {post.id && <ImageCollage post={post} />}
           <div className="title">
             {post.title}
           </div>
