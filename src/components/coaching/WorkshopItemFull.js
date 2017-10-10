@@ -15,22 +15,15 @@ const WorkshopList = props => {
           {moment(event.start.utc).format('dddd, Do MMMM YYYY')} |{' '}
           {event.venue.address.city}
         </div>
-        <div className="name">
-          {event.name.text}
-        </div>
+        <div className="name">{event.name.text}</div>
         <div
           className="description"
           dangerouslySetInnerHTML={{ __html: event.description.html }}
         />
-        {/* <div className="description">
-          {event.description.text}
-        </div> */}
         <a href={event.url} target="_blank">
           <button className="eventbrite-button">Book on Eventbrite</button>
         </a>
-        <div className="seats">
-          Only {event.capacity} Seats Available
-        </div>
+        <div className="seats">Only {event.capacity} Seats Available</div>
       </div>
     </div>
   );
