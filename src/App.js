@@ -7,6 +7,12 @@ import * as CoachingAPI from './utils/CoachingAPI';
 import * as WritingAPI from './utils/WritingAPI';
 import './App.css';
 
+//TODO: Hardcoded for now, figure out how to bring it from wordpress
+const COACHING_CATEGORY = 5;
+const WRITING_CATEGORY = 2;
+// const POEMS_CATEGORY = 3;
+// const STORIES_CATEGORY = 4;
+
 class App extends Component {
   state = {
     writingPosts: [],
@@ -25,8 +31,12 @@ class App extends Component {
     ]).then(results => {
       this.setState({
         events: results[0],
-        writingPosts: results[1],
-        coachingPosts: results[1],
+        writingPosts: results[1].filter(
+          p => p.categories.indexOf(WRITING_CATEGORY) !== -1
+        ),
+        coachingPosts: results[1].filter(
+          p => p.categories.indexOf(COACHING_CATEGORY) !== -1
+        ),
         status: 'ready'
       });
     });
@@ -42,11 +52,12 @@ class App extends Component {
         />
         <Route
           path="/coaching"
-          render={() =>
+          render={() => (
             <Coaching
               posts={this.state.coachingPosts}
               events={this.state.events}
-            />}
+            />
+          )}
         />
       </div>
     );

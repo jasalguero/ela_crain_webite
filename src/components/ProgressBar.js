@@ -18,13 +18,18 @@ class Header extends Component {
       html.scrollHeight,
       html.offsetHeight
     );
-    console.log('calculating doc height ', height);
+    // console.log('calculating doc height progress', height);
+    // substract the forms height
     return height;
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScrolling);
     this.setState({ max: this.calculateTotalHeight() });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScrolling);
   }
 
   handleScrolling = () => {
@@ -39,20 +44,17 @@ class Header extends Component {
         // );
 
         let progress = `${Math.round(totalViewed / docHeight * 10000) / 100}%`;
-        console.log(`Percentage: ${progress}`);
+        // console.log(`Percentage: ${progress}`);
         this.setState({ ticking: false, progress: progress });
       });
     }
     this.setState({ ticking: true });
   };
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScrolling);
-  }
-
   render() {
+    const { type = 'writing' } = this.props;
     return (
-      <div className="progress-bar">
+      <div className={`progress-bar ${type}`}>
         <div className="bar" style={{ width: this.state.progress }} />
       </div>
     );

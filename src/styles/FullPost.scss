@@ -1,4 +1,4 @@
-@import 'styles/vars.scss';
+@import "styles/vars.scss";
 
 .full-post-wrapper {
   display: flex;
@@ -86,7 +86,8 @@
   display: flex;
   border: 1px solid $grey;
   margin-top: 115px;
-  section {   
+  section {
+    flex: 1;
     padding-left: 10%;
     padding-right: 5%;
     padding-bottom: 2.5%;

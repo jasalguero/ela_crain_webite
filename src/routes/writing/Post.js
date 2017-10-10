@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../components/writing/Header';
 import FullPost from '../../components/writing/FullPost';
-import PostHeader from '../../components/writing/PostHeader';
+import PostHeader from '../../components/PostHeader';
 import Footer from '../../components/writing/Footer';
 
 import '../../styles/FullPostNavigation.css';
@@ -59,33 +59,31 @@ class PostRoute extends Component {
 
   getNavPrev() {
     return (
-      this.state.prevPost &&
-      <div className="post-navigation nav-prev">
-        <div className="nav-content">
-          <div className="post-title">
-            {this.state.prevPost.title}
+      this.state.prevPost && (
+        <div className="post-navigation nav-prev">
+          <div className="nav-content">
+            <div className="post-title">{this.state.prevPost.title}</div>
+            <Link to={`/writing/posts/${this.state.prevPost.id}`}>
+              <div className="link">Previous</div>
+            </Link>
           </div>
-          <Link to={`/writing/posts/${this.state.prevPost.id}`}>
-            <div className="link">Previous</div>
-          </Link>
         </div>
-      </div>
+      )
     );
   }
 
   getNavNext() {
     return (
-      this.state.nextPost &&
-      <div className="post-navigation nav-next">
-        <div className="nav-content">
-          <div className="post-title">
-            {this.state.nextPost.title}
+      this.state.nextPost && (
+        <div className="post-navigation nav-next">
+          <div className="nav-content">
+            <div className="post-title">{this.state.nextPost.title}</div>
+            <Link to={`/writing/posts/${this.state.nextPost.id}`}>
+              <div className="link">Next</div>
+            </Link>
           </div>
-          <Link to={`/writing/posts/${this.state.nextPost.id}`}>
-            <div className="link">Next</div>
-          </Link>
         </div>
-      </div>
+      )
     );
   }
 
@@ -97,9 +95,11 @@ class PostRoute extends Component {
         <PostHeader post={post} />
         {this.getNavPrev()}
         <div className="full-post-wrapper">
-          {this.state.post
-            ? <FullPost post={post} />
-            : <h1>Post doesn't exist</h1>}
+          {this.state.post ? (
+            <FullPost post={post} />
+          ) : (
+            <h1>Post doesn't exist</h1>
+          )}
         </div>
         {this.getNavNext()}
         <Footer />

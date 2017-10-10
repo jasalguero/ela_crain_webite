@@ -1,5 +1,3 @@
-//const api = "https://reactnd-books-api.udacity.com"
-
 const WP_API =
   'http://www.elacrain.com/wp-json/wp/v2/posts?fields=id,content,title,status,categories,tags,acf';
 
@@ -11,18 +9,20 @@ const headers = {
 //TODO: Implement API for Wordpress Writing posts
 
 export const getAllPosts = () => {
-  return fetch(`${WP_API}`, { headers }).then(res => res.json()).then(data =>
-    data.map(post => {
-      return {
-        id: post.id,
-        title: post.title.rendered,
-        excerpt: post.excerpt,
-        content: post.content.rendered,
-        status: post.status,
-        tags: post.tags,
-        categories: post.categories,
-        fields: post.acf
-      };
-    })
-  );
+  return fetch(`${WP_API}`, { headers })
+    .then(res => res.json())
+    .then(data =>
+      data.map(post => {
+        return {
+          id: post.id,
+          title: post.title.rendered,
+          excerpt: post.excerpt,
+          content: post.content.rendered,
+          status: post.status,
+          tags: post.tags,
+          categories: post.categories,
+          fields: post.acf
+        };
+      })
+    );
 };

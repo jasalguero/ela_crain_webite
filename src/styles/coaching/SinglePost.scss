@@ -1,5 +1,5 @@
-@import 'styles/vars.scss';
-@import '../SinglePost.scss';
+@import "styles/vars.scss";
+@import "../SinglePost.scss";
 
 .single-post.coaching {
   min-height: 100vh;
@@ -15,5 +15,11 @@
     font-family: Lora;
     font-size: 40px;
     text-align: center;
+    margin: 0 30%;
+    font-weight: 100;
+  }
+
+  .read-more-link {
+    margin-top: 59px;
   }
 }

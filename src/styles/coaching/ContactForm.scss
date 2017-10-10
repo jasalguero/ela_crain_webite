@@ -1,9 +1,11 @@
 @import "styles/vars.scss";
 
-.newsletter-form.coaching {
+.newsletter-form.coaching,
+.contact-form.coaching {
   h1 {
     font-family: Lora;
     font-size: 61px;
+    font-weight: 100;
   }
 
   input,

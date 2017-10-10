@@ -63,7 +63,7 @@ class CoachingRoute extends Component {
 
           {/* NEWSLETTER FORM */}
           <div className="form-wrapper">
-            <NewsletterForm className="coaching" />
+            <NewsletterForm type="coaching" />
           </div>
         </div>
         <Footer />

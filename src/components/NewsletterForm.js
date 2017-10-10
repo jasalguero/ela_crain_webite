@@ -68,7 +68,7 @@ class NewsletterForm extends Component {
 
   render() {
     return (
-      <section className={`newsletter-form ${this.props.className}`}>
+      <section className={`newsletter-form ${this.props.type}`}>
         <form to="/" onSubmit={this.handleSubmit}>
           <h1>Newsletter</h1>
           <p className="sub">

@@ -5,21 +5,21 @@ import '../../styles/coaching/SinglePost.css';
 
 class SinglePost extends Component {
   render() {
-    const post = this.props.post;
+    const { post } = this.props;
+    const image_url = post.fields && post.fields.image_url;
+    const labels = post.fields && post.fields.labels;
 
     return (
       <div
         className="single-post coaching"
         style={{
-          background: `url("https://raw.githubusercontent.com/jasalguero/ela_crain_webite/ea24d97b/src/images/coaching-post-sample.jpg") no-repeat center center fixed`,
+          background: `url("${image_url}") no-repeat center center fixed`,
           backgroundSize: 'cover'
         }}
       >
         <Header showLayoutIcons={true} onViewModeChange={this.changeViewMode} />
-        <div className="labels">Life, Love</div>
-        <div className="title">
-          {post.title}
-        </div>
+        <div className="labels">{labels}</div>
+        <div className="title">{post.title}</div>
         <Link className="read-more-link" to={`/coaching/posts/${post.id}`}>
           Read More
         </Link>

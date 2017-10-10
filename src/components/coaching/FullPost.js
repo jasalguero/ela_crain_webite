@@ -1,37 +1,26 @@
 import React, { Component } from 'react';
 import ContactForm from '../../components/ContactForm';
 import NewsletterForm from '../../components/NewsletterForm';
-import AudioWidget from '../AudioWidget';
-import ImageCollage from '../ImageCollage';
-import '../../styles/FullPost.css';
+import '../../styles/coaching/FullPost.css';
 
 class FullPost extends Component {
   render() {
-    const post = this.props.post;
+    const { post } = this.props;
+    const { image_url, labels } = post.fields;
+
     return (
       <div>
-        <div className="full-post">
-          {post.id && <ImageCollage post={post} />}
-          <div className="title">
-            {post.title}
-          </div>
-          <div className="excerpt">
-            {post.excerpt}
-          </div>
-          <div className="comment">
-            {post.comment}
-          </div>
-          {post.audio && <AudioWidget data={post.audio} />}
-          <div className="head">
-            {post.head}
-          </div>
-          <div className="content">
-            {post.content}
-          </div>
+        <div className="full-post coaching">
+          <img className="image-header" src={`${image_url}`} alt={post.title} />
+          <div className="labels">{labels}</div>
+          <div
+            className="content"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
         </div>
         <div className="forms-wrapper">
-          <ContactForm />
-          <NewsletterForm />
+          <ContactForm type="coaching" />
+          <NewsletterForm type="coaching" />
         </div>
       </div>
     );

@@ -28,4 +28,18 @@
   &::-moz-progress-bar {
     background-color: $white;
   }
+
+  &.coaching {
+    .bar {
+      background-color: $black;
+    }
+
+    &::-webkit-progress-value {
+      background-color: $black;
+    }
+  
+    &::-moz-progress-bar {
+      background-color: $black;
+    }
+  }
 }

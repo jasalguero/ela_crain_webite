@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import serializeForm from 'form-serialize';
 import '../styles/ContactForm.css';
+import '../styles/coaching/ContactForm.css';
 
 class ContactForm extends Component {
   handleSubmit = e => {
@@ -12,18 +13,14 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <section>
-        <h1>Contact</h1>
-        <p>
-          You can hit me up with matters related to my writing, to ask for
-          advice, anything really! I will try to get back to you as fast as
-          possible.
-        </p>
-        <form
-          className={'contact-form ' + this.props.type}
-          to="/"
-          onSubmit={this.handleSubmit}
-        >
+      <section className={`contact-form ${this.props.type}`}>
+        <form to="/" onSubmit={this.handleSubmit}>
+          <h1>Contact</h1>
+          <p>
+            You can hit me up with matters related to my writing, to ask for
+            advice, anything really! I will try to get back to you as fast as
+            possible.
+          </p>
           <label>YOUR EMAIL</label>
           <input type="text" placeholder="e.g. john@gmail.com" />
           <label>YOUR NAME</label>
