@@ -13,6 +13,7 @@ class FullPost extends Component {
         <div className="full-post coaching">
           <img className="image-header" src={`${image_url}`} alt={post.title} />
           <div className="labels">{labels}</div>
+          <div className="title">{post.title}</div>
           <div
             className="content"
             dangerouslySetInnerHTML={{ __html: post.content }}
