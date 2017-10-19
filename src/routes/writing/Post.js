@@ -62,8 +62,8 @@ class PostRoute extends Component {
       this.state.prevPost && (
         <div className="post-navigation nav-prev">
           <div className="nav-content">
-            <div className="post-title">{this.state.prevPost.title}</div>
             <Link to={`/writing/posts/${this.state.prevPost.id}`}>
+              <div className="post-title">{this.state.prevPost.title}</div>
               <div className="link">Previous</div>
             </Link>
           </div>
@@ -77,8 +77,8 @@ class PostRoute extends Component {
       this.state.nextPost && (
         <div className="post-navigation nav-next">
           <div className="nav-content">
-            <div className="post-title">{this.state.nextPost.title}</div>
             <Link to={`/writing/posts/${this.state.nextPost.id}`}>
+              <div className="post-title">{this.state.nextPost.title}</div>
               <div className="link">Next</div>
             </Link>
           </div>

@@ -11,7 +11,6 @@ class SinglePost extends Component {
 
     return (
       <div className="single-post">
-        <Header showLayoutIcons={true} onViewModeChange={this.changeViewMode} />
         <div className="labels">{labels}</div>
         <div className="image-collage">
           <div className="image-wrapper">

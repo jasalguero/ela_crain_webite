@@ -8,16 +8,14 @@ class PostList extends Component {
 
     return (
       <ul className="overview-post-list">
-        {posts.map(post =>
+        {posts.map(post => (
           <li key={post.title} className="post">
             <Link to={`/writing/posts/${post.id}`}>
-              <div className="title">
-                {post.title}
-              </div>
-              <div className="info">Short Story, 2016</div>
+              <div className="title">{post.title}</div>
+              {/* <div className="info">Short Story, 2016</div> */}
             </Link>
           </li>
-        )}
+        ))}
       </ul>
     );
   }
