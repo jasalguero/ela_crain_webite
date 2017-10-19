@@ -1,14 +1,21 @@
 import React from 'react';
 import moment from 'moment';
 import '../../styles/coaching/WorkshopItem.css';
+import { Link } from 'react-router-dom';
 
 const WorkshopList = props => {
   const event = props.event;
   return (
     <div className="workshop-item">
+      <Link to={`/coaching`}>
+        <span>Back</span>
+      </Link>
       <div
         className="image"
-        style={{ background: `url(${event.logo.url}) center center no-repeat` }}
+        style={{
+          background: `url(${event.logo &&
+            event.logo.url}) center center no-repeat`
+        }}
       />
       <div className="info">
         <div className="date">
