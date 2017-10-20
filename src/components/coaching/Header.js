@@ -13,7 +13,7 @@ class Header extends Component {
   };
 
   render() {
-    const { showLayoutIcons, onViewModeChange } = this.props;
+    const { showLayoutIcons, onViewModeChange, viewMode } = this.props;
 
     return (
       <header
@@ -30,21 +30,26 @@ class Header extends Component {
             <span className="logo">Ela Crain</span>
           </div>
           <div className="icons-wrapper">
-            {showLayoutIcons &&
+            {showLayoutIcons && (
               <div className="icons left reading-styles">
                 <span
-                  className="icon single"
+                  className={`icon single ${viewMode === 'single'
+                    ? 'selected'
+                    : null}`}
                   onClick={() => onViewModeChange('single')}
                 >
                   Single
                 </span>
                 <span
-                  className="icon overview"
+                  className={`icon overview ${viewMode === 'overview'
+                    ? 'selected'
+                    : null}`}
                   onClick={() => onViewModeChange('overview')}
                 >
                   Overview
                 </span>
-              </div>}
+              </div>
+            )}
           </div>
         </div>
       </header>

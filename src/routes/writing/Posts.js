@@ -16,11 +16,17 @@ class PostsRoute extends Component {
   render() {
     return (
       <div className="writing">
-        <Header showLayoutIcons={true} onViewModeChange={this.changeViewMode} />
+        <Header
+          showLayoutIcons={true}
+          onViewModeChange={this.changeViewMode}
+          viewMode={this.state.viewMode}
+        />
         <div className="content-wrapper">
-          {this.state.viewMode === 'single'
-            ? <SingleList items={this.props.posts} />
-            : <OverviewList items={this.props.posts} />}
+          {this.state.viewMode === 'single' ? (
+            <SingleList items={this.props.posts} />
+          ) : (
+            <OverviewList items={this.props.posts} />
+          )}
         </div>
       </div>
     );

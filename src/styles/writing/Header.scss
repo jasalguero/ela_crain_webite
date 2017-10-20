@@ -40,12 +40,20 @@ header {
           margin-right: 19px;
           cursor: pointer;
 
-          &.overview {
-            background-image: url('../../icons/overview.svg');
+          &.selected {
+            &.overview {
+              background-image: url('../../icons/black_multiple_filled.svg');
+            }
+            &.single {
+              background-image: url('../../icons/black_single_filled.svg');
+            }
           }
 
+          &.overview {
+            background-image: url('../../icons/black_multiple_empty.svg');
+          }
           &.single {
-            background-image: url('../../icons/single.svg');
+            background-image: url('../../icons/black_single_empty.svg');
           }
         }
       }
