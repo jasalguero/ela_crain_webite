@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import HeaderSelector from '../HeaderSelector';
 import '../../styles/coaching/Header.css';
 
@@ -19,6 +20,12 @@ class Header extends Component {
       <header
         className={`coaching ${this.state.showSelector ? 'open' : 'collapsed'}`}
       >
+        <Helmet>
+          <link
+            rel="shortcut icon"
+            href={require('../../icons/favicon_white.png')}
+          />
+        </Helmet>
         <HeaderSelector />
         <div className="header-wrapper">
           <div className="links">
