@@ -17,11 +17,14 @@ class CoachingRoute extends Component {
           {/* HERO */}
           <div className="coaching-hero">
             <div className="head">
-              Fight your inner fears and become your best self.
+              Discover your purpose. <br />
+              Open up with trust. <br />
+              Play with life.
             </div>
             <div className="sub">
-              Offering a broad range of workshops and coaching events, Ela will
-              help you reaching the next step in your life or career.
+              I help people to become top-performers and rebels with a cause.{' '}
+              <br />
+              Join me to transform your career and connect with your creativity.
             </div>
           </div>
 
