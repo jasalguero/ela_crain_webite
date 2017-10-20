@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../../components/coaching/Header';
 import '../../styles/coaching/SinglePost.css';
 
 class SinglePost extends Component {

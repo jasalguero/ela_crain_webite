@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../styles/coaching/WorkshopList.css';
-import moment from 'moment';
 import WorkshopPreview from './WorkshopPreview';
 
 const WorkshopList = props => {
