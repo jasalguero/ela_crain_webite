@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 
 import '../styles/Home.css';
 
@@ -8,10 +7,6 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <Helmet>
-          <link rel="shortcut icon" href={require('../icons/favicon.png')} />
-        </Helmet>
-
         <div className="left panel">
           <div className="label">
             <Link to="/writing/posts">Writing</Link>
