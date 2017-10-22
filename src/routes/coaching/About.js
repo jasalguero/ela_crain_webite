@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from '../../components/coaching/Header';
 import Footer from '../../components/coaching/Footer';
 import ContactForm from '../../components/ContactForm';
-import Portrait from '../../images/coaching-about.png'; // Tell Webpack this JS file uses this image
 
 import '../../styles/coaching/About.css';
 
@@ -15,7 +14,7 @@ class AboutRoute extends Component {
           <div className="left">
             <div className="wrapper">
               <img
-                src={Portrait}
+                src={require('../../images/coaching-about.jpg')}
                 alt="Ela Crain"
                 className="portrait"
                 width="504px"
