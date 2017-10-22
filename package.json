@@ -2,7 +2,7 @@
   "name": "ela_crain_fe",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://elacrain.com/web",
+  "homepage": "http://elacrain.com/",
   "dependencies": {
     "form-serialize": "^0.7.2",
     "husky": "^0.14.3",

@@ -11,7 +11,8 @@ class Home extends Component {
           <div className="label">
             <Link to="/writing/posts">Writing</Link>
             <div className="sub">
-              Explore a collection of my short stories and poems.
+              I refuse to memorize while I can discover. <br />
+              I refuse to fit in while I can inspire.
             </div>
           </div>
         </div>
@@ -20,7 +21,8 @@ class Home extends Component {
           <div className="label">
             <Link to="/coaching">Coaching</Link>
             <div className="sub">
-              Discover my latest blog posts and join my workshops.
+              I create freedom of self-expression. <br />
+              I create unity in diversity.
             </div>
           </div>
         </div>

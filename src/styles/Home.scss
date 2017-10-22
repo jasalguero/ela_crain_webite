@@ -18,10 +18,10 @@
       transition: margin-top $home-animation-duration $animation-type;
 
       .sub {
+        padding-top: 5px;
         font-family: Roboto;
         font-size: 18px;
         text-align: center;
-        width: 241px;
         visibility: hidden;
         opacity: 0;
         transition: opacity $home-animation-duration $animation-type;
