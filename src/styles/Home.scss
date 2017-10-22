@@ -11,11 +11,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: flex $animation-duration $animation-type;
+    transition: flex $home-animation-duration $animation-type;
 
     .label {
       margin-top: 20px;
-      transition: margin-top $animation-duration $animation-type;
+      transition: margin-top $home-animation-duration $animation-type;
 
       .sub {
         font-family: Roboto;
@@ -24,7 +24,7 @@
         width: 241px;
         visibility: hidden;
         opacity: 0;
-        transition: opacity $animation-duration $animation-type;
+        transition: opacity $home-animation-duration $animation-type;
       }
     }
 
@@ -40,7 +40,7 @@
     }
 
     &.left {
-      flex: 1;
+      flex: 9;
       font-family: Roboto;
       font-size: 61px;
       font-weight: 900;
@@ -48,12 +48,12 @@
       color: $white;
 
       &:hover {
-        flex: 2;
+        flex: 10;
       }
     }
 
     &.right {
-      flex: 1;
+      flex: 9;
       background-color: $white;
       color: $black;
       font-family: Lora;
@@ -64,7 +64,7 @@
       }
 
       &:hover {
-        flex: 2;
+        flex: 10;
       }
     }
 
