@@ -50,16 +50,20 @@ class NewsletterForm extends Component {
                 status: 'error',
                 msg: err
               });
+              alert(err.message);
             } else if (data.result !== 'success') {
               this.setState({
                 status: 'error',
                 msg: data.msg
               });
+              alert(data.msg);
             } else {
               this.setState({
                 status: 'success',
                 msg: data.msg
               });
+              alert('Thanks!');
+              e.target.reset();
             }
           }
         )
@@ -71,11 +75,6 @@ class NewsletterForm extends Component {
       <section className={`newsletter-form ${this.props.type}`}>
         <form to="/" onSubmit={this.handleSubmit}>
           <h1>Newsletter</h1>
-          <p className="sub">
-            You can hit me up with matters related to my writing, to ask for
-            advice, anything really! I will try to get back to you as fast as
-            possible.
-          </p>
           <label>YOUR EMAIL</label>
           <input type="text" name="email" placeholder="e.g. john@gmail.com" />
           <label>YOUR NAME</label>

@@ -11,7 +11,22 @@ class Header extends Component {
           Impressum
         </Link>
         <span className="mentions">
-          Design by freaksofnatu.re Coded by José
+          Design by
+          <a
+            href="http://freaksofnatu.re"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            freaksofnatu.re
+          </a>{' '}
+          | Coded by José and{' '}
+          <a
+            href="http://www.enricoscherlies.de"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Enrico
+          </a>
         </span>
       </footer>
     );

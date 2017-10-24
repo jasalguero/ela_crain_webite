@@ -8,30 +8,26 @@ const WorkshopList = props => {
       <div className="items">
         <div className="item">
           <div className="testimonial">
-            “If you wear clothes that don't suit you, you're a fashion victim.
-            You have to wear clothes that make you look better.”
+            “Ela is very good at facilitating and leading the group, while
+            holding the space where everyone can speak openly.”
           </div>
-          <div className="author">
-            Jose Salguero, Frontend Developer | Berlin
-          </div>
+          <div className="author">Johanna Eckart</div>
         </div>
         <div className="item">
           <div className="testimonial">
-            “If you wear clothes that don't suit you, you're a fashion victim.
-            You have to wear clothes that make you look better.”
+            “Ela is a great coach! She a created a safe and productive
+            environment for us to talk about our problems.”
           </div>
-          <div className="author">
-            Jose Salguero, Frontend Developer | Berlin
-          </div>
+          <div className="author">Karim Elbenower</div>
         </div>
         <div className="item">
           <div className="testimonial">
-            “If you wear clothes that don't suit you, you're a fashion victim.
-            You have to wear clothes that make you look better.”
+            “There are many ‘aha’ moments at Ela’s workshops. She can take
+            something you resent and turn it into something you feel
+            affectionate for. Once you see things that way, they stop having
+            power over you.”
           </div>
-          <div className="author">
-            Jose Salguero, Frontend Developer | Berlin
-          </div>
+          <div className="author">Jose Salguero</div>
         </div>
       </div>
     </div>
