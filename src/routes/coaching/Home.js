@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Posts from './Posts';
 import Post from './Post';
+import Event from './Event';
 import About from './About';
 import Coaching from './Coaching';
 
@@ -11,6 +12,14 @@ class CoachingRoute extends Component {
   render() {
     return (
       <div className="coaching">
+        <Route
+          exact
+          path="/coaching/events/:id"
+          onUpdate={() => window.scrollTo(0, 0)}
+          render={({ match }) => {
+            return <Event events={this.props.events} match={match} />;
+          }}
+        />
         <Route
           exact
           path="/coaching/posts"

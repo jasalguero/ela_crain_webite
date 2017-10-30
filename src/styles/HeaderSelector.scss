@@ -5,7 +5,7 @@
   align-items: center;
 
   .section {
-    flex: 1;
+    flex: 9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,7 @@
     transition: flex $animation-duration $animation-type;
 
     &:hover {
-      flex: 2;
+      flex: 10;
     }
   }
 

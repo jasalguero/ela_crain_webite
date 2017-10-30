@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../../components/coaching/Header';
 import '../../styles/coaching/SinglePost.css';
 
 class SinglePost extends Component {
@@ -10,15 +9,18 @@ class SinglePost extends Component {
     const labels = post.fields && post.fields.labels;
 
     return (
-      <div
-        className="single-post coaching"
-        style={{
-          background: `url("${image_url}") no-repeat center center fixed`,
-          backgroundSize: 'cover'
-        }}
-      >
-        <Header showLayoutIcons={true} onViewModeChange={this.changeViewMode} />
+      <div className="single-post">
         <div className="labels">{labels}</div>
+        <div className="image-collage">
+          <div className="image-wrapper">
+            <img
+              src={image_url}
+              alt={`${post.title}-top`}
+              className=""
+              style={{ width: '100%' }}
+            />
+          </div>
+        </div>
         <div className="title">{post.title}</div>
         <Link className="read-more-link" to={`/coaching/posts/${post.id}`}>
           Read More

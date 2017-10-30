@@ -3,24 +3,29 @@
 .coaching {
   .container {
     .coaching-hero {
-      padding: 177px 0 135px 0;
+      padding: 124px 0 200px 0;
+      background-image: url("../../images/coaching-hero.png");
+      background-position: center;
+      background-size: cover;
+      min-height: 640px;
       background-color: $black;
       color: $white;
-      text-align: center;
-
+      text-align: left;
+      
       .head {
-        margin: 0 20%;
+        margin: 0 6%;
+        width: 60vw;
         font-family: Lora;
         font-size: 61px;
         line-height: 1.18;
         letter-spacing: 1.2px;
       }
-
+      
       .sub {
-        width: 476px;
+        margin: 0 6%;
+        width: 60vw;
         font-size: 18px;
-        margin: 28px 32% 0 32%;
-        text-align: center;
+        // margin: 28px 32% 0 32%;
       }
     }
 

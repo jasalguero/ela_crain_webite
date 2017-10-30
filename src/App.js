@@ -25,16 +25,18 @@ class App extends Component {
    * Retrieve all the data
    */
   componentDidMount() {
-    Promise.all([
-      CoachingAPI.fetchEventbriteEvents(),
-      WritingAPI.getAllPosts()
-    ]).then(results => {
+    Promise.all([CoachingAPI.fetchEventbriteEvents()]).then(results => {
       this.setState({
         events: results[0],
-        writingPosts: results[1].filter(
+        status: 'ready'
+      });
+    });
+    Promise.all([WritingAPI.getAllPosts()]).then(results => {
+      this.setState({
+        writingPosts: results[0].filter(
           p => p.categories.indexOf(WRITING_CATEGORY) !== -1
         ),
-        coachingPosts: results[1].filter(
+        coachingPosts: results[0].filter(
           p => p.categories.indexOf(COACHING_CATEGORY) !== -1
         ),
         status: 'ready'

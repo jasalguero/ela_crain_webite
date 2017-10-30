@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import HeaderSelector from '../HeaderSelector';
 import '../../styles/coaching/Header.css';
 
@@ -13,12 +14,18 @@ class Header extends Component {
   };
 
   render() {
-    const { showLayoutIcons, onViewModeChange } = this.props;
+    const { showLayoutIcons, onViewModeChange, viewMode } = this.props;
 
     return (
       <header
         className={`coaching ${this.state.showSelector ? 'open' : 'collapsed'}`}
       >
+        <Helmet>
+          <link
+            rel="shortcut icon"
+            href={require('../../icons/favicon_white.png')}
+          />
+        </Helmet>
         <HeaderSelector />
         <div className="header-wrapper">
           <div className="links">
@@ -30,21 +37,26 @@ class Header extends Component {
             <span className="logo">Ela Crain</span>
           </div>
           <div className="icons-wrapper">
-            {showLayoutIcons &&
+            {showLayoutIcons && (
               <div className="icons left reading-styles">
                 <span
-                  className="icon single"
+                  className={`icon single ${viewMode === 'single'
+                    ? 'selected'
+                    : null}`}
                   onClick={() => onViewModeChange('single')}
                 >
                   Single
                 </span>
                 <span
-                  className="icon overview"
+                  className={`icon overview ${viewMode === 'overview'
+                    ? 'selected'
+                    : null}`}
                   onClick={() => onViewModeChange('overview')}
                 >
                   Overview
                 </span>
-              </div>}
+              </div>
+            )}
           </div>
         </div>
       </header>

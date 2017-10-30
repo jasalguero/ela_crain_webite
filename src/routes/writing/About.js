@@ -17,19 +17,44 @@ class AboutRoute extends Component {
             <section>
               <h1>About</h1>
               <p>
-                I still appreciate individuality. Style is much more interesting
-                than fashion, really. Over the years I have learned that what is
-                important in a dress is the woman who is wearing it. My shows
-                are about the complete woman who swallows it all. It’s a
-                question of survival.
-              </p>
-              <p>
-                My aim is to make the poor look rich and the rich look poor. I
-                have my favourite fashion decade, yes, yes, yes: ‘60s. It was a
-                sort of little revolution; the clothes were amazing but not too
-                exaggerated. Clothes mean nothing until someone lives in them. I
-                don’t really know how to do casual clothes. Clothes can
-                transform your mood and confidence.
+                Ela Crain wrote her first book at the age of 23, shortly after
+                completing her BA in Archaeology. Following an MA in Film &
+                Digital Media, she founded and managed a video production
+                company in London.
+                <br />
+                <br />
+                Her second book, which examined the link between creativity and
+                madness, was published in 2008. Although it was a research book,
+                it resonated with young readers and triggered a wave of
+                rebellion against rigid social norms. Due to the comprehensive
+                research in this book, Ela was offered a scholarship by
+                University College London for an MSc on Cognitive and Perceptual
+                Brain Sciences.
+                <br />
+                <br />
+                In 2013, Ela founded Mash Stories, a non-profit organization
+                helping writers kickstart their careers. With its 69 voluntary
+                staff, Mash Stories published over 2,200 hand-picked writers. It
+                was listed among the Top 50 Websites in 2015, and took the
+                second place in Webby Awards Social Media category.
+                <br />
+                <br />
+                In the meantime Ela published a poetry book and various short
+                stories under different pennames across the UK and US. She
+                completed her first novel Montana Day in April 2017.
+                <br />
+                <br />
+                Unlike her writings, Ela is a very cheerful person. She loves
+                reading, coaching, travelling, and extreme sports. Paragliding,
+                diving with sharks, hiking from one country to another, and
+                climbing up to glaciers in flip-flops are among her favourite
+                spare time activities.
+                <br />
+                <br />
+                Ela is currently working on a short story called, Dandelion
+                Clocks.
+                <br />
+                <br />
               </p>
             </section>
             {/* CONTACT SECTION  */}

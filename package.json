@@ -2,7 +2,7 @@
   "name": "ela_crain_fe",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://elacrain.com/web",
+  "homepage": "http://elacrain.com/",
   "dependencies": {
     "form-serialize": "^0.7.2",
     "husky": "^0.14.3",
@@ -14,6 +14,7 @@
     "prettier": "^1.7.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-helmet": "^5.2.0",
     "react-router-dom": "^4.1.2",
     "react-scripts": "1.0.10"
   },

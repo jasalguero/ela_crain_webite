@@ -4,7 +4,6 @@ import Footer from '../../components/coaching/Footer';
 import WorkshopList from '../../components/coaching/WorkshopList';
 import Testimonials from '../../components/coaching/Testimonials';
 import NewsletterForm from '../../components/NewsletterForm';
-import Portrait from '../../images/coaching-about.png'; // Tell Webpack this JS file uses this image
 
 import '../../styles/coaching/Coaching.css';
 
@@ -17,11 +16,14 @@ class CoachingRoute extends Component {
           {/* HERO */}
           <div className="coaching-hero">
             <div className="head">
-              Fight your inner fears and become your best self.
+              Discover your purpose. <br />
+              Open up with trust. <br />
+              Play with life.
             </div>
             <div className="sub">
-              Offering a broad range of workshops and coaching events, Ela will
-              help you reaching the next step in your life or career.
+              I help people to become top-performers and rebels with a cause.{' '}
+              <br />
+              Join me to transform your career and connect with your creativity.
             </div>
           </div>
 
@@ -35,29 +37,34 @@ class CoachingRoute extends Component {
           <section className="about-section">
             <div className="left">
               <img
-                src={Portrait}
+                src={require('../../images/coaching-about.jpg')}
                 alt="Ela Crain"
                 className="portrait"
                 width="432px"
               />
             </div>
             <div className="right">
-              <h1>About Ela Crain</h1>
-              <p>
-                I still appreciate individuality. Style is much more interesting
-                than fashion, really. Over the years I have learned that what is
-                important in a dress is the woman who is wearing it. My shows
-                are about the complete woman who swallows it all. It’s a
-                question of survival.
-              </p>
-              <p>
-                My aim is to make the poor look rich and the rich look poor. I
-                have my favourite fashion decade, yes, yes, yes: ‘60s. It was a
-                sort of little revolution; the clothes were amazing but not too
-                exaggerated. Clothes mean nothing until someone lives in them. I
-                don’t really know how to do casual clothes. Clothes can
-                transform your mood and confidence.
-              </p>
+              <section>
+                <h1>About</h1>
+                <p>
+                  Ela Crain helps people to become top-performers and rebels
+                  with a cause.
+                  <br />
+                  <br />
+                  As an entrepreneur herself, Ela has founded and managed an
+                  advertising agency in London, and a Webby nominee non-profit
+                  organization, called Mash Stories — listed among the Top 50
+                  Websites in 2015. She has a BA in Archaeology, an MA in Media,
+                  and an MSc in Brain Sciences from University College London.
+                  She’s also published three books and just finished a novel.
+                  <br />
+                  <br />
+                  As well as one-to-one sessions, Ela gives workshops on
+                  overcoming procrastination and perfectionism, developing
+                  leadership skills, building an inspired community, and
+                  adopting a success mindset.
+                </p>
+              </section>
             </div>
           </section>
 

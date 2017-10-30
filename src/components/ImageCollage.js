@@ -76,37 +76,59 @@ class ImageCollage extends Component {
     const title = post.title;
     const { bottom_image, top_image, middle_image } = post.fields;
 
+    const imageCollage = () => (
+      <div className="image-collage">
+        <div className="image-wrapper">
+          <img
+            ref={image => {
+              this.topImage = image;
+            }}
+            src={top_image}
+            alt={`${title}-top`}
+            className="image-top"
+            style={this.state.imageTopStyles}
+          />
+          <img
+            src={middle_image}
+            alt={`${title}-middle`}
+            className="image-middle"
+            style={this.state.imageMiddleStyles}
+          />
+          <img
+            src={bottom_image}
+            alt={`${title}-bottom`}
+            className="image-bottom"
+            style={this.state.imageBottomStyles}
+          />
+        </div>
+      </div>
+    );
+
+    const fallBackImageCollage = () => (
+      <div className="image-collage">
+        <div className="image-wrapper">
+          <img
+            ref={image => {
+              this.topImage = image;
+            }}
+            src={top_image}
+            alt={`${title}-top`}
+            className=""
+            style={{ width: '100%' }}
+          />
+        </div>
+      </div>
+    );
+
+    const renderCollage = () => {
+      if (bottom_image && middle_image) return imageCollage();
+      return fallBackImageCollage();
+    };
+
     return (
       <div className="collage-wrapper">
-        <div className="background-title">
-          {title}
-        </div>
-
-        <div className="image-collage">
-          <div className="image-wrapper">
-            <img
-              ref={image => {
-                this.topImage = image;
-              }}
-              src={top_image}
-              alt={`${title}-top`}
-              className="image-top"
-              style={this.state.imageTopStyles}
-            />
-            <img
-              src={middle_image}
-              alt={`${title}-middle`}
-              className="image-middle"
-              style={this.state.imageMiddleStyles}
-            />
-            <img
-              src={bottom_image}
-              alt={`${title}-bottom`}
-              className="image-bottom"
-              style={this.state.imageBottomStyles}
-            />
-          </div>
-        </div>
+        <div className="background-title">{title}</div>
+        {renderCollage()}
       </div>
     );
   }

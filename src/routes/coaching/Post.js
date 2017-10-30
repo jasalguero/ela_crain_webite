@@ -4,7 +4,7 @@ import Header from '../../components/coaching/Header';
 import PostHeader from '../../components/PostHeader';
 import FullPost from '../../components/coaching/FullPost';
 
-import '../../styles/FullPostNavigation.css';
+import '../../styles/coaching/FullPostNavigation.css';
 
 class PostRoute extends Component {
   state = {
@@ -59,10 +59,10 @@ class PostRoute extends Component {
   getNavPrev() {
     return (
       this.state.prevPost && (
-        <div className="post-navigation nav-prev">
+        <div className="coaching-post-navigation nav-prev">
           <div className="nav-content">
-            <div className="post-title">{this.state.prevPost.title}</div>
-            <Link to={`/writing/posts/${this.state.prevPost.id}`}>
+            <Link to={`/coaching/posts/${this.state.prevPost.id}`}>
+              <div className="post-title">{this.state.prevPost.title}</div>
               <div className="link">Previous</div>
             </Link>
           </div>
@@ -74,10 +74,10 @@ class PostRoute extends Component {
   getNavNext() {
     return (
       this.state.nextPost && (
-        <div className="post-navigation nav-next">
+        <div className="coaching-post-navigation nav-next">
           <div className="nav-content">
-            <div className="post-title">{this.state.nextPost.title}</div>
-            <Link to={`/writing/posts/${this.state.nextPost.id}`}>
+            <Link to={`/coaching/posts/${this.state.nextPost.id}`}>
+              <div className="post-title">{this.state.nextPost.title}</div>
               <div className="link">Next</div>
             </Link>
           </div>

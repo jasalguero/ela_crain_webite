@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from '../../components/coaching/Header';
 import Footer from '../../components/coaching/Footer';
 import ContactForm from '../../components/ContactForm';
-import Portrait from '../../images/coaching-about.png'; // Tell Webpack this JS file uses this image
 
 import '../../styles/coaching/About.css';
 
@@ -15,7 +14,7 @@ class AboutRoute extends Component {
           <div className="left">
             <div className="wrapper">
               <img
-                src={Portrait}
+                src={require('../../images/coaching-about.jpg')}
                 alt="Ela Crain"
                 className="portrait"
                 width="504px"
@@ -27,19 +26,22 @@ class AboutRoute extends Component {
             <section>
               <h1>About</h1>
               <p>
-                I still appreciate individuality. Style is much more interesting
-                than fashion, really. Over the years I have learned that what is
-                important in a dress is the woman who is wearing it. My shows
-                are about the complete woman who swallows it all. It’s a
-                question of survival.
-              </p>
-              <p>
-                My aim is to make the poor look rich and the rich look poor. I
-                have my favourite fashion decade, yes, yes, yes: ‘60s. It was a
-                sort of little revolution; the clothes were amazing but not too
-                exaggerated. Clothes mean nothing until someone lives in them. I
-                don’t really know how to do casual clothes. Clothes can
-                transform your mood and confidence.
+                Ela Crain helps people to become top-performers and rebels with
+                a cause.
+                <br />
+                <br />
+                As an entrepreneur herself, Ela has founded and managed an
+                advertising agency in London, and a Webby nominee non-profit
+                organization, called Mash Stories — listed among the Top 50
+                Websites in 2015. She has a BA in Archaeology, an MA in Media,
+                and an MSc in Brain Sciences from University College London.
+                She’s also published three books and just finished a novel.
+                <br />
+                <br />
+                As well as one-to-one sessions, Ela gives workshops on
+                overcoming procrastination and perfectionism, developing
+                leadership skills, building an inspired community, and adopting
+                a success mindset.
               </p>
             </section>
             {/* CONTACT SECTION  */}

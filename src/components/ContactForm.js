@@ -2,13 +2,30 @@ import React, { Component } from 'react';
 import serializeForm from 'form-serialize';
 import '../styles/ContactForm.css';
 import '../styles/coaching/ContactForm.css';
+import { validateEmail } from '../utils/helpers';
+var request = require('request');
+
+// const URL = "http://elacrain.com/cf/test.php?s=test123123123&m=hello&f=a@me.com"
+const BASE_URL = 'http://elacrain.com/cf/sendForm.php';
 
 class ContactForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
     const values = serializeForm(e.target, { hash: true });
-    console.log('contact form values', values);
+    if (!validateEmail(values.email)) return alert('Bad E-Mail Formatting');
+
+    let url =
+      BASE_URL +
+      `?&s=${values.name}&m=${values.message}&f=${values.email}&c=${values.company}`;
+
+    request.post(url, function(error, response, body) {
+      console.log('error:', error); // Print the error if one occurred
+      console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+      console.log('body:', body); // Print the HTML for the Google homepage.
+    });
+
+    e.target.reset();
   };
 
   render() {
@@ -16,21 +33,35 @@ class ContactForm extends Component {
       <section className={`contact-form ${this.props.type}`}>
         <form to="/" onSubmit={this.handleSubmit}>
           <h1>Contact</h1>
-          <p>
-            You can hit me up with matters related to my writing, to ask for
-            advice, anything really! I will try to get back to you as fast as
-            possible.
-          </p>
           <label>YOUR EMAIL</label>
-          <input type="text" placeholder="e.g. john@gmail.com" />
+          <input
+            required
+            name="email"
+            type="text"
+            placeholder="e.g. john@gmail.com"
+          />
+          <label style={{ display: 'none' }}>YOUR COMPANY</label>
+          <input
+            style={{ display: 'none' }}
+            name="company"
+            type="text"
+            placeholder="toyota"
+          />
           <label>YOUR NAME</label>
-          <input type="text" placeholder="e.g. Mariana Knol" />
+          <input
+            required
+            name="name"
+            type="text"
+            placeholder="e.g. Mariana Knol"
+          />
           <label>WHAT'S UP?</label>
-          <textarea placeholder="Type it away! Write it here..." rows="5" />
-
-          <button type="submit" onClick={this.sendForm}>
-            Send Out
-          </button>
+          <textarea
+            name="message"
+            type="text"
+            placeholder="Type it away! Write it here..."
+            rows="5"
+          />
+          <button type="submit">Send Out</button>
         </form>
       </section>
     );
