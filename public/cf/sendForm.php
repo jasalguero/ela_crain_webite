@@ -4,8 +4,8 @@ header('Access-Control-Allow-Origin: http://www.elacrain.com', false);
 
 $company = $_REQUEST["c"] = "undefined" ? "" : $_REQUEST["c"];
 $to      = 'me@elacrain.com';
-$subject = $_REQUEST["s"];
-$message = $_REQUEST["m"];
+$subject = "New Message from " . $_REQUEST["s"];
+$message = $_REQUEST["m"] . "\r\nFrom: " . $_REQUEST["s"] . "\r\n--\r\nThis e-mail was sent from a contact form on My Blog (http://www.elacrain.com)";
 $headers = 'From:' . $_REQUEST["f"] . "\r\n" .
     'Reply-To:' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
