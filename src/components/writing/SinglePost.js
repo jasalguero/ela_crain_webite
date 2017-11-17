@@ -8,16 +8,11 @@ class SinglePost extends Component {
     const post = this.props.post;
 
     return (
-      <div className="single-post">
-        {post.id && <ImageCollage post={post} />}
-        <div className="title">
-          {post.title}
-        </div>
-        <div className="headline">
-          {post.fields && post.fields.headline}
-        </div>
-        <Link className="read-more-link" to={`/writing/posts/${post.id}`}>
-          Read More
+      <div className="">
+        <Link className="single-post" to={`/writing/posts/${post.id}`}>
+          {post.id && <ImageCollage post={post} />}
+          <div className="title">{post.title}</div>
+          <div className="headline">{post.fields && post.fields.headline}</div>
         </Link>
       </div>
     );

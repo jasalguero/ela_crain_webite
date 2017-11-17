@@ -55,7 +55,7 @@ class Header extends Component {
             <span className="logo">Ela Crain</span>
           </div>
           <div className="links">
-            <Link to="/writing/posts">Posts</Link>
+            <Link to="/writing/posts">Writing</Link>
             <Link to="/writing/about">About</Link>
           </div>
         </div>

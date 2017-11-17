@@ -33,28 +33,28 @@ class ContactForm extends Component {
       <section className={`contact-form ${this.props.type}`}>
         <form to="/" onSubmit={this.handleSubmit}>
           <h1>Contact</h1>
-          <label>YOUR EMAIL</label>
+          <label>Your Email</label>
           <input
             required
             name="email"
             type="text"
             placeholder="e.g. john@gmail.com"
           />
-          <label style={{ display: 'none' }}>YOUR COMPANY</label>
+          <label style={{ display: 'none' }}>Your Company</label>
           <input
             style={{ display: 'none' }}
             name="company"
             type="text"
             placeholder="toyota"
           />
-          <label>YOUR NAME</label>
+          <label>Your Name</label>
           <input
             required
             name="name"
             type="text"
             placeholder="e.g. Mariana Knol"
           />
-          <label>WHAT'S UP?</label>
+          <label>Your Message</label>
           <textarea
             name="message"
             type="text"

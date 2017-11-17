@@ -83,8 +83,7 @@ class AboutRoute extends Component {
                 to be one or the other -- if we're lucky -- but Ela Crain is one
                 of the rare ones that got to be both.”
                 <span className="author">
-                  Trevor D. Richardson, Author of _American Bastards_,
-                  California
+                  Trevor D. Richardson, Author of American Bastards, California
                 </span>
               </span>
             </section>

@@ -28,7 +28,10 @@ class CoachingRoute extends Component {
           </div>
 
           {/* EVENTS */}
-          <WorkshopList events={this.props.events} />
+          {this.props.events &&
+            this.props.events.length > 0 && (
+              <WorkshopList events={this.props.events} />
+            )}
 
           {/* TESTIMONIALS */}
           <Testimonials />
