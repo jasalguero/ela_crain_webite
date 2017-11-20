@@ -1,5 +1,5 @@
 const WP_API =
-  'http://www.elacrain.com/wp-json/wp/v2/posts?fields=id,content,title,status,categories,tags,acf';
+  'http://www.elacrain.com/wp/wp-json/wp/v2/posts?fields=id,content,title,status,categories,tags,acf';
 
 const headers = {
   Accept: 'application/json'
