@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import SinglePost from './SinglePost';
+import PostIndicator from '../PostIndicator';
+import '../../styles/SingleList.css';
 
 class SingleList extends Component {
   state = {
@@ -38,14 +40,19 @@ class SingleList extends Component {
   };
 
   render() {
+    const currentPostIndex = this.state.currentPostIndex;
+    const totalPosts = this.props.items.length;
     let item =
-      this.props.items.length > this.state.currentPostIndex
-        ? this.props.items[this.state.currentPostIndex]
-        : {};
+      totalPosts > currentPostIndex ? this.props.items[currentPostIndex] : {};
 
     return (
       <div className="single-post-wrapper">
+        <div className="placeholder" />
         <SinglePost post={item} />
+        <PostIndicator
+          currentPostIndex={currentPostIndex}
+          totalPosts={totalPosts}
+        />
       </div>
     );
   }

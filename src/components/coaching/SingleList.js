@@ -47,7 +47,7 @@ class SingleList extends Component {
 
     return (
       <div className="single-post-wrapper">
-        <div style={{ background: 'yellow', flex: 1 }} />
+        <div className="placeholder" />
         <SinglePost post={item} />
         <PostIndicator
           currentPostIndex={currentPostIndex}

@@ -5,9 +5,9 @@ class PostIndicator extends Component {
   render() {
     return (
       <div className="post-indicator">
-        <div className="number">{this.props.currentPostIndex + 1}</div>
-        <div className="rectangle" />
-        <div className="number">{this.props.totalPosts}</div>
+        <div className="number writing">{this.props.currentPostIndex + 1}</div>
+        <div className="rectangle writing" />
+        <div className="number writing">{this.props.totalPosts}</div>
       </div>
     );
   }
