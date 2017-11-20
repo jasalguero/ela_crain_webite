@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/coaching/Header';
 import PostHeader from '../../components/PostHeader';
 import FullPost from '../../components/coaching/FullPost';
+import Footer from '../../components/coaching/Footer';
+import OverviewList from '../../components/coaching/OverviewList';
+import _ from 'lodash';
 
 import '../../styles/coaching/FullPostNavigation.css';
 
@@ -88,19 +91,25 @@ class PostRoute extends Component {
 
   render() {
     const post = this.state.post;
+
+    // filter and sort remaining posts
+    const posts = this.props.posts;
+    const postIndex = this.state.postIndex;
+    const remainingPostsSorted = _.drop(posts, postIndex + 1).concat(
+      _.dropRight(posts, posts.length - postIndex)
+    );
+
     return (
       <div className="writing">
         <Header showLayoutIcons={false} />
         <PostHeader post={post} type="coaching" />
         {this.getNavPrev()}
         <div className="full-post-wrapper">
-          {this.state.post ? (
-            <FullPost post={post} />
-          ) : (
-            <h1>Post doesn't exist</h1>
-          )}
+          {this.state.post && <FullPost post={post} />}
         </div>
+        <Footer />
         {this.getNavNext()}
+        {remainingPostsSorted && <OverviewList items={remainingPostsSorted} />}
       </div>
     );
   }
