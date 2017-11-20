@@ -9,18 +9,13 @@ class SinglePost extends Component {
     const labels = post.fields && post.fields.labels;
 
     return (
-      <div className="">
-        <Link
-          className="single-post coaching"
-          to={`/coaching/posts/${post.id}`}
-        >
-          <div className="labels">{labels}</div>
-          <div className="image-wrapper">
-            <img src={image_url} alt={`${post.title}-top`} className="" />
-          </div>
-          <div className="title">{post.title}</div>
-        </Link>
-      </div>
+      <Link className="single-post coaching" to={`/coaching/posts/${post.id}`}>
+        <div className="labels">{labels}</div>
+        <div className="image-wrapper">
+          <img src={image_url} alt={`${post.title}-top`} className="" />
+        </div>
+        <div className="title">{post.title}</div>
+      </Link>
     );
   }
 }
