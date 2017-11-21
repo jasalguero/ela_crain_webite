@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Redirect, Switch } from 'react-router-dom';
 import WritingPosts from './Posts';
 import WritingPost from './Post';
 import WritingAbout from './About';
@@ -21,10 +21,19 @@ class WritingRoute extends Component {
           }}
         />
         <Route
+          exact
           path="/writing"
           render={() => <Redirect to="/writing/posts" />}
         />
-        <Route path="/writing/about" component={WritingAbout} />
+        <Route
+          path="/writing/about"
+          render={() => (
+            <WritingAbout
+              about={this.props.about}
+              reviews={this.props.reviews}
+            />
+          )}
+        />
       </div>
     );
   }

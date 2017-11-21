@@ -1,34 +1,41 @@
-@import "styles/vars.scss";
+@import 'styles/vars.scss';
 
-.testimonials {
-  background-color: $white-two;
-  padding: 68px 72px 126px 72px;
+:global {
+  .testimonials {
+    background-color: $white-two;
+    padding: 68px 72px 126px 72px;
 
-  .header {
-    font-family: Lora;
-    font-size: 40px;
-    text-align: center;
-  }
+    .header {
+      font-family: Lora;
+      font-size: 40px;
+      text-align: center;
+    }
 
-  .items {
-    margin-top: 56px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    .items {
+      margin-top: 56px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
 
-    .item {
-      width: 360px;
-      .testimonial {
-        font-family: Roboto;
-        font-size: 18px;
-        text-align: center;
-      }
+      .item {
+        width: 360px;
+        
+        .testimonial {
+          
+          p {
+            font-family: Roboto;
+            font-size: 18px;
+            text-align: center;
+          }
 
-      .author {
-        font-family: Roboto;
-        font-size: 14px;
-        text-align: center;
-        margin-top: 20px;
+        }
+
+        .author {
+          font-family: Roboto;
+          font-size: 14px;
+          text-align: center;
+          margin-top: 20px;
+        }
       }
     }
   }
