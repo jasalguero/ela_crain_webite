@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import WritingPosts from './Posts';
 import WritingPost from './Post';
 import WritingAbout from './About';
@@ -19,6 +19,10 @@ class WritingRoute extends Component {
           render={({ match }) => {
             return <WritingPost posts={this.props.posts} match={match} />;
           }}
+        />
+        <Route
+          path="/writing"
+          render={() => <Redirect to="/writing/posts" />}
         />
         <Route path="/writing/about" component={WritingAbout} />
       </div>

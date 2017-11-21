@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect, Switch } from 'react-router';
 import Coaching from './routes/coaching/Home';
 import Writing from './routes/writing/Home';
 import Home from './routes/Home';
@@ -47,20 +47,23 @@ class App extends Component {
   render() {
     return (
       <div className="ela-crain-website">
-        <Route exact path="/" render={() => <Home />} />
-        <Route
-          path="/writing"
-          render={() => <Writing posts={this.state.writingPosts} />}
-        />
-        <Route
-          path="/coaching"
-          render={() => (
-            <Coaching
-              posts={this.state.coachingPosts}
-              events={this.state.events}
-            />
-          )}
-        />
+        <Switch>
+          <Route exact path="/" render={() => <Home />} />
+          <Route
+            path="/writing"
+            render={() => <Writing posts={this.state.writingPosts} />}
+          />
+          <Route
+            path="/coaching"
+            render={() => (
+              <Coaching
+                posts={this.state.coachingPosts}
+                events={this.state.events}
+              />
+            )}
+          />
+          <Route path="*" render={() => <Redirect to="/" />} />
+        </Switch>
       </div>
     );
   }
