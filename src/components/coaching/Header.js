@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import HeaderSelector from '../HeaderSelector';
-import '../../styles/coaching/Header.css';
 
 class Header extends Component {
   state = {
@@ -18,7 +17,9 @@ class Header extends Component {
 
     return (
       <header
-        className={`coaching ${this.state.showSelector ? 'open' : 'collapsed'}`}
+        className={`${this.state.showSelector
+          ? 'ec-header--open'
+          : 'ec-header'} ec-header--white`}
       >
         <Helmet>
           <link
@@ -27,35 +28,24 @@ class Header extends Component {
           />
         </Helmet>
         <HeaderSelector />
-        <div className="header-wrapper">
-          <div className="links">
+        <div className="ec-header__wrapper">
+          <div className="ec-header__links">
             <Link to="/coaching">Coaching</Link>
             <Link to="/coaching/posts">Blog</Link>
             <Link to="/coaching/about">About</Link>
           </div>
-          <div className="logo-container" onClick={this.toggleSelector}>
-            <span className="logo">Ela Crain</span>
+          <div
+            className="ec-header__logo-container"
+            onClick={this.toggleSelector}
+          >
+            <span className="ec-header__logo">Ela Crain</span>
           </div>
-          <div className="icons-wrapper">
+          <div className="ec-header__icons-wrapper">
             {showLayoutIcons && (
-              <div className="icons left reading-styles">
-                <span
-                  className={`icon single ${viewMode === 'single'
-                    ? 'selected'
-                    : null}`}
-                  onClick={() => onViewModeChange('single')}
-                >
-                  Single
-                </span>
-                <span
-                  className={`icon overview ${viewMode === 'overview'
-                    ? 'selected'
-                    : null}`}
-                  onClick={() => onViewModeChange('overview')}
-                >
-                  Overview
-                </span>
-              </div>
+              <LayoutButton
+                onViewModeChange={onViewModeChange}
+                viewMode={viewMode}
+              />
             )}
           </div>
         </div>
@@ -65,3 +55,31 @@ class Header extends Component {
 }
 
 export default Header;
+
+const LayoutButton = props => {
+  const { viewMode, onViewModeChange } = props;
+  const changeViewMode = () => {
+    viewMode === 'single'
+      ? onViewModeChange('overview')
+      : onViewModeChange('single');
+  };
+  return (
+    <div className="ec-layout-button" onClick={changeViewMode}>
+      {viewMode === 'single' ? (
+        <div className="ec-layout-button__content">
+          <div
+            className={`ec-layout-button__icon ec-layout-button__icon--overview`}
+          />
+          <span>List View</span>
+        </div>
+      ) : (
+        <div className="ec-layout-button__content">
+          <div
+            className={'ec-layout-button__icon ec-layout-button__icon--single'}
+          />
+          <span>Single View</span>
+        </div>
+      )}
+    </div>
+  );
+};
