@@ -1,0 +1,52 @@
+.ec-about {
+    &__container {
+        display: flex;
+        flex-flow: column-reverse;
+        justify-content: flex-start;
+        align-content: flex-start;
+    }
+
+    &__text-section {
+        margin: 5%;
+        flex: 1;
+    }
+
+    &__image-section {
+        margin: 5%;
+        flex: 1;
+    }
+
+    &__portrait {
+        width: 100%;
+        position: relative;
+    }
+}
+
+.ec-about--coaching {
+    .ec-about {
+        &__container {
+            flex-flow: column;
+        }
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .ec-about {
+        &__container {
+            flex-flow: row;
+        }
+
+        &__portrait {
+            width: 40vw;
+            position: fixed;
+        }
+    }
+
+    .ec-about--coaching {
+        .ec-about {
+            &__container {
+                flex-flow: row;
+            }
+        }
+    }
+}

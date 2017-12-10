@@ -5,15 +5,13 @@ import Reviews from '../../components/writing/Reviews';
 import ContactForm from '../../components/ContactForm';
 import Portrait from '../../images/writing-about.png'; // Tell Webpack this JS file uses this image
 
-import '../../styles/About.css';
-
 class AboutRoute extends Component {
   render() {
     return (
-      <div className="about writing">
+      <div className="ec-about">
         <Header showLayoutIcons={false} />
-        <div className="container">
-          <div className="left">
+        <div className="ec-about__container">
+          <div className="ec-about__text-section">
             {/* ABOUT SECTION  */}
             <div dangerouslySetInnerHTML={{ __html: this.props.about }} />
             {/* CONTACT SECTION  */}
@@ -21,9 +19,13 @@ class AboutRoute extends Component {
             {/* REVIEWS */}
             <Reviews reviews={this.props.reviews} />
           </div>
-          <div className="right">
-            <div className="wrapper">
-              <img src={Portrait} alt="Ela Crain" className="portrait" />
+          <div className="ec-about__image-section">
+            <div className="ec-about__wrapper">
+              <img
+                src={Portrait}
+                alt="Ela Crain"
+                className="ec-about__portrait"
+              />
             </div>
           </div>
         </div>

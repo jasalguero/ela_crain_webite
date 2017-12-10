@@ -3,28 +3,26 @@ import Header from '../../components/coaching/Header';
 import Footer from '../../components/coaching/Footer';
 import ContactForm from '../../components/ContactForm';
 
-import '../../styles/coaching/About.css';
-
 class AboutRoute extends Component {
   render() {
     return (
-      <div className="about coaching">
+      <div className="ec-about ec-about--coaching">
         <Header showLayoutIcons={false} />
-        <div className="container">
-          <div className="left">
-            <div className="wrapper">
+        <div className="ec-about__container">
+          <div className="ec-about__image-section">
+            <div className="ec-about__wrapper">
               <img
                 src={require('../../images/coaching-about.jpg')}
                 alt="Ela Crain"
-                className="portrait"
+                className="ec-about__portrait"
                 width="504px"
               />
             </div>
           </div>
-          <div className="right">
+          <div className="ec-about__text-section">
             {/* ABOUT SECTION  */}
             <div
-              className="right"
+              className="ec-about__right"
               dangerouslySetInnerHTML={{ __html: this.props.about }}
             />
             {/* CONTACT SECTION  */}
