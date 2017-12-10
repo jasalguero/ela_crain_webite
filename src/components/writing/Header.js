@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import { Helmet } from 'react-helmet';
 import HeaderSelector from '../HeaderSelector';
+import LayoutButton from '../header/LayoutButton';
 
 class Header extends Component {
   state = {
@@ -31,12 +32,16 @@ class Header extends Component {
 
         <HeaderSelector />
         <div className="ec-header__wrapper">
-          {showLayoutIcons && (
+          <div
+            className="ec-layout-button__wrapper"
+            style={{ visibility: showLayoutIcons ? 'visible' : 'hidden' }}
+          >
             <LayoutButton
+              showLayoutIcons={showLayoutIcons}
               onViewModeChange={onViewModeChange}
               viewMode={viewMode}
             />
-          )}
+          </div>
           <div
             className="ec-header__logo-container"
             onClick={this.toggleSelector}
@@ -56,31 +61,3 @@ class Header extends Component {
 const HeadderWithRouter = withRouter(Header);
 
 export default HeadderWithRouter;
-
-const LayoutButton = props => {
-  const { viewMode, onViewModeChange } = props;
-  const changeViewMode = () => {
-    viewMode === 'single'
-      ? onViewModeChange('overview')
-      : onViewModeChange('single');
-  };
-  return (
-    <div className="ec-layout-button" onClick={changeViewMode}>
-      {viewMode === 'single' ? (
-        <div className="ec-layout-button__content">
-          <div
-            className={`ec-layout-button__icon ec-layout-button__icon--overview`}
-          />
-          <span>List View</span>
-        </div>
-      ) : (
-        <div className="ec-layout-button__content">
-          <div
-            className={'ec-layout-button__icon ec-layout-button__icon--single'}
-          />
-          <span>Single View</span>
-        </div>
-      )}
-    </div>
-  );
-};
