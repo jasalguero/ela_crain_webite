@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import AppWrapper from './AppWrapper';
+import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import ScrollToTop from './utils/ScrollToTop';
 
@@ -10,7 +11,7 @@ import ScrollToTop from './utils/ScrollToTop';
 ReactDOM.render(
   <BrowserRouter basename="">
     <ScrollToTop>
-      <AppWrapper />
+      <App />
     </ScrollToTop>
   </BrowserRouter>,
   document.getElementById('root')
