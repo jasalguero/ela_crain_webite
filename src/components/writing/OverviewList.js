@@ -7,7 +7,10 @@ class PostList extends Component {
     const posts = this.props.items;
 
     return (
-      <div className="overview-post-list-wrapper">
+      <div
+        className={`overview-post-list-wrapper ${this.props.withFooter &&
+          'with-footer'}`}
+      >
         <ul className="overview-post-list">
           {posts.map(post => (
             <li key={post.title} className="post">
