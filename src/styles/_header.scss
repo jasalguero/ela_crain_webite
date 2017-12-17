@@ -18,11 +18,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-   
     }
 
     &__links {
-        background: yellow;
         justify-content: flex-end;
         text-align: right;
         font-size: 18px;
@@ -48,8 +46,8 @@
     }
 
     &__logo-container {
-        background: green;
         width: 154px;
+
         // flex: auto;
         text-align: center;
         font-size: 50px;
@@ -69,13 +67,18 @@
 }
 
 .ec-layout-button {
+    
+
     &__wrapper {
         width: 33%;
         display: flex;
         flex-flow: row;
         justify-content: flex-start;
-        background: hotpink;
     }
+
+    position: fixed;
+    bottom: 20px;
+    left: calc(50vw - (155px / 2 ));
 
     width: 145px;
     height: 44px;
@@ -111,6 +114,59 @@
 
         &--overview {
             background-image: url("icons/black_multiple_empty.svg");
+        }
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .ec-layout-button {
+
+        &__wrapper {
+            width: 33%;
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+        }
+
+        position: relative;
+        top: 0px;
+        left: 0px;
+
+        width: 145px;
+        height: 44px;
+        border-radius: 22.5px;
+        border: solid 2px $white;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+
+        &__content {
+            margin-left: 20px;
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+            align-items: center;
+            font-family: Roboto;
+            font-size: 14px;
+            text-align: center;
+            color: $white;
+        }
+
+        &__icon {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            margin-right: 10.5px;
+
+            &--single {
+                background-image: url("icons/black_single_empty.svg");
+            }
+
+            &--overview {
+                background-image: url("icons/black_multiple_empty.svg");
+            }
         }
     }
 }

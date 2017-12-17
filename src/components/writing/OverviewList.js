@@ -7,19 +7,21 @@ class PostList extends Component {
     const posts = this.props.items;
 
     return (
-      <ul className="overview-post-list">
-        {posts.map(post => (
-          <li key={post.title} className="post">
-            <Link to={`/writing/posts/${post.id}`}>
-              <div
-                className="title"
-                dangerouslySetInnerHTML={{ __html: post.title }}
-              />
-              {/* <div className="info">Short Story, 2016</div> */}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div className="overview-post-list-wrapper">
+        <ul className="overview-post-list">
+          {posts.map(post => (
+            <li key={post.title} className="post">
+              <Link to={`/writing/posts/${post.id}`}>
+                <div
+                  className="title"
+                  dangerouslySetInnerHTML={{ __html: post.title }}
+                />
+                {/* <div className="info">Short Story, 2016</div> */}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   }
 }

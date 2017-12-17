@@ -1,43 +1,65 @@
-@import 'styles/vars.scss';
+@import "styles/vars.scss";
 
 .overview-post-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-  .post {
-    border-top: solid 1px $grey;
-    padding-top: 44px;
-    padding-bottom: 44px;
-    transition: padding 0.4s ease;
-
-    .title {
-      font-family: Lora;
-      font-size: 40px;
-      text-align: center;
-      color: $white;
+    &-wrapper {
+        height: calc(100vh - 80px - 80px);
+        overflow: auto;
+        border-top: solid 1px $grey;
+        border-bottom: solid 1px $grey;
     }
 
-    .info {
-      font-family: Roboto;
-      font-size: 18px;
-      letter-spacing: 1px;
-      text-align: center;
-      color: $black;
-      display: none;
-    }
+    .post {
+        border-top: solid 1px $grey;
+        padding-top: 44px;
+        padding-bottom: 44px;
+        transition: padding 0.4s ease;
 
-    &:hover {
-      cursor: pointer;
-      padding: 60px;
-      background-color: $white;
+        .title {
+            font-family: Lora;
+            font-size: 40px;
+            text-align: center;
+            color: $white;
+        }
 
-      .title {
-        color: $black;
-      }
-      .info {
-        display: block;
-      }
+        .info {
+            font-family: Roboto;
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-align: center;
+            color: $black;
+            display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+            padding: 60px;
+            background-color: $white;
+
+            .title {
+                color: $black;
+            }
+
+            .info {
+                display: block;
+            }
+        }
     }
-  }
+}
+
+@media all and (min-width: $desktop) {
+    .overview-post-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 50px;
+
+        &-wrapper {
+            height: calc(100vh - 80px);
+            overflow: auto;
+        }
+    }
 }
