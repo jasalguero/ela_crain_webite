@@ -1,97 +1,204 @@
-@import 'styles/vars.scss';
+@import "styles/vars.scss";
 
 .full-post-wrapper {
+    .full-post {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
 
-  .full-post {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+        .title {
+            font-size: 40px;
+            font-weight: 900;
 
-    .title {
-      font-size: 40px;
-      font-weight: 900;
-      // margin-top: 27px;
-      margin-left: 10%;
-      margin-right: 10%;
+            // margin-top: 27px;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 70px;
+            text-align: center;
+        }
+
+        .summary {
+            font-family: Lora;
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 74px;
+            margin-top: 10px;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .comment {
+            font-family: Roboto;
+            font-size: 27px;
+            font-weight: 900;
+            line-height: 1.33;
+            letter-spacing: -0.2px;
+            margin-top: 74px;
+            margin: 0 10%;
+        }
+
+        .audio-widget {
+            .audio-title {
+                font-family: Roboto;
+                font-size: 16px;
+                letter-spacing: 1.1px;
+                color: $grey;
+                margin-top: 75px;
+            }
+
+            .audio-spacing {
+                width: 1px;
+                margin: 0 auto;
+                font-size: 0;
+                height: 60px;
+                background-color: $grey;
+                margin-top: 34px;
+                margin-bottom: 28px;
+            }
+        }
+
+        .head {
+            font-family: Roboto;
+            font-size: 61px;
+            font-weight: 900;
+            line-height: 1.33;
+            text-align: center;
+            color: $white;
+            margin: 95px 20% 0 20%;
+        }
+
+        .content {
+            font-family: Lora;
+            font-size: 18px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            text-align: left;
+            margin: 74px 10% 0 10%;
+        }
     }
-
-    .excerpt {
-      font-family: Lora;
-      font-size: 18px;
-      line-height: 1.5;
-      text-align: center;
-      margin-bottom: 30px;
-      margin-top: 10px;
-      margin-left: 25%;
-      margin-right: 25%;
-    }
-
-    .comment {
-      font-family: Roboto;
-      font-size: 27px;
-      font-weight: 900;
-      line-height: 1.33;
-      letter-spacing: -0.2px;
-      margin-top: 74px;
-      margin: 0 25%;
-    }
-
-    .audio-widget {
-      .audio-title {
-        font-family: Roboto;
-        font-size: 16px;
-        letter-spacing: 1.1px;
-        color: $grey;
-        margin-top: 75px;
-      }
-
-      .audio-spacing {
-        width: 1px;
-        margin: 0 auto;
-        font-size: 0;
-        height: 60px;
-        background-color: $grey;
-        margin-top: 34px;
-        margin-bottom: 28px;
-      }
-    }
-
-    .head {
-      font-family: Roboto;
-      font-size: 61px;
-      font-weight: 900;
-      line-height: 1.33;
-      text-align: center;
-      color: $white;
-      margin: 95px 20% 0 20%;
-    }
-
-    .content {
-      font-family: Lora;
-      font-size: 18px;
-      line-height: 1.5;
-      letter-spacing: 1px;
-      text-align: left;
-      margin: 74px 25% 0 25%;
-    }
-  }
 }
 
 .forms-wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: flex-start;
-  justify-content: flex-start;
-  margin-top: 115px;
-  section {
-    flex: 1;
-    border-top: 1px solid $grey;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 2.5%;
-  }
-  section:first-child {
-    border-right: 1px solid $grey;
-  }
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    margin-top: 115px;
+
+    section {
+        flex: 1;
+        border-top: 1px solid $grey;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 2.5%;
+    }
+
+    section:first-child {
+        border-right: 1px solid $grey;
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .full-post-wrapper {
+        .full-post {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+
+            .title {
+                font-size: 40px;
+                font-weight: 900;
+
+                // margin-top: 27px;
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 298px;
+            }
+
+            .summary {
+                font-family: Lora;
+                font-size: 18px;
+                line-height: 1.5;
+                text-align: center;
+                margin-bottom: 74px;
+                margin-top: 10px;
+                margin-left: 25%;
+                margin-right: 25%;
+            }
+
+            .comment {
+                font-family: Roboto;
+                font-size: 27px;
+                font-weight: 900;
+                line-height: 1.33;
+                letter-spacing: -0.2px;
+                margin-top: 74px;
+                margin: 0 25%;
+            }
+
+            .audio-widget {
+                .audio-title {
+                    font-family: Roboto;
+                    font-size: 16px;
+                    letter-spacing: 1.1px;
+                    color: $grey;
+                    margin-top: 75px;
+                }
+
+                .audio-spacing {
+                    width: 1px;
+                    margin: 0 auto;
+                    font-size: 0;
+                    height: 60px;
+                    background-color: $grey;
+                    margin-top: 34px;
+                    margin-bottom: 28px;
+                }
+            }
+
+            .head {
+                font-family: Roboto;
+                font-size: 61px;
+                font-weight: 900;
+                line-height: 1.33;
+                text-align: center;
+                color: $white;
+                margin: 95px 20% 0 20%;
+            }
+
+            .content {
+                font-family: Lora;
+                font-size: 18px;
+                line-height: 1.5;
+                letter-spacing: 1px;
+                text-align: left;
+                margin: 74px 25% 0 25%;
+            }
+        }
+    }
+
+    .forms-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        align-content: flex-start;
+        justify-content: flex-start;
+        margin-top: 115px;
+
+        section {
+            flex: 1;
+            border-top: 1px solid $grey;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-bottom: 2.5%;
+        }
+
+        section:first-child {
+            border-right: 1px solid $grey;
+        }
+    }
 }

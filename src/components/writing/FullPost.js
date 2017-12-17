@@ -17,10 +17,10 @@ class FullPost extends Component {
       .join('.');
     return (
       <div>
+        {post.id && <ImageCollage post={post} fullPost={true} />}
         <div className="full-post">
-          {post.id && <ImageCollage post={post} />}
           <div className="title">{post.title}</div>
-          <div className="excerpt">{post.fields && post.fields.excerpt}</div>
+          <div className="summary">{post.fields && post.fields.summary}</div>
           <div className="comment">{post.fields && post.fields.comment}</div>
           {post.fields.audio && <AudioWidget data={post.fields.audio} />}
           <div className="head" dangerouslySetInnerHTML={{ __html: head }} />

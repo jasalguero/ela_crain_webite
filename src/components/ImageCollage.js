@@ -126,7 +126,11 @@ class ImageCollage extends Component {
     };
 
     return (
-      <div className="collage-wrapper">
+      <div
+        className={`collage-wrapper ${this.props.fullPost
+          ? 'collage-wrapper--fullPost'
+          : ''}`}
+      >
         <div className="background-title">{title}</div>
         {renderCollage()}
       </div>
