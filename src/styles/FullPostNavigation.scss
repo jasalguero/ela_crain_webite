@@ -8,6 +8,8 @@
     z-index: 10;
     color: black;
     transition: right 0.4s ease;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     .nav-content {
         margin-top: auto;
@@ -44,7 +46,6 @@
         margin-right: -202px;
         transition: right 0.4s ease;
 
-
         .nav-content {
             right: 0;
             transform: rotate(-270deg);
@@ -54,6 +55,9 @@
 
 @media all and (min-width: $desktop) {
     .post-navigation {
+        white-space: normal;
+        text-overflow: initial;
+
         &.nav-prev {
             &:hover {
                 left: 0;
