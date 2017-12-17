@@ -49,8 +49,26 @@ class Header extends Component {
             <span className="ec-header__logo">Ela Crain</span>
           </div>
           <div className="ec-header__links">
-            <Link to="/writing/posts">Writing</Link>
-            <Link to="/writing/about">About</Link>
+            <Link
+              className={
+                this.props.location.pathname.split('/')[2] === 'posts'
+                  ? 'active'
+                  : ''
+              }
+              to="/writing/posts"
+            >
+              Writing
+            </Link>
+            <Link
+              className={
+                this.props.location.pathname.split('/')[2] === 'about'
+                  ? 'active'
+                  : ''
+              }
+              to="/writing/about"
+            >
+              About
+            </Link>
           </div>
         </div>
       </header>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import HeaderSelector from '../HeaderSelector';
 import LayoutButton from '../header/LayoutButton';
@@ -31,9 +31,36 @@ class Header extends Component {
         <HeaderSelector />
         <div className="ec-header__wrapper">
           <div className="ec-header__links">
-            <Link to="/coaching">Coaching</Link>
-            <Link to="/coaching/posts">Blog</Link>
-            <Link to="/coaching/about">About</Link>
+            <Link
+              className={
+                this.props.location.pathname.split('/')[2] === undefined
+                  ? 'active'
+                  : ''
+              }
+              to="/coaching"
+            >
+              Coaching
+            </Link>
+            <Link
+              className={
+                this.props.location.pathname.split('/')[2] === 'posts'
+                  ? 'active'
+                  : ''
+              }
+              to="/coaching/posts"
+            >
+              Blog
+            </Link>
+            <Link
+              className={
+                this.props.location.pathname.split('/')[2] === 'about'
+                  ? 'active'
+                  : ''
+              }
+              to="/coaching/about"
+            >
+              About
+            </Link>
           </div>
           <div
             className="ec-header__logo-container"
@@ -57,4 +84,6 @@ class Header extends Component {
   }
 }
 
-export default Header;
+const HeadderWithRouter = withRouter(Header);
+
+export default HeadderWithRouter;
