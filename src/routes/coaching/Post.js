@@ -62,10 +62,14 @@ class PostRoute extends Component {
   getNavPrev() {
     return (
       this.state.prevPost && (
-        <div className="coaching-post-navigation nav-prev">
+        <div className="post-navigation-coaching post-navigation nav-prev">
           <div className="nav-content">
             <Link to={`/coaching/posts/${this.state.prevPost.id}`}>
-              <div className="post-title">{this.state.prevPost.title}</div>
+              <div
+                className="post-title"
+                dangerouslySetInnerHTML={{ __html: this.state.prevPost.title }}
+              />
+
               <div className="link">Previous</div>
             </Link>
           </div>
@@ -77,10 +81,13 @@ class PostRoute extends Component {
   getNavNext() {
     return (
       this.state.nextPost && (
-        <div className="coaching-post-navigation nav-next">
+        <div className="post-navigation-coaching post-navigation nav-next">
           <div className="nav-content">
             <Link to={`/coaching/posts/${this.state.nextPost.id}`}>
-              <div className="post-title">{this.state.nextPost.title}</div>
+              <div
+                className="post-title"
+                dangerouslySetInnerHTML={{ __html: this.state.nextPost.title }}
+              />
               <div className="link">Next</div>
             </Link>
           </div>

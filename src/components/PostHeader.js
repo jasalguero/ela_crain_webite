@@ -65,7 +65,10 @@ class PostHeader extends Component {
         <ProgressBar show={this.state.showHeader} type={type} />
         <div className="left-side">
           <div className="currently-reading">CURRENTLY READING</div>
-          <div className="post-title">{title}</div>
+          <div
+            className="post-title"
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
         </div>
       </div>
     );

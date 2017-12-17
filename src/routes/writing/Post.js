@@ -65,7 +65,10 @@ class PostRoute extends Component {
         <div className="post-navigation nav-prev">
           <div className="nav-content">
             <Link to={`/writing/posts/${this.state.prevPost.id}`}>
-              <div className="post-title">{this.state.prevPost.title}</div>
+              <div
+                className="post-title"
+                dangerouslySetInnerHTML={{ __html: this.state.prevPost.title }}
+              />
               <div className="link">Previous</div>
             </Link>
           </div>
@@ -80,7 +83,10 @@ class PostRoute extends Component {
         <div className="post-navigation nav-next">
           <div className="nav-content">
             <Link to={`/writing/posts/${this.state.nextPost.id}`}>
-              <div className="post-title">{this.state.nextPost.title}</div>
+              <div
+                className="post-title"
+                dangerouslySetInnerHTML={{ __html: this.state.nextPost.title }}
+              />
               <div className="link">Next</div>
             </Link>
           </div>
