@@ -14,16 +14,19 @@ class CoachingRoute extends Component {
         <Header showLayoutIcons={false} />
         <div className="container">
           {/* HERO */}
-          <div className="coaching-hero">
-            <div className="head">
-              Discover your purpose. <br />
-              Open up with trust. <br />
-              Play with life.
-            </div>
-            <div className="sub">
-              I help people to become top-performers and rebels with a cause.{' '}
-              <br />
-              Join me to transform your career and connect with your creativity.
+          <div className="coaching-hero-container">
+            <div className="coaching-hero">
+              <div className="head">
+                Discover your purpose. <br />
+                Open up with trust. <br />
+                Play with life.
+              </div>
+              <div className="sub">
+                I help people to become top-performers and rebels with a cause.{' '}
+                <br />
+                Join me to transform your career and connect with your
+                creativity.
+              </div>
             </div>
           </div>
 
@@ -43,7 +46,7 @@ class CoachingRoute extends Component {
                 src={require('../../images/coaching-about.jpg')}
                 alt="Ela Crain"
                 className="portrait"
-                width="432px"
+                width="100%"
               />
             </div>
             <div
