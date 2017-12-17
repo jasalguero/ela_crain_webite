@@ -105,7 +105,7 @@
             font-weight: normal;
             display: flex;
             align-items: center;
-            flex: 0;
+            flex: 1;
             width: 33%;
 
             a {
@@ -198,6 +198,7 @@
     .ec-layout-button {
         &__wrapper {
             width: 33%;
+            flex: 1;
             display: flex;
             flex-flow: row;
             justify-content: flex-start;
