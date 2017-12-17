@@ -20,13 +20,7 @@ class AboutRoute extends Component {
             <Reviews reviews={this.props.reviews} />
           </div>
           <div className="ec-about__image-section">
-            <div className="ec-about__wrapper">
-              <img
-                src={Portrait}
-                alt="Ela Crain"
-                className="ec-about__portrait"
-              />
-            </div>
+            <div className="ec-about__image-wrapper" />
           </div>
         </div>
         <Footer />

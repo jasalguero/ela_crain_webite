@@ -10,14 +10,7 @@ class AboutRoute extends Component {
         <Header showLayoutIcons={false} />
         <div className="ec-about__container">
           <div className="ec-about__image-section">
-            <div className="ec-about__wrapper">
-              <img
-                src={require('../../images/coaching-about.jpg')}
-                alt="Ela Crain"
-                className="ec-about__portrait"
-                width="504px"
-              />
-            </div>
+            <div className="ec-about__image-wrapper" />
           </div>
           <div className="ec-about__text-section">
             {/* ABOUT SECTION  */}

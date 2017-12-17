@@ -14,11 +14,17 @@
     &__image-section {
         margin: 5%;
         flex: 1;
+        position: relative;
     }
 
-    &__portrait {
-        width: 100%;
+    &__image-wrapper {
+        background-image: url("./images/writing-about.png");
+        background-repeat: no-repeat;
+        background-size: contain;
         position: relative;
+        width: 100%;
+        height: 100vw;
+        max-height: 60vh;
     }
 }
 
@@ -26,6 +32,10 @@
     .ec-about {
         &__container {
             flex-flow: column;
+        }
+
+        &__image-wrapper {
+            background-image: url("./images/coaching-about.jpg");
         }
     }
 }
@@ -36,9 +46,14 @@
             flex-flow: row;
         }
 
-        &__portrait {
-            width: 40vw;
+        &__image-wrapper {
+            background-image: url("./images/writing-about.png");
+            background-repeat: no-repeat;
+            background-size: contain;
             position: fixed;
+            width: 45vw;
+            max-width: 50vw;
+            height: 100vw;
         }
     }
 
@@ -46,6 +61,10 @@
         .ec-about {
             &__container {
                 flex-flow: row;
+            }
+
+            &__image-wrapper {
+                background-image: url("./images/coaching-about.jpg");
             }
         }
     }
