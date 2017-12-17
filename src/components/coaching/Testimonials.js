@@ -10,8 +10,14 @@ const WorkshopList = props => {
         {_.map(props.reviews, (review, index) => {
           return (
             <div key={index} className="item">
-              <div className="testimonial">{review.fields.content}</div>
-              <div className="author"> {review.fields.author} </div>
+              <div
+                className="testimonial"
+                dangerouslySetInnerHTML={{ __html: review.fields.content }}
+              />
+              <div
+                className="author"
+                dangerouslySetInnerHTML={{ __html: review.fields.author }}
+              />
             </div>
           );
         })}
