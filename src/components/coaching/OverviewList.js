@@ -8,8 +8,9 @@ class PostList extends Component {
 
     return (
       <div
-        className={`overview-post-list-wrapper ${this.props.withFooter &&
-          'with-footer'}`}
+        className={`overview-post-list-wrapper ${this.props.withFooter
+          ? 'with-footer'
+          : ''}`}
       >
         <ul className="overview-post-list coaching">
           {posts.map(post => (

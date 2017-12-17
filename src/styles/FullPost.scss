@@ -2,11 +2,12 @@
 
 .full-post-wrapper {
     .full-post {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        // width: cal(100% - 100px);
+        // display: flex;
+        // align-items: center;
+        // flex-direction: column;
         position: relative;
+        margin: 0 12px 0 12px;
 
         .title {
             font-size: 40px;
