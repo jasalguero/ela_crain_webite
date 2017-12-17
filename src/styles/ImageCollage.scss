@@ -3,7 +3,7 @@
 .collage-wrapper {
     position: absolute;
     margin-top: 37px;
-    min-height: 512px;
+    max-height: 512px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,19 +20,20 @@
     &.coaching {
         position: absolute;
         margin-top: 37px;
-        min-height: 512px;
+        max-height: 512px;
         display: flex;
         align-items: center;
         justify-content: center;
         left: 0;
         right: 0;
         z-index: 0;
+        background: yellow;
 
         .image-collage {
             position: relative;
             width: 100%;
             max-width: 1020px;
-            height: 512px;
+            max-height: 80vh;
 
             img {
                 position: absolute;
@@ -62,7 +63,7 @@
         position: relative;
         width: 100%;
         width: 720px;
-        height: 512px;
+        max-height: 80vh;
 
         img {
             position: absolute;

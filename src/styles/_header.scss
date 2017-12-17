@@ -151,8 +151,10 @@
         display: flex;
         flex-flow: row;
         justify-content: flex-start;
+        position: relative;
     }
 
+    z-index: 100;
     position: fixed;
     bottom: 20px;
     left: calc(50vw - (155px / 2 ));
@@ -202,9 +204,11 @@
             display: flex;
             flex-flow: row;
             justify-content: flex-start;
+            position: relative;
         }
 
         position: relative;
+        z-index: 100;
         top: 0px;
         left: 0px;
         width: 145px;
