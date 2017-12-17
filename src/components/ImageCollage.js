@@ -131,7 +131,7 @@ class ImageCollage extends Component {
           ? 'collage-wrapper--fullPost'
           : ''}`}
       >
-        <div className="background-title">{title}</div>
+        {/* <div className="background-title">{title}</div> */}
         {renderCollage()}
       </div>
     );

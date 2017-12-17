@@ -20,7 +20,10 @@ class FullPost extends Component {
         </div>
         <div className="full-post">
           <div className="labels">{labels}</div>
-          <div className="title">{post.title}</div>
+          <div
+            className="title"
+            dangerouslySetInnerHTML={{ __html: post.title }}
+          />
           <div
             className="content"
             dangerouslySetInnerHTML={{ __html: post.content }}

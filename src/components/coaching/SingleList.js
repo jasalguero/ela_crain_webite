@@ -52,6 +52,7 @@ class SingleList extends Component {
         <PostIndicator
           currentPostIndex={currentPostIndex}
           totalPosts={totalPosts}
+          site="coaching"
         />
       </div>
     );

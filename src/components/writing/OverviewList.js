@@ -11,7 +11,10 @@ class PostList extends Component {
         {posts.map(post => (
           <li key={post.title} className="post">
             <Link to={`/writing/posts/${post.id}`}>
-              <div className="title">{post.title}</div>
+              <div
+                className="title"
+                dangerouslySetInnerHTML={{ __html: post.title }}
+              />
               {/* <div className="info">Short Story, 2016</div> */}
             </Link>
           </li>

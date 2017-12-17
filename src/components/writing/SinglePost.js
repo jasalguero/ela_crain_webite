@@ -9,10 +9,22 @@ class SinglePost extends Component {
 
     return (
       <div className="">
-        <Link className="single-post" to={`/writing/posts/${post.id}`}>
+        <Link className="single-post-link" to={`/writing/posts/${post.id}`}>
           {post.id && <ImageCollage post={post} />}
-          <div className="title">{post.title}</div>
-          <div className="headline">{post.fields && post.fields.headline}</div>
+          <div className="single-post">
+            <div
+              className="title"
+              dangerouslySetInnerHTML={{ __html: post.title }}
+            />
+            <div className="headline">
+              {post.fields && post.fields.headline}
+            </div>
+            <div className="button">
+              <Link className="" to={`/writing/posts/${post.id}`}>
+                Read
+              </Link>
+            </div>
+          </div>
         </Link>
       </div>
     );

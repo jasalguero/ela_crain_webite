@@ -19,7 +19,10 @@ class FullPost extends Component {
       <div>
         {post.id && <ImageCollage post={post} fullPost={true} />}
         <div className="full-post">
-          <div className="title">{post.title}</div>
+          <div
+            className="title"
+            dangerouslySetInnerHTML={{ __html: post.title }}
+          />
           <div className="summary">{post.fields && post.fields.summary}</div>
           <div className="comment">{post.fields && post.fields.comment}</div>
           {post.fields.audio && <AudioWidget data={post.fields.audio} />}
