@@ -30,6 +30,10 @@
             font-family: Lora;
             font-size: 18px;
             color: $white;
+            white-space: nowrap;
+            width: 80vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 }
