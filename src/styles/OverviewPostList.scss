@@ -7,9 +7,10 @@
 
     &-wrapper {
         &.with-footer {
-            height: calc(100vh - 80px - 80px);
-            overflow: auto;
-            border-top: solid 1px $grey;
+            margin-bottom: 80px;
+            // height: calc(100vh - 80px - 80px);
+            // overflow: auto;
+            // border-top: solid 1px $grey;
             border-bottom: solid 1px $grey;
         }
     }
@@ -22,7 +23,7 @@
 
         .title {
             font-family: Lora;
-            font-size: 40px;
+            font-size: 33px;
             text-align: center;
             color: $white;
         }

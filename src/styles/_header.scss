@@ -157,11 +157,12 @@
     z-index: 100;
     position: fixed;
     bottom: 20px;
-    left: calc(50vw - (155px / 2 ));
+    left: calc(50vw - (145px / 2 ));
     width: 145px;
     height: 44px;
     border-radius: 22.5px;
     border: solid 2px $white;
+    background: $black;
     display: flex;
     flex-flow: row;
     justify-content: flex-start;

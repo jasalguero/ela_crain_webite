@@ -39,6 +39,21 @@ class SingleList extends Component {
     }
   };
 
+  handleNavi = (dir, e) => {
+    e.preventDefault();
+    const up = dir === 'up';
+    const down = dir === 'down';
+
+    if (up || down) {
+      let currentPostIndex = this.state.currentPostIndex;
+      if (up && currentPostIndex === 0) return;
+      if (down && currentPostIndex >= this.props.items.length - 1) return;
+      this.setState({
+        currentPostIndex: down ? ++currentPostIndex : --currentPostIndex
+      });
+    }
+  };
+
   render() {
     const currentPostIndex = this.state.currentPostIndex;
     const totalPosts = this.props.items.length;
@@ -53,6 +68,22 @@ class SingleList extends Component {
           currentPostIndex={currentPostIndex}
           totalPosts={totalPosts}
         />
+        <div className="ec-single-post-list__nav">
+          <div
+            className="ec-single-post-list__nav-prev"
+            onClick={e => this.handleNavi('up', e)}
+            onTouchStart={e => this.handleNavi('up', e)}
+          >
+            ←
+          </div>
+          <div
+            className="ec-single-post-list__nav-next"
+            onClick={e => this.handleNavi('down', e)}
+            onTouchStart={e => this.handleNavi('down', e)}
+          >
+            →
+          </div>
+        </div>
       </div>
     );
   }
