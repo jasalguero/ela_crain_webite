@@ -12,7 +12,7 @@
         text-align: center;
         left: calc(50vw - (155px / 2 ) - 70px);
     }
-    
+
     &__nav-next {
         position: fixed;
         bottom: 20px;
@@ -20,5 +20,13 @@
         width: 50px;
         text-align: center;
         left: calc(50vw + (155px / 2 ) + 30px);
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .ec-single-post-list {
+        &__nav {
+            visibility: hidden;
+        }
     }
 }
