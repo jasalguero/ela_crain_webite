@@ -312,6 +312,9 @@
     }
 
     .ec-layout-button {
+
+            background: $white;
+
         &__wrapper {
             justify-content: flex-end;
         }

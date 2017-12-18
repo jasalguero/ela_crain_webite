@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SinglePost from './SinglePost';
 import PostIndicator from '../PostIndicator';
 import '../../styles/SingleList.css';
+import ReactSwipeEvents from 'react-swipe-events';
 
 class SingleList extends Component {
   state = {
@@ -61,30 +62,36 @@ class SingleList extends Component {
       totalPosts > currentPostIndex ? this.props.items[currentPostIndex] : {};
 
     return (
-      <div className="single-post-wrapper">
-        <div className="placeholder" />
-        <SinglePost post={item} />
-        <PostIndicator
-          currentPostIndex={currentPostIndex}
-          totalPosts={totalPosts}
-        />
-        <div className="ec-single-post-list__nav">
-          <div
-            className="ec-single-post-list__nav-prev"
-            onClick={e => this.handleNavi('up', e)}
-            onTouchStart={e => this.handleNavi('up', e)}
-          >
-            ←
-          </div>
-          <div
-            className="ec-single-post-list__nav-next"
-            onClick={e => this.handleNavi('down', e)}
-            onTouchStart={e => this.handleNavi('down', e)}
-          >
-            →
+      <ReactSwipeEvents
+        threshold={100}
+        onSwipedRight={e => this.handleNavi('up', e)}
+        onSwipedLeft={e => this.handleNavi('down', e)}
+      >
+        <div className="single-post-wrapper">
+          <div className="placeholder" />
+          <SinglePost post={item} />
+          <PostIndicator
+            currentPostIndex={currentPostIndex}
+            totalPosts={totalPosts}
+          />
+          <div className="ec-single-post-list__nav">
+            <div
+              className="ec-single-post-list__nav-prev"
+              onClick={e => this.handleNavi('up', e)}
+              onTouchStart={e => this.handleNavi('up', e)}
+            >
+              ←
+            </div>
+            <div
+              className="ec-single-post-list__nav-next"
+              onClick={e => this.handleNavi('down', e)}
+              onTouchStart={e => this.handleNavi('down', e)}
+            >
+              →
+            </div>
           </div>
         </div>
-      </div>
+      </ReactSwipeEvents>
     );
   }
 }

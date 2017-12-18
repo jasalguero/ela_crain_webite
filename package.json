@@ -16,7 +16,8 @@
     "react-dom": "^15.6.1",
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.1.2",
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.10",
+    "react-swipe-events": "^1.0.2"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
