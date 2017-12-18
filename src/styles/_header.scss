@@ -54,16 +54,21 @@
 
     &__logo-container {
         width: 154px;
+        flex: 1;
+
+        // background: yellow;
 
         // flex: auto;
-        text-align: center;
+        text-align: left;
         font-size: 50px;
         cursor: pointer;
     }
 
     &__logo {
-        background-position: center;
+        background-position: left;
         background-repeat: no-repeat;
+
+        // background: #F00;
         font-size: 0;
         display: block;
         width: 154px;
@@ -152,6 +157,7 @@
         flex-flow: row;
         justify-content: flex-start;
         position: relative;
+        flex: 0;
     }
 
     z-index: 100;
@@ -278,6 +284,10 @@
 
 .ec-header--white {
     .ec-header {
+        &__logo-container {
+            text-align: right;
+        }
+
         &__logo {
             background-image: url("images/ela_black.svg");
         }
@@ -312,8 +322,7 @@
     }
 
     .ec-layout-button {
-
-            background: $white;
+        background: $white;
 
         &__wrapper {
             justify-content: flex-end;
