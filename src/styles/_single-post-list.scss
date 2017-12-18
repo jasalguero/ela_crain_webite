@@ -30,3 +30,11 @@
         }
     }
 }
+
+.ec-single-post-list--coaching {
+    .ec-single-post-list {
+        &__nav {
+            color: $black;
+        }
+    }
+}
