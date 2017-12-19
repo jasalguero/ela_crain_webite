@@ -1,7 +1,7 @@
 @import "styles/vars.scss";
 
 .post-navigation {
-    width: 500px;
+    width: 300px;
     position: fixed;
     display: inline-block;
     top: 40%;
@@ -31,8 +31,8 @@
     }
 
     &.nav-prev {
-        left: -65px;
-        margin-left: -202px;
+        left: 0px;
+        margin-left: -170px;
         transition: left 0.4s ease-in;
 
         .nav-content {
@@ -42,8 +42,8 @@
     }
 
     &.nav-next {
-        right: -65px;
-        margin-right: -202px;
+        right: 0px;
+        margin-right: -170px;
         transition: right 0.4s ease;
 
         .nav-content {
@@ -57,10 +57,14 @@
     .post-navigation {
         white-space: normal;
         text-overflow: initial;
+        width: 500px;
 
         &.nav-prev {
+            left: -65px;
+            margin-left: -202px;
+
             &:hover {
-                left: 0;
+                left: 0px;
 
                 .link {
                     text-decoration: underline;
@@ -69,8 +73,11 @@
         }
 
         &.nav-next {
+            right: -65px;
+            margin-right: -202px;
+
             &:hover {
-                right: 0;
+                right: 0px;
 
                 .link {
                     text-decoration: underline;
