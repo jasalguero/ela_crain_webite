@@ -1,79 +1,149 @@
-@import 'styles/vars.scss';
+@import "styles/vars.scss";
 
 .home {
-  display: flex;
-
-  .panel {
-    width: 50%;
-    float: left;
-    min-height: 100vh;
-    font-size: 60px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: flex $home-animation-duration $animation-type;
 
-    .label {
-      margin-top: 20px;
-      transition: margin-top $home-animation-duration $animation-type;
+    .panel {
+        width: 50%;
+        float: left;
+        min-height: 100vh;
+        font-size: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: flex $home-animation-duration $animation-type;
 
-      .sub {
-        padding-top: 5px;
-        font-family: Roboto;
-        font-size: 18px;
-        text-align: center;
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity $home-animation-duration $animation-type;
-      }
+        .label {
+            margin-top: 20px;
+            transition: margin-top $home-animation-duration $animation-type;
+
+            .sub {
+                padding-top: 5px;
+                font-family: Roboto;
+                font-size: 18px;
+                text-align: center;
+                visibility: visible;
+                opacity: 1;
+                transition: opacity $home-animation-duration $animation-type;
+            }
+        }
+
+
+        &.left {
+            flex: 9;
+            font-family: Roboto;
+            font-size: 35px;
+            font-weight: 900;
+            background-color: $black;
+            color: $white;
+
+        }
+
+        &.right {
+            flex: 9;
+            background-color: $white;
+            color: $black;
+            font-family: Lora;
+            font-size: 35px;
+
+            .label .sub {
+                color: $black;
+                font-family: Lora
+            }
+
+
+        }
+
+        .label {
+            padding: 20px;
+            text-align: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
+}
 
-    &:hover {
-      flex: 2;
-      .label {
-        margin-top: 0;
-      }
-      .sub {
-        visibility: visible;
-        opacity: 1;
-      }
+@media all and (min-width: $desktop) {
+    .home {
+        display: flex;
+
+        .panel {
+            width: 50%;
+            float: left;
+            min-height: 100vh;
+            font-size: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: flex $home-animation-duration $animation-type;
+
+            .label {
+                margin-top: 20px;
+                transition: margin-top $home-animation-duration $animation-type;
+
+                .sub {
+                    padding-top: 5px;
+                    font-family: Roboto;
+                    font-size: 18px;
+                    text-align: center;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: opacity $home-animation-duration $animation-type;
+                }
+            }
+
+            &:hover {
+                flex: 2;
+
+                .label {
+                    margin-top: 0;
+                }
+
+                .sub {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            &.left {
+                flex: 9;
+                font-family: Roboto;
+                font-size: 61px;
+                font-weight: 900;
+                background-color: $black;
+                color: $white;
+
+                &:hover {
+                    flex: 10;
+                }
+            }
+
+            &.right {
+                flex: 9;
+                background-color: $white;
+                color: $black;
+                font-family: Lora;
+                font-size: 61px;
+
+                .label .sub {
+                    color: $black;
+                }
+
+                &:hover {
+                    flex: 10;
+                }
+            }
+
+            .label {
+                padding: 20px;
+                text-align: center;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
     }
-
-    &.left {
-      flex: 9;
-      font-family: Roboto;
-      font-size: 61px;
-      font-weight: 900;
-      background-color: $black;
-      color: $white;
-
-      &:hover {
-        flex: 10;
-      }
-    }
-
-    &.right {
-      flex: 9;
-      background-color: $white;
-      color: $black;
-      font-family: Lora;
-      font-size: 61px;
-
-      .label .sub {
-        color: $black;
-      }
-
-      &:hover {
-        flex: 10;
-      }
-    }
-
-    .label {
-      padding: 20px;
-      text-align: center;
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
 }
