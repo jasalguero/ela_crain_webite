@@ -67,7 +67,10 @@ class SingleList extends Component {
         onSwipedRight={e => this.handleNavi('prev', e)}
         onSwipedLeft={e => this.handleNavi('next', e)}
       >
-        <div className="single-post-wrapper">
+        <div
+          className="single-post-wrapper"
+          onTouchMoveCapture={e => e.preventDefault()}
+        >
           <div className="placeholder" />
           <SinglePost post={item} />
           <PostIndicator
