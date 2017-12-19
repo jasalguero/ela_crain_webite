@@ -63,8 +63,8 @@ class SingleList extends Component {
     return (
       <ReactSwipeEvents
         threshold={100}
-        onSwipedRight={e => this.handleNavi('up', e)}
-        onSwipedLeft={e => this.handleNavi('down', e)}
+        onSwipedRight={e => this.handleNavi('prev', e)}
+        onSwipedLeft={e => this.handleNavi('next', e)}
       >
         <div className="single-post-wrapper">
           <div className="placeholder" />
