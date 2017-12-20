@@ -1,60 +1,123 @@
 @import "styles/vars.scss";
 
 .coaching {
-  .container {
-    .coaching-hero {
-      padding: 124px 0 200px 0;
-      background-image: url("../../images/coaching-hero.png");
-      background-position: center;
-      background-size: cover;
-      min-height: 640px;
-      background-color: $black;
-      color: $white;
-      text-align: left;
-      
-      .head {
-        margin: 0 6%;
-        width: 60vw;
-        font-family: Lora;
-        font-size: 61px;
-        line-height: 1.18;
-        letter-spacing: 1.2px;
-      }
-      
-      .sub {
-        margin: 0 6%;
-        width: 60vw;
-        font-size: 18px;
-        // margin: 28px 32% 0 32%;
-      }
-    }
+    .container {
+        .coaching-hero-container {
+            background-image: url("../../images/coaching-hero.jpg");
+            background-position: 80%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
 
-    .about-section {
-      display: flex;
-      padding: 78px 15% 78px 15%;
-      border-bottom: 1px solid $pinkish-grey;
+            .coaching-hero {
+                padding: 24px 0 20px 0;
+                background-color: rgba($color: #FFF, $alpha: 0.5);
+                min-height: 640px;
+                color: $black;
+                text-align: left;
 
-      .left {
-        float: left;
-        margin-right: 72px;
-      }
+                .head {
+                    margin: 0 6%;
+                    width: 90vw;
+                    font-family: Lora;
+                    font-size: 61px;
+                    line-height: 1.18;
+                    letter-spacing: 1.2px;
+                }
 
-      .right {
-        padding-top: 30px;
-        h1 {
-          font-family: Lora;
-          font-size: 40px;
-          font-weight: 100;
+                .sub {
+                    margin: 0 6%;
+                    width: 90vw;
+                    font-size: 18px;
+
+                    // margin: 28px 32% 0 32%;
+               
+                }
+            }
         }
-        p {
-          font-family: Roboto;
-          font-size: 18px;
-        }
-      }
-    }
 
-    .form-wrapper {
-      margin: 0 15%;
+        .about-section {
+            display: flex;
+            flex-flow: column;
+            margin: 78px 10% 78px 10%;
+            border-bottom: 1px solid $pinkish-grey;
+
+            .left {
+                flex: 1;
+                float: left;
+                margin-right: 72px;
+            }
+
+            .right {
+                flex: 1;
+                padding-top: 30px;
+
+                h1 {
+                    font-family: Lora;
+                    font-size: 40px;
+                    font-weight: 100;
+                }
+
+                p {
+                    font-family: Roboto;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .form-wrapper {
+            margin: 0 15%;
+        }
     }
-  }
+}
+
+@media all and (min-width: $desktop) {
+    .coaching {
+        .container {
+            .coaching-hero-container {
+                background-image: url("../../images/coaching-hero.jpg");
+                background-position: 80%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 100%;
+
+                .coaching-hero {
+                    padding: 124px 0 20px 0;
+                    background-color: rgba($color: #FFF, $alpha: 0);
+                    min-height: 640px;
+                    color: $black;
+                    text-align: left;
+
+                    .head {
+                        margin: 0 6%;
+                        width: 60vw;
+                        font-family: Lora;
+                        font-size: 61px;
+                        line-height: 1.18;
+                        letter-spacing: 1.2px;
+                    }
+
+                    .sub {
+                        margin: 0 6%;
+                        width: 60vw;
+                        font-size: 18px;
+
+                        // margin: 28px 32% 0 32%;
+                   
+                    }
+                }
+            }
+
+            .about-section {
+                flex-flow: row;
+                margin: 78px 10% 78px 10%;
+
+                .left {}
+
+                .right {}
+            }
+
+            .form-wrapper {}
+        }
+    }
 }

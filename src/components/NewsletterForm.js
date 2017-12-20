@@ -75,9 +75,9 @@ class NewsletterForm extends Component {
       <section className={`newsletter-form ${this.props.type}`}>
         <form to="/" onSubmit={this.handleSubmit}>
           <h1>Newsletter</h1>
-          <label>YOUR EMAIL</label>
+          <label>Your Email</label>
           <input type="text" name="email" placeholder="e.g. john@gmail.com" />
-          <label>YOUR NAME</label>
+          <label>Your Name</label>
           <input type="text" name="name" placeholder="e.g. Mariana Knol" />
           <button type="submit" onClick={this.sendForm}>
             {this.state.status === 'sending' ? 'Subscribing...' : 'Subscribe'}

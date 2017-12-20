@@ -1,0 +1,443 @@
+.ec-header {
+    width: 100%;
+    height: 260px;
+    margin-top: -180px;
+    transition: margin-top $animation-duration $animation-type;
+
+    &--open {
+        margin-top: 0;
+        transition: margin-top $animation-duration $animation-type;
+    }
+
+    &__wrapper {
+        min-height: 80px;
+
+        // width: 90%;
+        padding-left: 4%;
+        padding-right: 4%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__links {
+        display: flex;
+        flex: 1;
+        flex-flow: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: normal;
+        width: 100%;
+
+        a {
+            margin-left: 0px;
+            margin-top: 2px;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                cursor: pointer;
+                border-bottom: 2px solid $white;
+            }
+
+            &.active {
+                border-bottom: 2px solid $white;
+            }
+        }
+
+        a:first-of-type {
+            margin-left: 0;
+        }
+    }
+
+    &__logo-container {
+        width: 154px;
+        flex: 1;
+
+        // background: yellow;
+
+        // flex: auto;
+        text-align: left;
+        font-size: 50px;
+        cursor: pointer;
+    }
+
+    &__logo {
+        background-position: left;
+        background-repeat: no-repeat;
+
+        // background: #F00;
+        font-size: 0;
+        display: block;
+        width: 154px;
+        height: 29px;
+        margin: 0 auto;
+        background-image: url("images/ela_white.svg");
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .ec-header {
+        width: 100%;
+        height: 260px;
+        margin-top: -180px;
+        transition: margin-top $animation-duration $animation-type;
+
+        &--open {
+            margin-top: 0;
+            transition: margin-top $animation-duration $animation-type;
+        }
+
+        &__wrapper {
+            height: 80px;
+
+            // width: 90%;
+            padding-left: 4%;
+            padding-right: 4%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__links {
+            justify-content: flex-end;
+            flex-flow: row;
+            text-align: right;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            width: 33%;
+
+            a {
+                margin-left: 36px;
+                border-bottom: 2px solid transparent;
+
+                &:hover {
+                    cursor: pointer;
+                    border-bottom: 2px solid $white;
+                }
+            }
+
+            a:first-of-type {
+                margin-left: 0;
+            }
+        }
+
+        &__logo-container {
+            width: 154px;
+
+            // flex: auto;
+            text-align: center;
+            font-size: 50px;
+            cursor: pointer;
+        }
+
+        &__logo {
+            background-position: center;
+            background-repeat: no-repeat;
+            font-size: 0;
+            display: block;
+            width: 154px;
+            height: 29px;
+            margin: 0 auto;
+            background-image: url("images/ela_white.svg");
+        }
+    }
+}
+
+.ec-layout-button {
+    &__wrapper {
+        width: 33%;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        position: relative;
+        flex: 0;
+    }
+
+    z-index: 100;
+    position: fixed;
+    bottom: 20px;
+    left: calc(50vw - (145px / 2 ));
+    width: 145px;
+    height: 44px;
+    border-radius: 22.5px;
+    border: solid 2px $white;
+    background: $black;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+
+    &__content {
+        margin-left: 20px;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: Roboto;
+        font-size: 14px;
+        text-align: center;
+        color: $white;
+    }
+
+    &__icon {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+        margin-right: 10.5px;
+
+        &--single {
+            background-image: url("icons/black_single_empty.svg");
+        }
+
+        &--overview {
+            background-image: url("icons/black_multiple_empty.svg");
+        }
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .ec-layout-button {
+        &__wrapper {
+            width: 33%;
+            flex: 1;
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+            position: relative;
+        }
+
+        position: relative;
+        z-index: 100;
+        top: 0px;
+        left: 0px;
+        width: 145px;
+        height: 44px;
+        border-radius: 22.5px;
+        border: solid 2px $white;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+
+        &__content {
+            margin-left: 20px;
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+            align-items: center;
+            font-family: Roboto;
+            font-size: 14px;
+            text-align: center;
+            color: $white;
+        }
+
+        &__icon {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            margin-right: 10.5px;
+
+            &--single {
+                background-image: url("icons/black_single_empty.svg");
+            }
+
+            &--overview {
+                background-image: url("icons/black_multiple_empty.svg");
+            }
+        }
+    }
+}
+
+.ec-layout-button:hover {
+    background: $white;
+
+    .ec-layout-button {
+        &__content {
+            color: $black;
+        }
+
+        &__icon {
+            &--single {
+                background-image: url("icons/white_single_filled.svg");
+            }
+
+            &--overview {
+                background-image: url("icons/white_multiple_filled.svg");
+            }
+        }
+    }
+}
+
+/**
+* WHITE / COACHING Section
+* Only edit _Differences_ to Black/Writing Site here
+*/
+
+.ec-header--white {
+    .ec-header {
+        &__logo-container {
+            text-align: right;
+        }
+
+        &__logo {
+            background-image: url("images/ela_black.svg");
+        }
+
+        &__links {
+            justify-content: flex-start;
+            text-align: left;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: normal;
+            display: flex;
+            align-items: flex-start;
+
+            a {
+                margin-left: 0px;
+                border-bottom: 2px solid transparent;
+
+                &:hover {
+                    cursor: pointer;
+                    border-bottom: 2px solid $black;
+                }
+
+                &.active {
+                    border-bottom: 2px solid $black;
+                }
+            }
+
+            a:first-of-type {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .ec-layout-button {
+        background: $white;
+
+        &__wrapper {
+            justify-content: flex-end;
+        }
+
+        border-color: $black;
+
+        &__content {
+            color: $black;
+        }
+
+        &__icon {
+            &--single {
+                background-image: url("icons/white_single_empty.svg");
+            }
+
+            &--overview {
+                background-image: url("icons/white_multiple_empty.svg");
+            }
+        }
+    }
+
+    .ec-layout-button:hover {
+        background: $black;
+
+        .ec-layout-button {
+            &__content {
+                color: $white;
+            }
+
+            &__icon {
+                &--single {
+                    background-image: url("icons/black_single_filled.svg");
+                }
+
+                &--overview {
+                    background-image: url("icons/black_multiple_filled.svg");
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .ec-header--white {
+        .ec-header {
+            &__logo {
+                background-image: url("images/ela_black.svg");
+            }
+
+            &__links {
+                justify-content: flex-start;
+                text-align: right;
+                font-size: 18px;
+                letter-spacing: 1px;
+                font-weight: normal;
+                display: flex;
+                align-items: center;
+
+                a {
+                    margin-left: 36px;
+                    border-bottom: 2px solid transparent;
+
+                    &:hover {
+                        cursor: pointer;
+                        border-bottom: 2px solid $black;
+                    }
+                }
+
+                a:first-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .ec-layout-button {
+            &__wrapper {
+                justify-content: flex-end;
+            }
+
+            border-color: $black;
+
+            &__content {
+                color: $black;
+            }
+
+            &__icon {
+                &--single {
+                    background-image: url("icons/white_single_empty.svg");
+                }
+
+                &--overview {
+                    background-image: url("icons/white_multiple_empty.svg");
+                }
+            }
+        }
+
+        .ec-layout-button:hover {
+            background: $black;
+
+            .ec-layout-button {
+                &__content {
+                    color: $white;
+                }
+
+                &__icon {
+                    &--single {
+                        background-image: url("icons/black_single_filled.svg");
+                    }
+
+                    &--overview {
+                        background-image: url("icons/black_multiple_filled.svg");
+                    }
+                }
+            }
+        }
+    }
+}

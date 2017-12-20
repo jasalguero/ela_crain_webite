@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../styles/coaching/ImageCollage.css';
 
 class ImageCollage extends Component {
   render() {
@@ -8,15 +7,11 @@ class ImageCollage extends Component {
     const { image_url } = post.fields;
 
     return (
-      <div className="collage-wrapper">
-        <div className="background-title">{title}</div>
+      <div className="collage-wrapper coaching">
+        {/* <div className="background-title">{title}</div> */}
 
         <div className="image-collage">
-          <img
-            src={image_url}
-            alt={`${title}-img`}
-            className="image-background"
-          />
+          <img src={image_url} alt={`${title}-img`} className="" />
         </div>
       </div>
     );

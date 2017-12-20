@@ -1,36 +1,40 @@
-@import 'styles/vars.scss';
-.overview-post-list.coaching{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+@import "styles/vars.scss";
+
+.overview-post-list.coaching {
     .post {
-        border-top: solid 1px $grey;
-        padding-top: 44px;
-        padding-bottom: 44px;
-        transition: padding 0.4s ease;
         .title {
-            font-family: Lora;
-            font-size: 40px;
-            text-align: center;
             color: $black;
         }
+
         .info {
-            font-family: Roboto;
-            font-size: 18px;
-            letter-spacing: 1px;
-            text-align: center;
             color: $white;
-            display: none;
         }
-        &:hover {
-            cursor: pointer;
-            padding: 60px;
-            background-color: $black;
+
+
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .overview-post-list.coaching {
+        .post {
             .title {
+                color: $black;
+            }
+
+            .info {
                 color: $white;
             }
-            .info {
-                display: block;
+
+            &:hover {
+                background-color: $black;
+
+                .title {
+                    color: $white;
+                }
+
+                .info {
+                    display: block;
+                }
             }
         }
     }

@@ -1,69 +1,88 @@
-@import 'styles/vars.scss';
+@import "styles/vars.scss";
 
 .post-navigation {
-    width: 500px;
+    width: 300px;
     position: fixed;
     display: inline-block;
     top: 40%;
     z-index: 10;
     color: black;
-
     transition: right 0.4s ease;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     .nav-content {
-      margin-top: auto;
-      color: $white;
+        margin-top: auto;
+        color: $white;
     }
 
     .link {
-      cursor: pointer;
-      font-size: 18px;
-      text-align: center;
-      padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        text-align: center;
+        padding: 10px;
     }
 
     .post-title {
-      font-family: Lora;
-      font-size: 27px;
-      text-align: center;
-      padding: 30px 10px 10px 10px;
+        font-family: Lora;
+        font-size: 27px;
+        text-align: center;
+        padding: 30px 10px 10px 10px;
     }
 
     &.nav-prev {
-      left: -65px;
-      margin-left: -202px;
-      transition: left 0.4s ease-in;
+        left: 0px;
+        margin-left: -170px;
+        transition: left 0.4s ease-in;
 
-      &:hover {
-        left: 0;
-        .link {
-          text-decoration: underline;
+        .nav-content {
+            left: 0;
+            transform: rotate(-90deg);
         }
-      }
-
-      .nav-content {
-        left: 0;
-        transform: rotate(-90deg);
-      }
     }
 
     &.nav-next {
-      right: -65px;
-      margin-right: -202px;
+        right: 0px;
+        margin-right: -170px;
+        transition: right 0.4s ease;
 
-      transition: right 0.4s ease;
-
-      &:hover {
-        right: 0;
-
-        .link {
-          text-decoration: underline;
+        .nav-content {
+            right: 0;
+            transform: rotate(-270deg);
         }
-      }
-
-      .nav-content {
-        right: 0;
-        transform: rotate(-270deg);
-      }
     }
-  }
+}
+
+@media all and (min-width: $desktop) {
+    .post-navigation {
+        white-space: normal;
+        text-overflow: initial;
+        width: 500px;
+
+        &.nav-prev {
+            left: -65px;
+            margin-left: -202px;
+
+            &:hover {
+                left: 0px;
+
+                .link {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &.nav-next {
+            right: -65px;
+            margin-right: -202px;
+
+            &:hover {
+                right: 0px;
+
+                .link {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

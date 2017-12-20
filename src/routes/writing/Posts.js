@@ -25,7 +25,7 @@ class PostsRoute extends Component {
           {this.state.viewMode === 'single' ? (
             <SingleList items={this.props.posts} />
           ) : (
-            <OverviewList items={this.props.posts} />
+            <OverviewList items={this.props.posts} withFooter={true} />
           )}
         </div>
       </div>

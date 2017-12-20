@@ -1,55 +1,6 @@
 @import 'styles/vars.scss';
-.coaching-post-navigation {
-    width: 500px;
-    position: fixed;
-    display: inline-block;
-    top: 40%;
-    z-index: 10;
-    transition: right 0.4s ease;
+.post-navigation.post-navigation-coaching {
     .nav-content {
-        margin-top: auto;
         color: $black;
-    }
-    .link {
-        cursor: pointer;
-        font-size: 18px;
-        text-align: center;
-        padding: 10px;
-    }
-    .post-title {
-        font-family: Lora;
-        font-size: 27px;
-        text-align: center;
-        padding: 30px 10px 10px 10px;
-    }
-    &.nav-prev {
-        left: -65px;
-        margin-left: -202px;
-        transition: left 0.4s ease-in;
-        &:hover {
-            left: 0;
-            .link {
-                text-decoration: underline;
-            }
-        }
-        .nav-content {
-            left: 0;
-            transform: rotate(-90deg);
-        }
-    }
-    &.nav-next {
-        right: -65px;
-        margin-right: -202px;
-        transition: right 0.4s ease;
-        &:hover {
-            right: 0;
-            .link {
-                text-decoration: underline;
-            }
-        }
-        .nav-content {
-            right: 0;
-            transform: rotate(-270deg);
-        }
     }
 }

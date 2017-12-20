@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/coaching/SinglePost.css';
+import ImageCollage from './ImageCollage';
 
 class SinglePost extends Component {
   render() {
@@ -9,21 +10,23 @@ class SinglePost extends Component {
     const labels = post.fields && post.fields.labels;
 
     return (
-      <div className="single-post">
-        <div className="labels">{labels}</div>
-        <div className="image-collage">
-          <div className="image-wrapper">
-            <img
-              src={image_url}
-              alt={`${post.title}-top`}
-              className=""
-              style={{ width: '100%' }}
+      <div className="">
+        <Link className="single-post-link" to={`/coaching/posts/${post.id}`}>
+          {post.id && <ImageCollage post={post} />}
+          <div className="single-post coaching">
+            <div
+              className="title"
+              dangerouslySetInnerHTML={{ __html: post.title }}
             />
+            <div className="headline">
+              {post.fields && post.fields.headline}
+            </div>
+            <div className="button">
+              <Link className="" to={`/coaching/posts/${post.id}`}>
+                Read
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="title">{post.title}</div>
-        <Link className="read-more-link" to={`/coaching/posts/${post.id}`}>
-          Read More
         </Link>
       </div>
     );

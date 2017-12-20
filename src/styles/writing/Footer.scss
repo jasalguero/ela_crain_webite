@@ -5,21 +5,25 @@ footer {
   height: 95px;
   border-top: 1px solid $grey;
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   font-size: 16px;
   font-family: Roboto;
   z-index: 10;
+  padding: 15px;
+  text-align: center;
+
+  .impressum {
+    flex: auto;
+  }
 
   .copyright {
-    color: $white;
-    display: inline-block;
-    margin-right: 20px;
+    flex: auto;
   }
 
   .mentions {
-    display: inline-block;
-    margin-left: 20px;
+    flex: auto;
     color: $brownish-grey;
   }
 }

@@ -4,7 +4,7 @@ import '../styles/ProgressBar.css';
 class Header extends Component {
   state = {
     ticking: false,
-    progress: '20%'
+    progress: '10%'
   };
 
   calculateTotalHeight() {

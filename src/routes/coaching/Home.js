@@ -35,9 +35,20 @@ class CoachingRoute extends Component {
         <Route
           exact
           path="/coaching"
-          render={() => <Coaching events={this.props.events} />}
+          render={() => (
+            <Coaching
+              events={this.props.events}
+              about={this.props.about}
+              reviews={this.props.reviews}
+            />
+          )}
         />
-        <Route path="/coaching/about" component={About} />
+        <Route
+          path="/coaching/about"
+          render={() => (
+            <About about={this.props.about} reviews={this.props.reviews} />
+          )}
+        />
       </div>
     );
   }

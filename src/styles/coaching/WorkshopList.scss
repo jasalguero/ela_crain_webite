@@ -1,43 +1,67 @@
 @import "styles/vars.scss";
 
 .workshop-list {
-  margin-top: 94px;
+    margin-top: 94px;
 
-  .header {
-    font-family: Lora;
-    font-size: 40px;
-    text-align: center;
-  }
-
-  .events {
-    display: flex;
-    margin: 55px 144px 115px 144px;
-
-    .workshop-preview {
-      width: 360px;
-      margin-right: 26px;
-
-      .image {
-        min-width: 360px;
-        min-height: 200px;
-      }
-
-      .info {
-        margin-top: 42px;
-        .date {
-          text-align: center;
-          font-family: Roboto;
-          font-size: 14px;
-          color: $black;
-        }
-
-        .name {
-          font-family: Lora;
-          font-size: 27px;
-          margin-top: 17px;
-          text-align: center;
-        }
-      }
+    .header {
+        font-family: Lora;
+        font-size: 40px;
+        text-align: center;
     }
-  }
+
+    .events {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 55px 5% 115px 5%;
+
+        .workshop-preview {
+            flex: 1;
+
+            // width: 360px;
+            margin: 0 13px 26px 13px;
+
+            .image {
+                min-width: 200px;
+                min-height: 200px;
+            }
+
+            .info {
+                margin-top: 42px;
+
+                .date {
+                    text-align: center;
+                    font-family: Roboto;
+                    font-size: 14px;
+                    color: $black;
+                }
+
+                .name {
+                    font-family: Lora;
+                    font-size: 27px;
+                    margin-top: 17px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .workshop-list {
+        .header {}
+
+        .events {
+            margin: 55px 10% 115px 10%;
+
+            .workshop-preview {
+                .image {}
+
+                .info {
+                    .date {}
+
+                    .name {}
+                }
+            }
+        }
+    }
 }

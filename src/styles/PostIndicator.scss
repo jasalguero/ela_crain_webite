@@ -1,0 +1,157 @@
+@import "styles/vars.scss";
+
+.post-indicator {
+    position: absolute;
+    // right: 5vw;
+    top: calc(50vh + 85px + 25px);
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .number {
+        width: 21px;
+        height: 21px;
+        // margin: 10px;
+        font-family: Roboto;
+        font-size: 18px;
+        text-align: center;
+        color: #ffffff;
+        color: $white;
+    }
+
+    .rectangle {
+        width: 30px;
+        height: 1px;
+        transform: rotate(-270deg);
+        background-color: #ffffff;
+        background-color: $white;
+    }
+
+    .arrow {
+        position: relative;
+        height: 20px;
+        margin-top: 14px;
+        display: none;
+
+        .vertical-rectangle {
+            position: absolute;
+            bottom: 0px;
+            width: 2px;
+            height: 20px;
+            background-color: $grey;
+        }
+
+        .left-rectangle {
+            position: absolute;
+            bottom: 0px;
+            left: -4px;
+            width: 2px;
+            height: 11.1px;
+            transform: rotate(-45deg);
+            background-color: $grey;
+        }
+
+        .right-rectangle {
+            position: absolute;
+            bottom: 0px;
+            left: 4px;
+            width: 2px;
+            height: 11.1px;
+            transform: rotate(45deg);
+            background-color: $grey;
+        }
+    }
+}
+
+.post-indicator.coaching {
+    .number {
+        color: #000000;
+        color: $black;
+    }
+
+    .rectangle {
+        background-color: #000000;
+        background-color: $black;
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .post-indicator {
+        position: absolute;
+        right: 10vw;
+        top: 40vh;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .number {
+            width: 21px;
+            height: 21px;
+            margin: 10px;
+            font-family: Roboto;
+            font-size: 18px;
+            text-align: center;
+            color: #ffffff;
+            color: $white;
+        }
+
+        .rectangle {
+            width: 30px;
+            height: 1px;
+            transform: rotate(-180deg);
+            background-color: #ffffff;
+            background-color: $white;
+        }
+
+        .arrow {
+            display: block;
+            position: relative;
+            height: 20px;
+            margin-top: 14px;
+
+            .vertical-rectangle {
+                position: absolute;
+                bottom: 0px;
+                width: 2px;
+                height: 20px;
+                background-color: $grey;
+            }
+
+            .left-rectangle {
+                position: absolute;
+                bottom: 0px;
+                left: -4px;
+                width: 2px;
+                height: 11.1px;
+                transform: rotate(-45deg);
+                background-color: $grey;
+            }
+
+            .right-rectangle {
+                position: absolute;
+                bottom: 0px;
+                left: 4px;
+                width: 2px;
+                height: 11.1px;
+                transform: rotate(45deg);
+                background-color: $grey;
+            }
+        }
+    }
+
+    .post-indicator.coaching {
+        .number {
+            color: #000000;
+            color: $black;
+        }
+
+        .rectangle {
+            background-color: #000000;
+            background-color: $black;
+        }
+    }
+}

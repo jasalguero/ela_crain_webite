@@ -1,62 +1,166 @@
-@import 'styles/vars.scss';
+@import "styles/vars.scss";
 
 .collage-wrapper {
-  position: relative;
-  margin-top: 37px;
-  min-height: 512px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-left: 20%;
-  margin-right: 20%;
-
-  .background-title {
     position: absolute;
+    margin-top: 37px;
+    max-height: 512px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // width: 100%;
     left: 0;
     right: 0;
-    font-family: Lora;
-    font-size: 137px;
-    line-height: 1.45;
-    margin-left: 11.5%;
-    margin-right: 11.5%;
-    text-align: center;
-    color: $supergrey;
     z-index: 0;
-  }
 
-  .image-collage {
-    position: relative;
-    left: 0;
-    width: 720px;
-    height: 512px;
-    
-    img {
-      position: absolute;
-      z-index: 10;
-      margin: 0;
-      transition: top 1s $animation-type,
-        left 1s $animation-type;
-    }
-    .image-top {
-      //original size:  1000px x 520px
-      width: 500px;
-      height: 260px;
-      z-index: 12;
+    &--fullPost {
+        opacity: 0.2;
     }
 
-    .image-middle {
-      // original size: 700x550
-      width: 350px;
-      height: 275px;
-      z-index: 11;
+    &.coaching {
+        position: absolute;
+        margin-top: 37px;
+        max-height: 512px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        right: 0;
+        z-index: 0;
+
+        .image-collage {
+            position: relative;
+            width: 100%;
+            max-width: 1020px;
+            max-height: 80vh;
+
+            img {
+                position: absolute;
+                z-index: 10;
+                margin: 0;
+                transition: top 1s $animation-type, left 1s $animation-type;
+                width: 100%;
+            }
+        }
     }
 
-    .image-bottom {
-      //original size: 550x450
-      width: 275px;
-      height: 225px;
-      z-index: 10;
+    .background-title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        font-family: Lora;
+        font-size: 137px;
+        line-height: 1.45;
+        margin-left: 11.5%;
+        margin-right: 11.5%;
+        text-align: center;
+        color: $supergrey;
+        z-index: 0;
     }
-  }
+
+    .image-collage {
+        position: relative;
+        width: 100%;
+        width: 720px;
+        max-height: 80vh;
+
+        img {
+            position: absolute;
+            z-index: 10;
+            margin: 0;
+            transition: top 1s $animation-type, left 1s $animation-type;
+            width: 100%;
+        }
+
+        .image-top {
+            //original size:  1000px x 520px
+            width: 500px;
+            height: 260px;
+            z-index: 12;
+        }
+
+        .image-middle {
+            // original size: 700x550
+            width: 350px;
+            height: 275px;
+            z-index: 11;
+        }
+
+        .image-bottom {
+            //original size: 550x450
+            width: 275px;
+            height: 225px;
+            z-index: 10;
+        }
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .collage-wrapper {
+        position: absolute;
+        margin-top: 37px;
+        min-height: 512px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // width: 100%;
+        left: 10%;
+        right: 10%;
+        z-index: 0;
+
+        &--fullPost {
+            opacity: 0.2;
+        }
+
+        .background-title {
+            position: absolute;
+            left: 0;
+            right: 0;
+            font-family: Lora;
+            font-size: 137px;
+            line-height: 1.45;
+            margin-left: 11.5%;
+            margin-right: 11.5%;
+            text-align: center;
+            color: $supergrey;
+            z-index: 0;
+        }
+
+        .image-collage {
+            position: relative;
+            width: 100%;
+            width: 720px;
+            height: 512px;
+
+            img {
+                position: absolute;
+                z-index: 10;
+                margin: 0;
+                transition: top 1s $animation-type, left 1s $animation-type;
+                width: 100%;
+            }
+
+            .image-top {
+                //original size:  1000px x 520px
+                width: 500px;
+                height: 260px;
+                z-index: 12;
+            }
+
+            .image-middle {
+                // original size: 700x550
+                width: 350px;
+                height: 275px;
+                z-index: 11;
+            }
+
+            .image-bottom {
+                //original size: 550x450
+                width: 275px;
+                height: 225px;
+                z-index: 10;
+            }
+        }
+    }
 }

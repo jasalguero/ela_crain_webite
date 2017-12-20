@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import SinglePost from './SinglePost';
+import PostIndicator from '../PostIndicator';
+import '../../styles/SingleList.css';
+import ReactSwipeEvents from 'react-swipe-events';
 
 class SingleList extends Component {
   state = {
     currentPostIndex: 0,
-    scrollable: true
+    scrollable: true,
+    relativeScrollPosition: 0
   };
 
   componentDidMount() {
@@ -16,37 +20,85 @@ class SingleList extends Component {
   }
 
   handleWheel = event => {
-    const threshold = 1;
-    const down = event.deltaY > threshold;
-    const up = event.deltaY < -threshold;
-    console.log(event.movementY, event.deltaY);
+    const threshold = 600;
+    const relativeScrollPosition = this.state.relativeScrollPosition;
+    if (relativeScrollPosition > threshold) {
+      return this.handleNavi('next', event);
+    }
+    if (relativeScrollPosition < -threshold) {
+      return this.handleNavi('prev', event);
+    }
+    this.setState({
+      relativeScrollPosition: relativeScrollPosition - event.wheelDeltaY
+    });
+  };
 
-    if (this.state.scrollable) {
-      if (up || down) {
-        let currentPostIndex = this.state.currentPostIndex;
-        if (up && currentPostIndex === 0) return;
-        if (down && currentPostIndex >= this.props.items.length - 1) return;
-        this.setState({
-          currentPostIndex: down ? ++currentPostIndex : --currentPostIndex,
-          scrollable: false
-        });
-        setTimeout(() => {
-          this.setState({ scrollable: true });
-        }, 1000);
+  handleNavi = (dir, e) => {
+    e.preventDefault();
+    const prev = dir === 'prev';
+    const next = dir === 'next';
+
+    if (prev || next) {
+      let currentPostIndex = this.state.currentPostIndex;
+      if (prev && currentPostIndex === 0) {
+        ++currentPostIndex;
       }
+      if (next && currentPostIndex >= this.props.items.length - 1) {
+        --currentPostIndex;
+      }
+      next ? ++currentPostIndex : --currentPostIndex;
+      this.setState({
+        currentPostIndex,
+        relativeScrollPosition: 0
+      });
     }
   };
 
   render() {
+    const currentPostIndex = this.state.currentPostIndex;
+    const totalPosts = this.props.items.length;
     let item =
-      this.props.items.length > this.state.currentPostIndex
-        ? this.props.items[this.state.currentPostIndex]
-        : {};
+      totalPosts > currentPostIndex ? this.props.items[currentPostIndex] : {};
 
     return (
-      <div className="single-post-wrapper">
-        <SinglePost post={item} />
-      </div>
+      <ReactSwipeEvents
+        threshold={100}
+        onSwipedRight={e => this.handleNavi('prev', e)}
+        onSwipedDown={e => this.handleNavi('prev', e)}
+        onSwipedLeft={e => this.handleNavi('next', e)}
+        onSwipedUp={e => this.handleNavi('next', e)}
+      >
+        <div
+          className="single-post-wrapper"
+          onTouchMoveCapture={e => e.preventDefault()}
+        >
+          <div className="placeholder" />
+          <SinglePost post={item} />
+          <PostIndicator
+            currentPostIndex={currentPostIndex}
+            totalPosts={totalPosts}
+            site="coaching"
+          />
+          <div className="ec-single-post-list--coaching">
+            <div className="ec-single-post-list__nav">
+              <div
+                className="ec-single-post-list__nav-prev"
+                onClick={e => this.handleNavi('prev', e)}
+                onTouchStart={e => this.handleNavi('prev', e)}
+              >
+                ←
+              </div>
+              <div
+                className="ec-single-post-list__nav-next"
+                onClick={e => this.handleNavi('next', e)}
+                onTouchStart={e => this.handleNavi('next', e)}
+              >
+                →
+              </div>
+            </div>
+          </div>
+        </div>
+      </ReactSwipeEvents>
     );
   }
 }

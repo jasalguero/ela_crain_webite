@@ -1,35 +1,39 @@
 @import "styles/vars.scss";
 
 .testimonials {
-  background-color: $white-two;
-  padding: 68px 72px 126px 72px;
+    background-color: $white-two;
+    padding: 68px 5% 70px 5%;
 
-  .header {
-    font-family: Lora;
-    font-size: 40px;
-    text-align: center;
-  }
-
-  .items {
-    margin-top: 56px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-    .item {
-      width: 360px;
-      .testimonial {
-        font-family: Roboto;
-        font-size: 18px;
+    .header {
+        font-family: Lora;
+        font-size: 40px;
         text-align: center;
-      }
-
-      .author {
-        font-family: Roboto;
-        font-size: 14px;
-        text-align: center;
-        margin-top: 20px;
-      }
     }
-  }
+
+    .items {
+        margin-top: 56px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        
+        .item {
+          max-width: 320px;
+          margin: 0 20px 40px 0;
+
+            .testimonial {
+                p {
+                    font-family: Roboto;
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+
+            .author {
+                font-family: Roboto;
+                font-size: 14px;
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+    }
 }

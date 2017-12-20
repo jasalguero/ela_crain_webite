@@ -14,24 +14,30 @@ class CoachingRoute extends Component {
         <Header showLayoutIcons={false} />
         <div className="container">
           {/* HERO */}
-          <div className="coaching-hero">
-            <div className="head">
-              Discover your purpose. <br />
-              Open up with trust. <br />
-              Play with life.
-            </div>
-            <div className="sub">
-              I help people to become top-performers and rebels with a cause.{' '}
-              <br />
-              Join me to transform your career and connect with your creativity.
+          <div className="coaching-hero-container">
+            <div className="coaching-hero">
+              <div className="head">
+                Discover your purpose. <br />
+                Open up with trust. <br />
+                Play with life.
+              </div>
+              <div className="sub">
+                I help people to become top-performers and rebels with a cause.{' '}
+                <br />
+                Join me to transform your career and connect with your
+                creativity.
+              </div>
             </div>
           </div>
 
           {/* EVENTS */}
-          <WorkshopList events={this.props.events} />
+          {this.props.events &&
+            this.props.events.length > 0 && (
+              <WorkshopList events={this.props.events} />
+            )}
 
           {/* TESTIMONIALS */}
-          <Testimonials />
+          <Testimonials reviews={this.props.reviews} />
 
           {/* ABOUT */}
           <section className="about-section">
@@ -40,32 +46,15 @@ class CoachingRoute extends Component {
                 src={require('../../images/coaching-about.jpg')}
                 alt="Ela Crain"
                 className="portrait"
-                width="432px"
+                width="100%"
               />
             </div>
-            <div className="right">
-              <section>
-                <h1>About</h1>
-                <p>
-                  Ela Crain helps people to become top-performers and rebels
-                  with a cause.
-                  <br />
-                  <br />
-                  As an entrepreneur herself, Ela has founded and managed an
-                  advertising agency in London, and a Webby nominee non-profit
-                  organization, called Mash Stories — listed among the Top 50
-                  Websites in 2015. She has a BA in Archaeology, an MA in Media,
-                  and an MSc in Brain Sciences from University College London.
-                  She’s also published three books and just finished a novel.
-                  <br />
-                  <br />
-                  As well as one-to-one sessions, Ela gives workshops on
-                  overcoming procrastination and perfectionism, developing
-                  leadership skills, building an inspired community, and
-                  adopting a success mindset.
-                </p>
-              </section>
-            </div>
+            <div
+              className="right"
+              dangerouslySetInnerHTML={{
+                __html: this.props.about
+              }}
+            />
           </section>
 
           {/* NEWSLETTER FORM */}

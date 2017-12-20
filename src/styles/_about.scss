@@ -1,0 +1,70 @@
+.ec-about {
+    &__container {
+        display: flex;
+        flex-flow: column-reverse;
+        justify-content: flex-start;
+        align-content: flex-start;
+    }
+
+    &__text-section {
+        margin: 5%;
+        flex: 1;
+    }
+
+    &__image-section {
+        margin: 5%;
+        flex: 1;
+        position: relative;
+    }
+
+    &__image-wrapper {
+        background-image: url("./images/writing-about.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        width: 100%;
+        height: 100vw;
+        max-height: 60vh;
+    }
+}
+
+.ec-about--coaching {
+    .ec-about {
+        &__container {
+            flex-flow: column;
+        }
+
+        &__image-wrapper {
+            background-image: url("./images/coaching-about.jpg");
+        }
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .ec-about {
+        &__container {
+            flex-flow: row;
+        }
+
+        &__image-wrapper {
+            background-image: url("./images/writing-about.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: fixed;
+            width: 40vw;
+            height: 100vw;
+        }
+    }
+
+    .ec-about--coaching {
+        .ec-about {
+            &__container {
+                flex-flow: row;
+            }
+
+            &__image-wrapper {
+                background-image: url("./images/coaching-about.jpg");
+            }
+        }
+    }
+}

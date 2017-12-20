@@ -6,8 +6,8 @@ class Header extends Component {
   render() {
     return (
       <footer>
-        <span className="copyright">© Ela Crain 2017</span>
-        <Link to="/" className="Impressum">
+        <div className="copyright">© Ela Crain 2017</div>
+        <Link to="/" className="impressum">
           Impressum
         </Link>
         <span className="mentions">

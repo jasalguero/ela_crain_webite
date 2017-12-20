@@ -7,8 +7,8 @@ const WorkshopPreview = props => {
   console.log(props);
   const event = props.event;
   return (
-    <Link to={`/coaching/events/${event.id}`}>
-      <div className="workshop-preview" key={event.id}>
+    <div className="workshop-preview" key={event.id}>
+      <Link to={`/coaching/events/${event.id}`}>
         <div
           className="image"
           style={{
@@ -22,8 +22,8 @@ const WorkshopPreview = props => {
           </div>
           <div className="name">{event.name.text}</div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 

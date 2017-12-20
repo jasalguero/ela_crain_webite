@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect, Switch } from 'react-router';
 import Coaching from './routes/coaching/Home';
 import Writing from './routes/writing/Home';
 import Home from './routes/Home';
@@ -10,6 +10,11 @@ import './App.css';
 //TODO: Hardcoded for now, figure out how to bring it from wordpress
 const COACHING_CATEGORY = 5;
 const WRITING_CATEGORY = 2;
+const ABOUT_COACHING_CATEGORY = 9;
+const ABOUT_WRITING_CATEGORY = 10;
+const REVIEWS_WRITING_CATEGORY = 11;
+const REVIEWS_COACHING_CATEGORY = 12;
+
 // const POEMS_CATEGORY = 3;
 // const STORIES_CATEGORY = 4;
 
@@ -18,6 +23,14 @@ class App extends Component {
     writingPosts: [],
     coachingPosts: [],
     events: [],
+    about: {
+      writing: '',
+      coaching: ''
+    },
+    reviews: {
+      writing: [],
+      coaching: []
+    },
     status: 'loading'
   };
 
@@ -25,20 +38,43 @@ class App extends Component {
    * Retrieve all the data
    */
   componentDidMount() {
-    Promise.all([CoachingAPI.fetchEventbriteEvents()]).then(results => {
+    CoachingAPI.fetchEventbriteEvents().then(results => {
       this.setState({
-        events: results[0],
+        events: results,
         status: 'ready'
       });
     });
-    Promise.all([WritingAPI.getAllPosts()]).then(results => {
+    WritingAPI.getAllPosts().then(results => {
+      // filter about
+      const about = {
+        coaching: results.filter(
+          p => p.categories.indexOf(ABOUT_COACHING_CATEGORY) !== -1
+        )[0].content,
+        writing: results.filter(
+          p => p.categories.indexOf(ABOUT_WRITING_CATEGORY) !== -1
+        )[0].content
+      };
+
+      // filter reviews
+      const reviews = {
+        coaching: results.filter(
+          p => p.categories.indexOf(REVIEWS_COACHING_CATEGORY) !== -1
+        ),
+        writing: results.filter(
+          p => p.categories.indexOf(REVIEWS_WRITING_CATEGORY) !== -1
+        )
+      };
+
+      // filter posts && setstate
       this.setState({
-        writingPosts: results[0].filter(
+        writingPosts: results.filter(
           p => p.categories.indexOf(WRITING_CATEGORY) !== -1
         ),
-        coachingPosts: results[0].filter(
+        coachingPosts: results.filter(
           p => p.categories.indexOf(COACHING_CATEGORY) !== -1
         ),
+        about,
+        reviews,
         status: 'ready'
       });
     });
@@ -47,20 +83,31 @@ class App extends Component {
   render() {
     return (
       <div className="ela-crain-website">
-        <Route exact path="/" render={() => <Home />} />
-        <Route
-          path="/writing"
-          render={() => <Writing posts={this.state.writingPosts} />}
-        />
-        <Route
-          path="/coaching"
-          render={() => (
-            <Coaching
-              posts={this.state.coachingPosts}
-              events={this.state.events}
-            />
-          )}
-        />
+        <Switch>
+          <Route exact path="/" render={() => <Home />} />
+          <Route
+            path="/writing"
+            render={() => (
+              <Writing
+                posts={this.state.writingPosts}
+                about={this.state.about.writing}
+                reviews={this.state.reviews.writing}
+              />
+            )}
+          />
+          <Route
+            path="/coaching"
+            render={() => (
+              <Coaching
+                posts={this.state.coachingPosts}
+                events={this.state.events}
+                about={this.state.about.coaching}
+                reviews={this.state.reviews.coaching}
+              />
+            )}
+          />
+          <Route path="*" render={() => <Redirect to="/" />} />
+        </Switch>
       </div>
     );
   }

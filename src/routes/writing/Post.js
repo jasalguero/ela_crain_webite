@@ -4,6 +4,8 @@ import Header from '../../components/writing/Header';
 import FullPost from '../../components/writing/FullPost';
 import PostHeader from '../../components/PostHeader';
 import Footer from '../../components/writing/Footer';
+import OverviewList from '../../components/writing/OverviewList';
+import _ from 'lodash';
 
 import '../../styles/FullPostNavigation.css';
 
@@ -63,7 +65,10 @@ class PostRoute extends Component {
         <div className="post-navigation nav-prev">
           <div className="nav-content">
             <Link to={`/writing/posts/${this.state.prevPost.id}`}>
-              <div className="post-title">{this.state.prevPost.title}</div>
+              <div
+                className="post-title"
+                dangerouslySetInnerHTML={{ __html: this.state.prevPost.title }}
+              />
               <div className="link">Previous</div>
             </Link>
           </div>
@@ -78,7 +83,10 @@ class PostRoute extends Component {
         <div className="post-navigation nav-next">
           <div className="nav-content">
             <Link to={`/writing/posts/${this.state.nextPost.id}`}>
-              <div className="post-title">{this.state.nextPost.title}</div>
+              <div
+                className="post-title"
+                dangerouslySetInnerHTML={{ __html: this.state.nextPost.title }}
+              />
               <div className="link">Next</div>
             </Link>
           </div>
@@ -89,20 +97,25 @@ class PostRoute extends Component {
 
   render() {
     const post = this.state.post;
+
+    // filter and sort remaining posts
+    const posts = this.props.posts;
+    const postIndex = this.state.postIndex;
+    const remainingPostsSorted = _.drop(posts, postIndex + 1).concat(
+      _.dropRight(posts, posts.length - postIndex)
+    );
+
     return (
       <div className="writing">
         <Header showLayoutIcons={false} />
         <PostHeader post={post} />
         {this.getNavPrev()}
         <div className="full-post-wrapper">
-          {this.state.post ? (
-            <FullPost post={post} />
-          ) : (
-            <h1>Post doesn't exist</h1>
-          )}
+          {this.state.post && <FullPost post={post} />}
         </div>
-        {this.getNavNext()}
         <Footer />
+        {this.getNavNext()}
+        {remainingPostsSorted && <OverviewList items={remainingPostsSorted} />}
       </div>
     );
   }

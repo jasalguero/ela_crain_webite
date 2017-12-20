@@ -1,42 +1,137 @@
-@import 'styles/vars.scss';
+@import "styles/vars.scss";
 
-// .single-post-wrapper {
-   .single-post {
+.single-post {
+    position: absolute;
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    left: 10%;
+    right: 10%;
+    top: 50vh;
+    
     img {
-      margin-top: 37px;
-      margin-bottom: 27px;
-      max-height: 512px;
+        width: 100%;
+    }
+    
+    .title {
+        position: relative;
+        font-size: 26px;
+        font-weight: 900;
+        margin-bottom: 6px;
+        text-align: center;
+        text-shadow: 0px 0px 20px $black, 0px 0px 20px $black;
     }
 
-    .title {
-      font-size: 40px;
-      font-weight: 900;
-      margin-bottom: 6px;
+    .button {
+        visibility: hidden;
+        position: relative;
+        width: 170px;
+        height: 52px;
+        padding-top: 14px;
+        border-radius: 100px;
+        background-color: $white;
+        border: solid 2px $white;
+        font-family: Roboto;
+        font-size: 16px;
+        letter-spacing: 0.9px;
+        text-align: center;
+        color: $black;
+        cursor: pointer;
     }
 
     .headline {
-      font-family: Lora;
-      font-size: 18px;
-      line-height: 1.5;
-      text-align: center;
-      margin-bottom: 30px;
-      margin-left: 35%;
-      margin-left: 35%;
+        font-family: Lora;
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-left: 35%;
+        margin-left: 35%;
     }
 
     .read-more-link {
-      font-family: Roboto;
-      font-size: 18px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: 1px;
-      text-align: center;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-align: center;
     }
-  }
-// }
+
+    &-link {
+        cursor: default;
+    }
+}
+
+.single-post.coaching {
+    .button {
+        border: solid 2px $black;
+    }
+
+    .title {
+        text-shadow: 0px 0px 20px $white, 0px 0px 20px $white;
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .single-post {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        left: 20%;
+        right: 20%;
+        top: 50vh;
+
+        img {
+            width: 100%;
+        }
+
+        .title {
+            position: relative;
+            font-size: 40px;
+            font-weight: 900;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .button {
+            visibility: visible;
+            position: relative;
+            width: 170px;
+            height: 52px;
+            padding-top: 14px;
+            border-radius: 100px;
+            background-color: $white;
+            border: solid 2px $white;
+            font-family: Roboto;
+            font-size: 16px;
+            letter-spacing: 0.9px;
+            text-align: center;
+            color: $black;
+        }
+
+        .headline {
+            font-family: Lora;
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 30px;
+            margin-left: 35%;
+            margin-left: 35%;
+        }
+
+        .read-more-link {
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+    }
+}

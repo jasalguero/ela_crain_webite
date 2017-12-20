@@ -1,36 +1,73 @@
-@import 'styles/vars.scss';
+@import "styles/vars.scss";
 
 .section-selector {
-  display: flex;
-  align-items: center;
-
-  .section {
-    flex: 9;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 180px;
-    cursor: pointer;
-    transition: flex $animation-duration $animation-type;
 
-    &:hover {
-      flex: 10;
+    .section {
+        flex: 9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 180px;
+        cursor: pointer;
+        transition: flex $animation-duration $animation-type;
+
+        &:hover {
+            flex: 10;
+        }
     }
-  }
 
-  .writing-section {
-    font-family: Roboto;
-    font-size: 44px;
-    font-weight: 900;
-    color: $white;
-    background-color: $superblack;
-  }
+    .writing-section {
+        font-family: Roboto;
+        font-size: 33px;
+        font-weight: 900;
+        color: $white;
+        background-color: $superblack;
+    }
 
-  .coaching-section {
-    font-family: Lora;
-    font-size: 44px;
-    color: $black;
-    background-color: $white;
-    background: linear-gradient($white, $grad-white)
-  }
+    .coaching-section {
+        font-family: Lora;
+        font-size: 33px;
+        color: $black;
+        background-color: $white;
+        background: linear-gradient($white, $grad-white);
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .section-selector {
+        display: flex;
+        align-items: center;
+
+        .section {
+            flex: 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 180px;
+            cursor: pointer;
+            transition: flex $animation-duration $animation-type;
+
+            &:hover {
+                flex: 10;
+            }
+        }
+
+        .writing-section {
+            font-family: Roboto;
+            font-size: 44px;
+            font-weight: 900;
+            color: $white;
+            background-color: $superblack;
+        }
+
+        .coaching-section {
+            font-family: Lora;
+            font-size: 44px;
+            color: $black;
+            background-color: $white;
+            background: linear-gradient($white, $grad-white);
+        }
+    }
 }

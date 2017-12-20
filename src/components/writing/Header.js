@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import { Helmet } from 'react-helmet';
 import HeaderSelector from '../HeaderSelector';
-import '../../styles/writing/Header.css';
+import LayoutButton from '../header/LayoutButton';
 
 class Header extends Component {
   state = {
@@ -18,7 +19,9 @@ class Header extends Component {
 
     return (
       <header
-        className={`writing ${this.state.showSelector ? 'open' : 'collapsed'}`}
+        className={`${this.state.showSelector
+          ? 'ec-header--open'
+          : 'ec-header'}`}
       >
         <Helmet>
           <link
@@ -28,35 +31,44 @@ class Header extends Component {
         </Helmet>
 
         <HeaderSelector />
-        <div className="header-wrapper">
-          <div className="icons-wrapper">
-            {showLayoutIcons && (
-              <div className="icons left reading-styles">
-                <span
-                  className={`icon single ${viewMode === 'single'
-                    ? 'selected'
-                    : null}`}
-                  onClick={() => onViewModeChange('single')}
-                >
-                  Single
-                </span>
-                <span
-                  className={`icon overview ${viewMode === 'overview'
-                    ? 'selected'
-                    : null}`}
-                  onClick={() => onViewModeChange('overview')}
-                >
-                  Overview
-                </span>
-              </div>
-            )}
+        <div className="ec-header__wrapper">
+          <div
+            className="ec-layout-button__wrapper"
+            style={{ visibility: showLayoutIcons ? 'visible' : 'hidden' }}
+          >
+            <LayoutButton
+              showLayoutIcons={showLayoutIcons}
+              onViewModeChange={onViewModeChange}
+              viewMode={viewMode}
+            />
           </div>
-          <div className="logo-container" onClick={this.toggleSelector}>
-            <span className="logo">Ela Crain</span>
+          <div
+            className="ec-header__logo-container"
+            onClick={this.toggleSelector}
+          >
+            <span className="ec-header__logo">Ela Crain</span>
           </div>
-          <div className="links">
-            <Link to="/writing/posts">Posts</Link>
-            <Link to="/writing/about">About</Link>
+          <div className="ec-header__links">
+            <Link
+              className={
+                this.props.location.pathname.split('/')[2] === 'posts'
+                  ? 'active'
+                  : ''
+              }
+              to="/writing/posts"
+            >
+              Writing
+            </Link>
+            <Link
+              className={
+                this.props.location.pathname.split('/')[2] === 'about'
+                  ? 'active'
+                  : ''
+              }
+              to="/writing/about"
+            >
+              About
+            </Link>
           </div>
         </div>
       </header>
@@ -64,4 +76,6 @@ class Header extends Component {
   }
 }
 
-export default Header;
+const HeadderWithRouter = withRouter(Header);
+
+export default HeadderWithRouter;
