@@ -4,10 +4,17 @@ import WritingPosts from './Posts';
 import WritingPost from './Post';
 import WritingAbout from './About';
 
+import Dev from './../../components/NewsletterForm';
+
 class WritingRoute extends Component {
   render() {
     return (
       <div className="home-writing">
+        <Route
+          exact
+          path="/writing/dev"
+          render={() => <Dev type="writing" />}
+        />
         <Route
           exact
           path="/writing/posts"

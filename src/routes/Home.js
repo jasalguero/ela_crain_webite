@@ -16,7 +16,6 @@ class Home extends Component {
             </div>
           </div>
         </div>
-
         <div className="right panel">
           <div className="label">
             <Link to="/coaching">Coaching</Link>

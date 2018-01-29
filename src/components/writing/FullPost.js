@@ -30,7 +30,6 @@ class FullPost extends Component {
           <div className="content" dangerouslySetInnerHTML={{ __html: text }} />
         </div>
         <div className="forms-wrapper">
-          <ContactForm />
           <NewsletterForm />
         </div>
       </div>
