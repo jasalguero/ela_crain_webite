@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../../components/coaching/Header';
-import Footer from '../../components/coaching/Footer';
+import Footer from '../../components/Footer';
 import ContactForm from '../../components/ContactForm';
 
 class AboutRoute extends Component {
@@ -22,7 +22,7 @@ class AboutRoute extends Component {
             <ContactForm type="coaching" />
           </div>
         </div>
-        <Footer />
+        <Footer type="coaching" />
       </div>
     );
   }

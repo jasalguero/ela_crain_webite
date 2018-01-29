@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../../styles/writing/Footer.css';
+import '../styles/writing/Footer.css';
 
 class Header extends Component {
   render() {
     return (
-      <footer className="footer-coaching">
+      <footer
+        className={this.props.type === 'coaching' ? 'footer-coaching' : ''}
+      >
         <div className="copyright">© Ela Crain 2017</div>
         <Link to="/" className="impressum">
           Impressum

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../../components/writing/Header';
-import Footer from '../../components/writing/Footer';
+import Footer from '../../components/Footer';
 import Reviews from '../../components/writing/Reviews';
 import ContactForm from '../../components/ContactForm';
 import Portrait from '../../images/writing-about.png'; // Tell Webpack this JS file uses this image
