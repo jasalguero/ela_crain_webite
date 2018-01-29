@@ -4,7 +4,7 @@ import WritingPosts from './Posts';
 import WritingPost from './Post';
 import WritingAbout from './About';
 
-import Dev from './../../components/NewsletterForm';
+import Dev from './../../components/Footer';
 
 class WritingRoute extends Component {
   render() {
