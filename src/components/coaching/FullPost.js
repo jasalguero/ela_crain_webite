@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ContactForm from '../../components/ContactForm';
 import NewsletterForm from '../../components/NewsletterForm';
 import '../../styles/coaching/FullPost.css';
 // import '../../styles/FullPost.css';
@@ -7,7 +6,13 @@ import '../../styles/coaching/FullPost.css';
 class FullPost extends Component {
   render() {
     const { post } = this.props;
-    const { image_url, labels } = post.fields;
+    const {
+      image_url,
+      labels,
+      authorName,
+      authorShortbio,
+      authorPicture
+    } = post.fields;
 
     return (
       <div>
@@ -28,6 +33,13 @@ class FullPost extends Component {
             className="content"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+          <div className="author">
+            {authorPicture && (
+              <img src={authorPicture} alt="" className="author-pic" />
+            )}
+            <div className="author-name">{authorName}</div>
+            <div className="author-short-bio">{authorShortbio}</div>
+          </div>
         </div>
         <div className="forms-wrapper">
           <NewsletterForm type="coaching" />

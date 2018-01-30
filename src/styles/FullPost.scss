@@ -79,6 +79,47 @@
             text-align: left;
             margin: 74px 10% 0 10%;
         }
+
+        .author {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+
+            .author-pic {
+                width: 64px;
+                height: 64px;
+                border-radius: 32px;
+            }
+            
+            .author-name {
+                height: 27px;
+                font-family: Lora;
+                font-size: 27px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1;
+                letter-spacing: normal;
+                text-align: center;
+                color: #121212;
+                color: $black;
+            }
+
+            .author-short-bio {
+                width: 344px;
+                font-family: Roboto;
+                font-size: 18px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.5;
+                letter-spacing: normal;
+                text-align: center;
+                color: #121212;
+                color: $black;
+            }
+        }
     }
 }
 
