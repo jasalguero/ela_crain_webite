@@ -78,6 +78,7 @@ class SingleList extends Component {
           <PostIndicator
             currentPostIndex={currentPostIndex}
             totalPosts={totalPosts}
+            handleNavi={this.handleNavi}
           />
           <div className="ec-single-post-list__nav">
             <div
