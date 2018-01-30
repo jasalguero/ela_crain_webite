@@ -6,7 +6,22 @@ import LayoutButton from '../header/LayoutButton';
 
 class Header extends Component {
   state = {
-    showSelector: false
+    showSelector: false,
+    scrollTop: 0
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScrolling);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScrolling);
+  }
+
+  handleScrolling = e => {
+    console.log(e);
+    const scrollTop = document.documentElement.scrollTop;
+    this.setState({ scrollTop });
   };
 
   toggleSelector = () => {
@@ -23,7 +38,10 @@ class Header extends Component {
         className={`${this.state.showSelector
           ? 'ec-header--open'
           : 'ec-header'} ec-header--white`}
-        style={{ position: isHome ? 'absolute' : 'relative' }}
+        style={{
+          position: isHome ? 'fixed' : 'relative',
+          background: this.state.scrollTop > 0 ? 'white' : 'transparent'
+        }}
       >
         <Helmet>
           <link
