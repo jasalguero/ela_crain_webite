@@ -129,18 +129,18 @@
 
         .image-collage {
             position: relative;
-            width: 100%;
-            width: 720px;
+            width: 80vw;
             height: 512px;
-
+                        
             img {
+
                 position: absolute;
                 z-index: 10;
                 margin: 0;
                 transition: top 1s $animation-type, left 1s $animation-type;
                 width: 100%;
             }
-
+            
             .image-top {
                 //original size:  1000px x 520px
                 width: 500px;
