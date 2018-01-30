@@ -1,0 +1,42 @@
+@import "styles/vars.scss";
+
+.newsletter-form.coaching,
+.contact-form.coaching {
+  h1 {
+    font-family: Lora;
+    font-size: 61px;
+    font-weight: 100;
+  }
+
+  input,
+  textarea {
+    color: $black;
+    border: 1px solid $black;
+    background-color: $white;
+  }
+
+  button {
+      background:$white;
+        width: 170px;
+        height: 48px;
+        border-radius: 100px;
+        border: solid 1px #ffffff;
+        border: solid 1px $black;  
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.9px;
+        text-align: center;
+        color: #ffffff;
+        color: $black;
+
+    &:hover {
+      cursor: pointer;
+      background: $black;
+      color: $white;    
+    }
+  }
+}

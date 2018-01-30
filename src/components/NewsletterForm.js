@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import serializeForm from 'form-serialize';
 import jsonp from 'jsonp';
 
-import '../styles/ContactForm.css';
-import '../styles/coaching/ContactForm.css';
+import '../styles/NewsletterForm.css';
+import '../styles/coaching/NewsletterForm.css';
 
 const MAILCHIMP_FORM =
   '//elacrain.us14.list-manage.com/subscribe/post?u=988886b7bec93779337af1c49&id=115e349166';
