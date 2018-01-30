@@ -9,6 +9,8 @@ class WorkshopList extends Component {
   };
 
   render() {
+    const reviewLength = this.props.reviews.length;
+
     return (
       <div className="testimonials">
         <div className="header">Testimonials</div>
@@ -37,13 +39,15 @@ class WorkshopList extends Component {
             );
           })}
         </div>
-        <div className="button">
-          <button
-            onClick={() => this.setState({ showAll: !this.state.showAll })}
-          >
-            {this.state.showAll ? '- View Less' : '+ View More'}
-          </button>
-        </div>
+        {reviewLength > 3 && (
+          <div className="button">
+            <button
+              onClick={() => this.setState({ showAll: !this.state.showAll })}
+            >
+              {this.state.showAll ? '- View Less' : '+ View More'}
+            </button>
+          </div>
+        )}
       </div>
     );
   }
