@@ -1,8 +1,14 @@
 @import "styles/vars.scss";
 
 .testimonials {
-    background-color: $white-two;
+    background-color: $black;
     padding: 68px 5% 70px 5%;
+    color: $white;
+
+    // display: flex;
+    // flex-flow: column;
+    // justify-content: center;
+    // align-items: center;
 
     .header {
         font-family: Lora;
@@ -14,13 +20,28 @@
         margin-top: 56px;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-around;
-        
+        justify-content: center;
+        align-items: flex-start;
+
         .item {
-          max-width: 320px;
-          margin: 0 20px 40px 0;
+            width: 100vw;
+            margin: 0 0px 40px 0px;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+
+            .author-picture {
+                flex: 1;
+                height: 84px;
+                width: 84px;
+                border-radius: 42px;
+                margin: 16px;
+            }
 
             .testimonial {
+                flex: 1;
+
                 p {
                     font-family: Roboto;
                     font-size: 18px;
@@ -29,11 +50,32 @@
             }
 
             .author {
+                flex: 1;
                 font-family: Roboto;
                 font-size: 14px;
                 text-align: center;
                 margin-top: 20px;
             }
+        }
+    }
+
+    .button {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            cursor: pointer;
+            color: $white;
+            background: $black;
+            width: 144px;
+            height: 44px;
+            border-radius: 22.5px;
+            border: solid 2px #ffffff;
+            border: solid 2px $white;
+            font-family: Roboto;
+            font-size: 14px;
         }
     }
 }
