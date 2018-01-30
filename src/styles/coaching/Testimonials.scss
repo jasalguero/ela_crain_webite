@@ -79,3 +79,31 @@
         }
     }
 }
+
+@media all and (min-width: $desktop) {
+    .testimonials {
+        .header {}
+
+        .items {
+            justify-content: center;
+            align-items: flex-start;
+
+            .item {
+                width: calc(30vw);
+                padding: 0 25px 40px 25px;
+
+                .author-picture {}
+
+                .testimonial {
+                    p {}
+                }
+
+                .author {}
+            }
+        }
+
+        .button {
+            button {}
+        }
+    }
+}
