@@ -15,12 +15,15 @@ class Header extends Component {
 
   render() {
     const { showLayoutIcons, onViewModeChange, viewMode } = this.props;
+    const isHome =
+      this.props.location.pathname.split('/').length > 2 ? false : true;
 
     return (
       <header
         className={`${this.state.showSelector
           ? 'ec-header--open'
           : 'ec-header'} ec-header--white`}
+        style={{ position: isHome ? 'absolute' : 'relative' }}
       >
         <Helmet>
           <link
