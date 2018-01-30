@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+
 import ProgressBar from './ProgressBar';
 import '../styles/coaching/PostHeader.css';
 
@@ -63,16 +65,27 @@ class PostHeader extends Component {
         }
       >
         <ProgressBar show={this.state.showHeader} type={type} />
-        <div className="left-side">
-          <div className="currently-reading">CURRENTLY READING</div>
-          <div
-            className="post-title"
-            dangerouslySetInnerHTML={{ __html: title }}
-          />
+        <div className="box">
+          <div className="left-side">
+            <div className="currently-reading">CURRENTLY READING</div>
+            <div
+              className="post-title"
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
+          </div>
+          <Link className="right-side" to={'/' + type + '/posts'}>
+            <div className="text">Close</div>
+            <div className="rect">
+              <div className="rect1" />
+              <div className="rect2" />
+            </div>
+          </Link>
         </div>
       </div>
     );
   }
 }
 
-export default PostHeader;
+const PostHeaderWithRouter = withRouter(PostHeader);
+
+export default PostHeaderWithRouter;

@@ -5,17 +5,34 @@
   background-color: $white;
   border-bottom: 0.5px solid $pinkish-grey;
 
+  .box {
 
-  .currently-reading {
-    font-family: Roboto;
-    font-size: 10px;
-    letter-spacing: 0.8px;
-    color: $black;
-  }
+    
+    .currently-reading {
+      font-family: Roboto;
+      font-size: 10px;
+      letter-spacing: 0.8px;
+      color: $black;
+    }
+    
+    .post-title {
+      font-family: Lora;
+      font-size: 18px;
+      color: $black;
+    }
 
-  .post-title {
-    font-family: Lora;
-    font-size: 18px;
-    color: $black;
+    .text {
+      color: $black;
+    }
+
+    .rect {
+
+      .rect1 {
+        background: $black;
+      }
+      .rect2 {
+        background: $black;  
+      }
+    }
   }
 }
