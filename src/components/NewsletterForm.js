@@ -20,6 +20,8 @@ class NewsletterForm extends Component {
     e.preventDefault();
 
     const values = serializeForm(e.target, { hash: true });
+    if (!values.email) return;
+    if (!values.name) return;
     if (values.email.indexOf('@') === -1) {
       this.setState({
         status: 'error'

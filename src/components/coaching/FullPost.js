@@ -30,7 +30,6 @@ class FullPost extends Component {
           />
         </div>
         <div className="forms-wrapper">
-          <ContactForm type="coaching" />
           <NewsletterForm type="coaching" />
         </div>
       </div>

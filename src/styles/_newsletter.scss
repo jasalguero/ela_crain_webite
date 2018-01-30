@@ -10,17 +10,20 @@
     }
 
     &__form-element-wrapper {
+        background: yellow;
         display: flex;
-        flex-flow: wrap;
-        justify-content: space-between;
+        flex-flow: row wrap;
+        justify-content: center;
         align-items: center;
     }
-    
+
     &__form-element {
         flex: 1;
+        margin: 10px;
     }
 
     &__button {
         width: 200px;
+        margin: 10px;
     }
 }
