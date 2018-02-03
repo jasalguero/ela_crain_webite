@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import NewsletterForm from '../../components/NewsletterForm';
 import '../../styles/coaching/FullPost.css';
+import ImageCollage from './ImageCollage';
+
 // import '../../styles/FullPost.css';
 
 class FullPost extends Component {
@@ -17,11 +19,7 @@ class FullPost extends Component {
     return (
       <div>
         <div className="collage-wrapper collage-wrapper--fullPost">
-          <div className="image-collage">
-            <div className="image-wrapper">
-              <img className="" src={`${image_url}`} alt={post.title} />
-            </div>
-          </div>
+          {post.id && <ImageCollage post={post} />}
         </div>
         <div className="full-post">
           <div className="labels">{labels}</div>
