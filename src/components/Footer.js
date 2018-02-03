@@ -30,14 +30,26 @@ class Header extends Component {
       <footer className={type === 'white' ? 'footer-coaching' : ''}>
         <h2>Ela Crain</h2>
         <div className="social">
-          <a href="https://www.facebook.com/elacrain" target="_blank">
-            <img src={social[type].facebook} />
+          <a
+            href="https://www.facebook.com/elacrain"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={social[type].facebook} alt="ela crain's facebook" />
           </a>
-          <a href="https://twitter.com/elacrain" target="_blank">
-            <img src={social[type].twitter} />
+          <a
+            href="https://twitter.com/elacrain"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={social[type].twitter} alt="ela crain's twitter" />
           </a>
-          <a href="https://medium.com/elacrain" target="_blank">
-            <img src={social[type].medium} />
+          <a
+            href="https://medium.com/elacrain"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={social[type].medium} alt="ela crain's medium" />
           </a>
         </div>
         <div className="meta">

@@ -8,13 +8,7 @@ import ImageCollage from './ImageCollage';
 class FullPost extends Component {
   render() {
     const { post } = this.props;
-    const {
-      image_url,
-      labels,
-      authorName,
-      authorShortbio,
-      authorPicture
-    } = post.fields;
+    const { labels, authorName, authorShortbio, authorPicture } = post.fields;
 
     return (
       <div>

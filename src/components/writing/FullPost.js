@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ContactForm from '../../components/ContactForm';
 import NewsletterForm from '../../components/NewsletterForm';
 import AudioWidget from '../AudioWidget';
 import ImageCollage from '../ImageCollage';
