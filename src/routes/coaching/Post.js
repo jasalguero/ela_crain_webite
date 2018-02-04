@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/coaching/Header';
 import PostHeader from '../../components/PostHeader';
 import FullPost from '../../components/coaching/FullPost';
-import Footer from '../../components/coaching/Footer';
+import Footer from '../../components/Footer';
 import OverviewList from '../../components/coaching/OverviewList';
 import _ from 'lodash';
 
@@ -114,7 +114,7 @@ class PostRoute extends Component {
         <div className="full-post-wrapper">
           {this.state.post && <FullPost post={post} />}
         </div>
-        <Footer />
+        <Footer type="coaching" />
         {this.getNavNext()}
         {remainingPostsSorted && <OverviewList items={remainingPostsSorted} />}
       </div>

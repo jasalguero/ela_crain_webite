@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../../components/coaching/Header';
-import Footer from '../../components/coaching/Footer';
+import Footer from '../../components/Footer';
 import WorkshopList from '../../components/coaching/WorkshopList';
 import Testimonials from '../../components/coaching/Testimonials';
 import NewsletterForm from '../../components/NewsletterForm';
@@ -62,7 +62,7 @@ class CoachingRoute extends Component {
             <NewsletterForm type="coaching" />
           </div>
         </div>
-        <Footer />
+        <Footer type="coaching" />
       </div>
     );
   }

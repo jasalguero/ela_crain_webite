@@ -9,9 +9,10 @@ class ImageCollage extends Component {
     return (
       <div className="collage-wrapper coaching">
         {/* <div className="background-title">{title}</div> */}
-
         <div className="image-collage">
-          <img src={image_url} alt={`${title}-img`} className="" />
+          <div className="image-wrapper">
+            <img src={image_url} alt={`${title}-img`} className="" />
+          </div>
         </div>
       </div>
     );

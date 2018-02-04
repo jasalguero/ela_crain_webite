@@ -6,8 +6,8 @@ import ImageCollage from './ImageCollage';
 class SinglePost extends Component {
   render() {
     const { post } = this.props;
-    const image_url = post.fields && post.fields.image_url;
-    const labels = post.fields && post.fields.labels;
+    // const image_url = post.fields && post.fields.image_url;
+    // const labels = post.fields && post.fields.labels;
 
     return (
       <div className="">

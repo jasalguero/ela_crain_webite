@@ -15,25 +15,74 @@
         top: -74px;
     }
 
-    .left-side {
-        margin-left: 10%;
-        margin-top: 20px;
+    .box {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 10% 0 10%;
+    
 
-        .currently-reading {
-            font-family: Roboto;
-            font-size: 10px;
-            letter-spacing: 0.8px;
-            color: $white;
+        .left-side {
+            flex: 1;
+            
+            .currently-reading {
+                font-family: Roboto;
+                font-size: 10px;
+                letter-spacing: 0.8px;
+                color: $white;
+            }
+            
+            .post-title {
+                font-family: Lora;
+                font-size: 18px;
+                color: $white;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
+        
+        .right-side {
+            flex: 1;
+            text-align: right;
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-end;
+            align-items: center;
 
-        .post-title {
-            font-family: Lora;
-            font-size: 18px;
-            color: $white;
-            white-space: nowrap;
-            width: 80vw;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            .text {
+                color: $white;
+            }
+            
+            .rect {
+                position: relative;
+                top: 0;
+                left: 0;
+                        
+                .rect1 {
+                    position: absolute;
+                    bottom: -7px;
+                    left: 16px;
+                    width: 2px;
+                    height: 14px;
+                    transform: rotate(-45deg);
+                    background-color: #1b1b1b;
+                    background-color: $white;
+                } 
+                
+                .rect2 {
+                    position: absolute;
+                    bottom: -7px;
+                    left: 16px;
+                    width: 2px;
+                    height: 14px;
+                    transform: rotate(45deg);
+                    background-color: #1b1b1b;
+                    background-color: $white;
+                }  
+            }
         }
     }
 }
+    
