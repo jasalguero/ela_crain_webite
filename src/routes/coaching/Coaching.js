@@ -3,6 +3,7 @@ import Header from '../../components/coaching/Header';
 import Footer from '../../components/Footer';
 import WorkshopList from '../../components/coaching/WorkshopList';
 import Testimonials from '../../components/coaching/Testimonials';
+import PreviousEvents from '../../components/coaching/PreviousEvents';
 import NewsletterForm from '../../components/NewsletterForm';
 
 import '../../styles/coaching/Coaching.css';
@@ -35,6 +36,9 @@ class CoachingRoute extends Component {
             this.props.events.length > 0 && (
               <WorkshopList events={this.props.events} />
             )}
+
+          {/* PREVIOUS EVENTS */}
+          <PreviousEvents images={this.props.previousEvents} />
 
           {/* TESTIMONIALS */}
           <Testimonials reviews={this.props.reviews} />
