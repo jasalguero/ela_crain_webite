@@ -1,29 +1,48 @@
 @import 'styles/vars.scss';
 
 footer {
-  width: 100%;
-  height: 95px;
   border-top: 1px solid $grey;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  font-family: Roboto;
-  z-index: 10;
-  padding: 15px;
-  text-align: center;
-
-  .impressum {
-    flex: auto;
+  
+  h2 {
+    text-align: center;
+    font-size: 31px;
   }
 
-  .copyright {
-    flex: auto;
+  .social {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    a {
+      width: 40px;
+      height: 40px;
+      margin: 5px;
+    }
   }
 
-  .mentions {
-    flex: auto;
-    color: $brownish-grey;
+  .meta {
+    // width: 100%;
+    height: 95px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: Roboto;
+    z-index: 10;
+    // padding: 15px;
+    text-align: center;
+    
+    .impressum {
+      padding: 10px;
+    }
+    
+    .copyright {
+      padding:10px;
+    }
+    
+    .mentions {
+      padding: 10px;
+    }
   }
 }

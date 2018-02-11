@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ContactForm from '../../components/ContactForm';
 import NewsletterForm from '../../components/NewsletterForm';
 import AudioWidget from '../AudioWidget';
 import ImageCollage from '../ImageCollage';
@@ -30,7 +29,6 @@ class FullPost extends Component {
           <div className="content" dangerouslySetInnerHTML={{ __html: text }} />
         </div>
         <div className="forms-wrapper">
-          <ContactForm />
           <NewsletterForm />
         </div>
       </div>

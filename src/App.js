@@ -23,6 +23,7 @@ class App extends Component {
     writingPosts: [],
     coachingPosts: [],
     events: [],
+    previousEvents: [],
     about: {
       writing: '',
       coaching: ''
@@ -65,6 +66,11 @@ class App extends Component {
         )
       };
 
+      // filter previousEvents
+      const previousEvents = results.filter(
+        p => p.categories.indexOf(13) !== -1
+      );
+
       // filter posts && setstate
       this.setState({
         writingPosts: results.filter(
@@ -75,6 +81,7 @@ class App extends Component {
         ),
         about,
         reviews,
+        previousEvents,
         status: 'ready'
       });
     });
@@ -101,6 +108,7 @@ class App extends Component {
               <Coaching
                 posts={this.state.coachingPosts}
                 events={this.state.events}
+                previousEvents={this.state.previousEvents}
                 about={this.state.about.coaching}
                 reviews={this.state.reviews.coaching}
               />

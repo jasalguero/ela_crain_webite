@@ -79,11 +79,12 @@
     .single-post {
         position: absolute;
         display: flex;
+        justify-content: flex-end;
         align-items: center;
         flex-direction: column;
         left: 20%;
         right: 20%;
-        top: 50vh;
+        bottom: 50px;
 
         img {
             width: 100%;
@@ -91,13 +92,14 @@
 
         .title {
             position: relative;
-            font-size: 40px;
+            font-size: 61px;
             font-weight: 900;
             margin-bottom: 6px;
             text-align: center;
         }
 
         .button {
+
             visibility: visible;
             position: relative;
             width: 170px;

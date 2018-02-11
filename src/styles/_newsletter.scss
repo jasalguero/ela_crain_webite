@@ -1,0 +1,28 @@
+.ec-newsletter {
+    &__section {
+        width: 80vw;
+        padding-bottom: 25px;
+    }
+
+    &__text {
+        padding: 20px;
+        text-align: center;
+    }
+
+    &__form-element-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__form-element {
+        flex: 1;
+        margin: 10px;
+    }
+
+    &__button {
+        width: 200px;
+        margin: 10px;
+    }
+}

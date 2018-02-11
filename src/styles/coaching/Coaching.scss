@@ -10,7 +10,7 @@
             height: 100%;
 
             .coaching-hero {
-                padding: 24px 0 20px 0;
+                padding: 100px 0 20px 0;
                 background-color: rgba($color: #FFF, $alpha: 0.5);
                 min-height: 640px;
                 color: $black;
@@ -26,7 +26,7 @@
                 }
 
                 .sub {
-                    margin: 0 6%;
+                    margin: 6%;
                     width: 90vw;
                     font-size: 18px;
 
@@ -75,7 +75,7 @@
     .coaching {
         .container {
             .coaching-hero-container {
-                background-image: url("../../images/coaching-hero.jpg");
+                // background-image: url("../../images/coaching-hero.jpg");
                 background-position: 80%;
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -98,7 +98,6 @@
                     }
 
                     .sub {
-                        margin: 0 6%;
                         width: 60vw;
                         font-size: 18px;
 

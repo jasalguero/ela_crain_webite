@@ -2,6 +2,7 @@
 
 .post-indicator {
     position: absolute;
+
     // right: 5vw;
     top: calc(50vh + 85px + 25px);
     flex: 1;
@@ -13,6 +14,7 @@
     .number {
         width: 21px;
         height: 21px;
+
         // margin: 10px;
         font-family: Roboto;
         font-size: 18px;
@@ -35,33 +37,34 @@
         margin-top: 14px;
         display: none;
 
-        .vertical-rectangle {
-            position: absolute;
-            bottom: 0px;
-            width: 2px;
-            height: 20px;
-            background-color: $grey;
-        }
+        // .vertical-rectangle {
+        //     position: absolute;
+        //     bottom: 0px;
+        //     width: 2px;
+        //     height: 20px;
+        //     background-color: $grey;
+        // }
 
-        .left-rectangle {
-            position: absolute;
-            bottom: 0px;
-            left: -4px;
-            width: 2px;
-            height: 11.1px;
-            transform: rotate(-45deg);
-            background-color: $grey;
-        }
+        // .left-rectangle {
+        //     position: absolute;
+        //     bottom: 0px;
+        //     left: -4px;
+        //     width: 2px;
+        //     height: 11.1px;
+        //     transform: rotate(-45deg);
+        //     background-color: $grey;
+        // }
 
-        .right-rectangle {
-            position: absolute;
-            bottom: 0px;
-            left: 4px;
-            width: 2px;
-            height: 11.1px;
-            transform: rotate(45deg);
-            background-color: $grey;
-        }
+        // .right-rectangle {
+        //     position: absolute;
+        //     bottom: 0px;
+        //     left: 4px;
+        //     width: 2px;
+        //     height: 11.1px;
+        //     transform: rotate(45deg);
+        //     background-color: $grey;
+        // }
+   
     }
 }
 
@@ -112,6 +115,8 @@
             position: relative;
             height: 20px;
             margin-top: 14px;
+            margin-bottom: 10px;
+            cursor: pointer;
 
             .vertical-rectangle {
                 position: absolute;
@@ -139,6 +144,14 @@
                 height: 11.1px;
                 transform: rotate(45deg);
                 background-color: $grey;
+            }
+
+            .click-target {
+                position: absolute;
+                left: -15px;
+                top: 0px;
+                width: 30px;
+                height: 25px;
             }
         }
     }

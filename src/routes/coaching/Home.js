@@ -38,6 +38,7 @@ class CoachingRoute extends Component {
           render={() => (
             <Coaching
               events={this.props.events}
+              previousEvents={this.props.previousEvents}
               about={this.props.about}
               reviews={this.props.reviews}
             />

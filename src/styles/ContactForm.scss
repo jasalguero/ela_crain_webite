@@ -1,83 +1,90 @@
 @import "styles/vars.scss";
 
-form {
-  padding-bottom: 50px;
-  h1 {
-    margin-bottom: 0;
-  }
+.contact-form {
+    form {
+        padding-bottom: 50px;
 
-  .sub {
-    margin-top: 10px;
-  }
+        h1 {
+            margin-bottom: 0;
+        }
 
-  label {
-    display: block;
-    font-size: 10px;
-    margin-bottom: 7px;
-  }
+        .sub {
+            margin-top: 10px;
+        }
 
-  input,
-  textarea {
-    display: block;
-    color: $white;
-    border: 1px solid $white;
-    background-color: $black;
-    padding: 8px;
-    width: 288px;
-    font-size: 16px;
-    margin-bottom: 23px;
-  }
+        label {
+            display: block;
+            font-size: 10px;
+            margin-bottom: 7px;
+        }
 
-  textarea {
-    width: 288px;
-  }
+        input,
+        textarea {
+            display: block;
+            color: $white;
+            border: 1px solid $white;
+            background-color: $black;
+            padding: 8px;
+            width: 288px;
+            font-size: 16px;
+            margin-bottom: 23px;
+        }
 
-  button {
-    margin-top: 18px;
-    font-size: 18px;
-    background-color: $black;
-    color: $white;
-    border: 0;
-    border-bottom: 2px solid transparent;
+        textarea {
+            width: 288px;
+        }
 
-    &:hover {
-      cursor: pointer;
-      border-bottom: 2px solid $white;
+        button {
+            margin-top: 18px;
+            font-size: 18px;
+            background-color: $black;
+            color: $white;
+            border: 0;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                cursor: pointer;
+                border-bottom: 2px solid $white;
+            }
+        }
+
+        &.coaching {
+            input,
+            textarea {
+                color: $black;
+                border: 1px solid $black;
+                background-color: $white;
+
+                &::-webkit-input-placeholder {
+                    /* Chrome/Opera/Safari */
+                    color: $grayish;
+                }
+
+                &::-moz-placeholder {
+                    /* Firefox 19+ */
+                    color: $grayish;
+                }
+
+                &:-ms-input-placeholder {
+                    /* IE 10+ */
+                    color: $grayish;
+                }
+
+                &:-moz-placeholder {
+                    /* Firefox 18- */
+                    color: $grayish;
+                }
+            }
+
+            button {
+                background-color: $white;
+                color: $black;
+
+                &:hover {
+                    cursor: pointer;
+                    border-bottom: 2px solid $black;
+                }
+            }
+        }
     }
-  }
-
-  &.coaching {
-    input,
-    textarea {
-      color: $black;
-      border: 1px solid $black;
-      background-color: $white;
-
-      &::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
-        color: $grayish;
-      }
-      &::-moz-placeholder {
-        /* Firefox 19+ */
-        color: $grayish;
-      }
-      &:-ms-input-placeholder {
-        /* IE 10+ */
-        color: $grayish;
-      }
-      &:-moz-placeholder {
-        /* Firefox 18- */
-        color: $grayish;
-      }
-    }
-    button {
-      background-color: $white;
-      color: $black;
-
-      &:hover {
-        cursor: pointer;
-        border-bottom: 2px solid $black;
-      }
-    }
-  }
 }

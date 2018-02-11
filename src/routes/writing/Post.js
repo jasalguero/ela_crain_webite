@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/writing/Header';
 import FullPost from '../../components/writing/FullPost';
 import PostHeader from '../../components/PostHeader';
-import Footer from '../../components/writing/Footer';
+import Footer from '../../components/Footer';
 import OverviewList from '../../components/writing/OverviewList';
 import _ from 'lodash';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const LayoutButton = props => {
-  const { viewMode, onViewModeChange, showLayoutIcons } = props;
+  const { viewMode, onViewModeChange } = props;
   const changeViewMode = () => {
     viewMode === 'single'
       ? onViewModeChange('overview')
