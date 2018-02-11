@@ -10,7 +10,7 @@ const PreviousEvents = props => {
 
   return (
     <div className="ec-previous-events">
-      <h2 className="ec-previous-events__title">Previous Events</h2>
+      <div className="ec-previous-events__title">Previous Events</div>
       <div className="ec-previous-events__image-container">
         {images.length > 0 &&
           _.map(images, (image, index) => (

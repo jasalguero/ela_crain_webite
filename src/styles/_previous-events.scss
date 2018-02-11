@@ -1,7 +1,8 @@
 .ec-previous-events {
-    height: 960px;
+    height: 760px;
     background: $black;
     color: $white;
+    // z-index: -10000000;
 
     &__title {
         padding-top: 75px;

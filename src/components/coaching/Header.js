@@ -40,7 +40,8 @@ class Header extends Component {
           : 'ec-header'} ec-header--white`}
         style={{
           position: isHome ? 'fixed' : 'relative',
-          background: this.state.scrollTop > 0 ? 'white' : 'transparent'
+          background: this.state.scrollTop > 0 ? 'white' : 'transparent',
+          zIndex: 1000000
         }}
       >
         <Helmet>
