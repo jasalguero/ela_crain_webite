@@ -31,6 +31,9 @@ class CoachingRoute extends Component {
             </div>
           </div>
 
+          {/* TESTIMONIALS */}
+          <Testimonials reviews={this.props.reviews} />
+
           {/* EVENTS */}
           {this.props.events &&
             this.props.events.length > 0 && (
@@ -39,9 +42,6 @@ class CoachingRoute extends Component {
 
           {/* PREVIOUS EVENTS */}
           <PreviousEvents images={this.props.previousEvents} />
-
-          {/* TESTIMONIALS */}
-          <Testimonials reviews={this.props.reviews} />
 
           {/* ABOUT */}
           <section className="about-section">
